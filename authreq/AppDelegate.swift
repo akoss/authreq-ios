@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let config = EllipticCurveKeyPair.Config(
                 publicLabel: "info.szente.authreq.public",
-                privateLabel: "info.szente.authreq..private",
+                privateLabel: "info.szente.authreq.private",
                 operationPrompt: "Sign transaction",
                 publicKeyAccessControl: publicAccessControl,
                 privateKeyAccessControl: privateAccessControl,
@@ -47,11 +47,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         if let notification = launchOptions?[.remoteNotification] as? [String: AnyObject] {
-            // 2
             let aps = notification["aps"] as! [String: AnyObject]
             print("got it");
             print(aps);
-            // 3
             (window?.rootViewController as? UITabBarController)?.selectedIndex = 1
         }
         UNUserNotificationCenter.current().delegate = self
@@ -174,6 +172,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func allowAction(aps: [String: AnyObject]) {
+        print("kapott: ")
         print(aps)
         let content = UNMutableNotificationContent()
         guard let alertDict = aps["alert"] as? [String:String] else {
@@ -181,9 +180,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
         
-        guard let nonce = alertDict["nonce"] else {
+        guard let nonce = alertDict["nonce"] as? String else {
             return
         }
+        
+        print("NONCE: " + nonce)
         
         guard let alertSubtitle = alertDict["subtitle"] else {
             return
@@ -213,19 +214,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             content.subtitle = alertSubtitle
             content.body = newAlertBody
             
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1,
-                                                            repeats: false)
-            let request = UNNotificationRequest(identifier: "successConfirmation", content: content, trigger: trigger)
-            
-            let center = UNUserNotificationCenter.current()
             UIPasteboard.general.string = newAlertBody
-            center.add(request) { (error) in
-                print(error)
-            }
+
         } catch {
             print("Error: \(error)")
+            content.title = "⚠️ Please open authreq to continue"
+            content.body = alertSubtitle + " - " + alertBody
         }
 
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1,
+                                                        repeats: false)
+        let request = UNNotificationRequest(identifier: "successConfirmation", content: content, trigger: trigger)
+        
+        let center = UNUserNotificationCenter.current()
+
+        center.add(request) { (error) in
+            print(error)
+        }
         /*do {
             DispatchQueue.roundTrip({
                 guard let digest = alertDict["nonce"] as? String else {
