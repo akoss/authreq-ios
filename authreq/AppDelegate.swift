@@ -174,7 +174,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func allowAction(aps: [String: AnyObject]) {
-        print("ASDASD start")
         print(aps)
         let content = UNMutableNotificationContent()
         guard let alertDict = aps["alert"] as? [String:String] else {
@@ -198,13 +197,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         do {
-            print("ASDASD do")
             let pem = try Shared.keypair.publicKey().data().PEM
-            print("ASDASD pem: " + pem)
+            print("PEM: " + pem)
 
             let signature = try Shared.keypair.signUsingSha256(digest)
-            print("ASDASD sig: ")
-            print(signature)
+            print("Signature: ")
+            print(signature.base64EncodedString())
             
             try Shared.keypair.verifyUsingSha256(signature: signature, originalDigest: digest)
             try printVerifySignatureInOpenssl(manager: Shared.keypair, signed: signature, digest: digest, shaAlgorithm: "sha256")
