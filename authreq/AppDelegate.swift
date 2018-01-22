@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import LocalAuthentication
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     struct Shared {
         static let keypair: EllipticCurveKeyPair.Manager = {
             EllipticCurveKeyPair.logger = { print($0) }
-            let publicAccessControl = EllipticCurveKeyPair.AccessControl(protection: kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly, flags: [])
+            let publicAccessControl = EllipticCurveKeyPair.AccessControl(protection: kSecAttrAccessibleAlwaysThisDeviceOnly, flags: [])
             let privateAccessControl = EllipticCurveKeyPair.AccessControl(protection: kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly, flags: [.privateKeyUsage])
             
             let config = EllipticCurveKeyPair.Config(
@@ -31,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     var window: UIWindow?
-
+    var context: LAContext! = LAContext()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -79,6 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        self.saveContext()
     }
 
     func registerForPushNotifications() {
@@ -172,7 +174,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func allowAction(aps: [String: AnyObject]) {
-        print("kapott: ")
         print(aps)
         let content = UNMutableNotificationContent()
         guard let alertDict = aps["alert"] as? [String:String] else {
@@ -180,7 +181,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
         
-        guard let nonce = alertDict["nonce"] as? String else {
+        guard let additional_data = aps["additional_data"] as? [String: AnyObject] else {
+            print("additional_data not found")
+            return
+        }
+        
+        guard let nonce = additional_data["nonce"] as? String else {
             return
         }
         
@@ -192,37 +198,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let alertBody = alertDict["body"] else {
             return
         }
-        
-        guard let digest = nonce.data(using: .utf8) else {
-            return
-        }
+
         
         do {
             let pem = try Shared.keypair.publicKey().data().PEM
             print("PEM: " + pem)
-
-            let signature = try Shared.keypair.signUsingSha256(digest)
-            print("Signature: ")
-            print(signature.base64EncodedString())
             
-            try Shared.keypair.verifyUsingSha256(signature: signature, originalDigest: digest)
-            try printVerifySignatureInOpenssl(manager: Shared.keypair, signed: signature, digest: digest, shaAlgorithm: "sha256")
+            guard let digest = nonce.data(using: .utf8) else {
+                return
+            }
+                
+            let signature = try Shared.keypair.sign(digest, hash: .sha256, context: self.context)
             
             let newAlertBody = alertBody + "\n\n" + "Nonce: " + nonce + "\n\nSignature: " + signature.base64EncodedString() + "\n\n" + "Public key: " + pem
+            print(newAlertBody)
+            UIPasteboard.general.string = newAlertBody
+            
+            try Shared.keypair.verify(signature: signature, originalDigest: digest, hash: .sha256)
+            try printVerifySignatureInOpenssl(manager: Shared.keypair, signed: signature, digest: digest, shaAlgorithm: "sha256")
+            
+            self.save(name: nonce)
             
             content.title = "✅ Allowed"
             content.subtitle = alertSubtitle
             content.body = newAlertBody
-            
-            UIPasteboard.general.string = newAlertBody
-
         } catch {
             print("Error: \(error)")
             content.title = "⚠️ Please open authreq to continue"
             content.body = alertSubtitle + " - " + alertBody
+            content.badge = 1
         }
 
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1,
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5,
                                                         repeats: false)
         let request = UNNotificationRequest(identifier: "successConfirmation", content: content, trigger: trigger)
         
@@ -231,43 +238,77 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         center.add(request) { (error) in
             print(error)
         }
-        /*do {
-            DispatchQueue.roundTrip({
-                guard let digest = alertDict["nonce"] as? String else {
-                    throw "Missing text in unencrypted text field"
-                }
-                return digest
-            }, thenAsync: { digest in
-                return try Shared.keypair.signUsingSha256(digest, authenticationContext: self.context)
-            }, thenOnMain: { digest, signature in
-                //self.signatureTextView.text = signature.base64EncodedString()
-                try Shared.keypair.verifyUsingSha256(signature: signature, originalDigest: digest)
-                try printVerifySignatureInOpenssl(manager: Shared.keypair, signed: signature, digest: digest, shaAlgorithm: "sha256")
-                
-                let newAlertBody = alertBody + "\n\n" + "Nonce: " + digest + "\n\nSignature: " + signature.base64EncodedString() + "\n\n" + "Public key: " + Shared.keypair.publicKey().data().PEM
-                
-                content.title = "✅ Allowed"
-                content.subtitle = alertSubtitle
-                content.body = newAlertBody
-                
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1,
-                                                                repeats: false)
-                let request = UNNotificationRequest(identifier: "successConfirmation", content: content, trigger: trigger)
-                
-                let center = UNUserNotificationCenter.current()
-                UIPasteboard.general.string = newAlertBody
-                center.add(request) { (error) in
-                    print(error)
-                }
-                
-            }, catchToMain: { error in
-                self.signatureTextView.text = "Error: \(error)"
-            })
-
+    }
+    
+    func save(name: String) {
+        
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
         }
-        catch let error {
-            print("Error \(error)")
-        }*/
+        
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        let entity =
+            NSEntityDescription.entity(forEntityName: "Request",
+                                       in: managedContext)!
+        
+        let request = NSManagedObject(entity: entity,
+                                     insertInto: managedContext)
+        
+        request.setValue(name, forKeyPath: "nonce")
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    // MARK: - Core Data stack
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+        /*
+         The persistent container for the application. This implementation
+         creates and returns a container, having loaded the store for the
+         application to it. This property is optional since there are legitimate
+         error conditions that could cause the creation of the store to fail.
+         */
+        let container = NSPersistentContainer(name: "authreq")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                
+                /*
+                 Typical reasons for an error here include:
+                 * The parent directory does not exist, cannot be created, or disallows writing.
+                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
+                 * The device is out of space.
+                 * The store could not be migrated to the current model version.
+                 Check the error message to determine what the actual problem was.
+                 */
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+    
+    // MARK: - Core Data Saving support
+    
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
     }
 }
 

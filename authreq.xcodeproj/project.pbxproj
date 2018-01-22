@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3181C92015516700ACF407 /* EllipticCurveKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3181C82015516700ACF407 /* EllipticCurveKeyPair.swift */; };
 		0F4D8E4A1FB93780000F259D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D8E491FB93780000F259D /* AppDelegate.swift */; };
 		0F4D8E4C1FB93780000F259D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D8E4B1FB93780000F259D /* FirstViewController.swift */; };
 		0F4D8E4E1FB93780000F259D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D8E4D1FB93780000F259D /* SecondViewController.swift */; };
@@ -16,8 +17,8 @@
 		0F4D8E611FB93780000F259D /* authreqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D8E601FB93780000F259D /* authreqTests.swift */; };
 		0F4D8E6C1FB93780000F259D /* authreqUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D8E6B1FB93780000F259D /* authreqUITests.swift */; };
 		0F7CAA231FC24B330026278E /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7CAA211FC24B330026278E /* SHA256.swift */; };
-		0F7CAA241FC24B330026278E /* EllipticCurveKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7CAA221FC24B330026278E /* EllipticCurveKeyPair.swift */; };
 		0F7CAA261FC24D480026278E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7CAA251FC24D480026278E /* Utils.swift */; };
+		0F9797B920169AC8001799B4 /* authreq.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 0F9797B820169AC8001799B4 /* authreq.xcdatamodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F3181C82015516700ACF407 /* EllipticCurveKeyPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EllipticCurveKeyPair.swift; path = "../../../../Downloads/EllipticCurveKeyPair-master/Sources/EllipticCurveKeyPair.swift"; sourceTree = "<group>"; };
 		0F4D8E461FB93780000F259D /* authreq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = authreq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4D8E491FB93780000F259D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F4D8E4B1FB93780000F259D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -54,8 +56,8 @@
 		0F4D8E6D1FB93780000F259D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F4D8E791FB9412C000F259D /* authreq.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = authreq.entitlements; sourceTree = "<group>"; };
 		0F7CAA211FC24B330026278E /* SHA256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA256.swift; sourceTree = "<group>"; };
-		0F7CAA221FC24B330026278E /* EllipticCurveKeyPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticCurveKeyPair.swift; sourceTree = "<group>"; };
 		0F7CAA251FC24D480026278E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0F9797B820169AC8001799B4 /* authreq.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = authreq.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +113,10 @@
 				0F4D8E4B1FB93780000F259D /* FirstViewController.swift */,
 				0F4D8E4D1FB93780000F259D /* SecondViewController.swift */,
 				0F4D8E4F1FB93780000F259D /* Main.storyboard */,
-				0F7CAA221FC24B330026278E /* EllipticCurveKeyPair.swift */,
+				0F3181C82015516700ACF407 /* EllipticCurveKeyPair.swift */,
 				0F7CAA211FC24B330026278E /* SHA256.swift */,
 				0F7CAA251FC24D480026278E /* Utils.swift */,
+				0F9797B820169AC8001799B4 /* authreq.xcdatamodel */,
 				0F4D8E521FB93780000F259D /* Assets.xcassets */,
 				0F4D8E541FB93780000F259D /* LaunchScreen.storyboard */,
 				0F4D8E571FB93780000F259D /* Info.plist */,
@@ -282,7 +285,8 @@
 				0F4D8E4E1FB93780000F259D /* SecondViewController.swift in Sources */,
 				0F4D8E4A1FB93780000F259D /* AppDelegate.swift in Sources */,
 				0F4D8E4C1FB93780000F259D /* FirstViewController.swift in Sources */,
-				0F7CAA241FC24B330026278E /* EllipticCurveKeyPair.swift in Sources */,
+				0F9797B920169AC8001799B4 /* authreq.xcdatamodel in Sources */,
+				0F3181C92015516700ACF407 /* EllipticCurveKeyPair.swift in Sources */,
 				0F7CAA261FC24D480026278E /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
