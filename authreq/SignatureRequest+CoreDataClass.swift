@@ -52,6 +52,11 @@ public class SignatureRequest: NSManagedObject {
             return
         }
         
+        guard let short_title = additional_data["short_title"] as? String else {
+            print("short_title not found")
+            return
+        }
+        
         guard let message_id = additional_data["message_id"] as? NSInteger else {
             print("message_id not found")
             return
@@ -74,10 +79,12 @@ public class SignatureRequest: NSManagedObject {
         
         request.setValue(response_url, forKeyPath: "response_url")
         request.setValue(message_id, forKeyPath: "message_id")
+        request.setValue(short_title, forKeyPath: "short_title")
         //request.setValue(hash, forKeyPath: "hash")
         request.setValue(nonce, forKeyPath: "nonce")
         
         request.setValue(signature, forKeyPath: "srv_signature")
+        request.setValue(Date() as NSDate, forKeyPath: "timestamp")
         
         do {
             try managedContext.save()
