@@ -14,6 +14,14 @@ import UIKit
 @objc(SignatureRequest)
 public class SignatureRequest: NSManagedObject {
     
+    static func getRecordForHash() {
+        
+    }
+    
+    static func calculateHash() {
+        
+    }
+    
     static func saveFromAps(aps: [String: AnyObject]) {
         
         guard let appDelegate =
@@ -62,6 +70,11 @@ public class SignatureRequest: NSManagedObject {
             return
         }
         
+        guard let expiry = additional_data["expiry"] as? NSInteger else {
+            print("expiry not found")
+            return
+        }
+        
         let managedContext =
             appDelegate.persistentContainer.viewContext
         
@@ -85,6 +98,9 @@ public class SignatureRequest: NSManagedObject {
         
         request.setValue(signature, forKeyPath: "srv_signature")
         request.setValue(Date() as NSDate, forKeyPath: "timestamp")
+        request.setValue(expiry, forKeyPath: "expiry")
+        
+        request.setValue(0, forKeyPath: "reply_status")
         
         do {
             try managedContext.save()

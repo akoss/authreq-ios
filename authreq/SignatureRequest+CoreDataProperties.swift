@@ -24,8 +24,9 @@ extension SignatureRequest {
     @NSManaged public var push_text: String?
     @NSManaged public var short_title: String?
     @NSManaged public var message_id: Int32
+    @NSManaged public var reply_status: Int32
     @NSManaged public var response_url: String?
     @NSManaged public var srv_signature: String?
     @NSManaged public var timestamp: NSDate?
-
+    @NSManaged public var expiry: Int64
 }

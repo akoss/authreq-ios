@@ -112,8 +112,27 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
         cell.titleLabel?.text = signatureRequest.short_title
         cell.subtitleLabel?.text = signatureRequest.push_subtitle
+        cell.accessoryType = .disclosureIndicator
         
-        //cell.textLabel!.text = signatureRequest.timestamp!.description
+        var isGray = true;
+        
+        if(signatureRequest.reply_status == 1) {
+            cell.statusImageView.image = UIImage(named: "tick")
+        } else if(signatureRequest.reply_status == 2) {
+            cell.statusImageView.image = UIImage(named: "failure")
+        } else if(signatureRequest.reply_status == 0) {
+            if(Double(signatureRequest.expiry)  < NSDate().timeIntervalSince1970) {
+                cell.statusImageView.image = UIImage(named: "timeout")
+            } else {
+                cell.statusImageView.image = UIImage(named: "new")
+                isGray = false;
+            }
+        }
+        
+        if(isGray) {
+            cell.titleLabel?.textColor = UIColor.darkGray
+            cell.subtitleLabel?.textColor = UIColor.darkGray
+        }
     }
 
     // MARK: - Fetched results controller

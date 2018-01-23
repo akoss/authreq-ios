@@ -221,8 +221,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let content = UNMutableNotificationContent()
 
         let signatureRequest = SignatureRequest.saveFromAps(aps: aps)
+        /*
+
+        guard let alertDict = aps["alert"] as? [String:String] else {
+            NSLog("alertDict not a dictionary")
+            return
+        }
         
-        /*do {
+        guard let additional_data = aps["additional_data"] as? [String: AnyObject] else {
+            print("additional_data not found")
+            return
+        }
+        
+        
+        guard (aps["category"] as? String) != nil else {
+            print("category not found")
+            return
+        }
+        
+        guard let nonce = additional_data["nonce"] as? String else {
+            print("nonce not found")
+            return
+        }
+        print("NONCE: " + nonce)
+        
+        guard let signature = additional_data["signature"] as? String else {
+            print("signature not found")
+            return
+        }
+        guard let response_url = additional_data["response_url"] as? String else {
+            print("response_url not found")
+            return
+        }
+        
+        guard let short_title = additional_data["short_title"] as? String else {
+            print("short_title not found")
+            return
+        }
+        
+        guard let message_id = additional_data["message_id"] as? NSInteger else {
+            print("message_id not found")
+            return
+        }
+        
+        guard let expiry = additional_data["expiry"] as? NSInteger else {
+            print("expiry not found")
+            return
+        }
+        
+        
+        do {
             let pem = try Shared.keypair.publicKey().data().PEM
             print("PEM: " + pem)
             

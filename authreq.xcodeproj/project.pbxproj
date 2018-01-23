@@ -114,21 +114,21 @@
 		0F4D8E481FB93780000F259D /* authreq */ = {
 			isa = PBXGroup;
 			children = (
+				0F4D8E491FB93780000F259D /* AppDelegate.swift */,
+				0F4D8E521FB93780000F259D /* Assets.xcassets */,
+				0F4D8E791FB9412C000F259D /* authreq.entitlements */,
+				0F9797B820169AC8001799B4 /* authreq.xcdatamodel */,
+				0FA1FBFE201784CF00CD5DBF /* DetailViewController.swift */,
+				0F3181C82015516700ACF407 /* EllipticCurveKeyPair.swift */,
+				0F4D8E571FB93780000F259D /* Info.plist */,
+				0F4D8E541FB93780000F259D /* LaunchScreen.storyboard */,
+				0F4D8E4F1FB93780000F259D /* Main.storyboard */,
+				0FA1FBFD201784CE00CD5DBF /* MasterViewController.swift */,
+				0F7CAA211FC24B330026278E /* SHA256.swift */,
 				0FC48B4E2017335F009B5CB0 /* SignatureRequest+CoreDataClass.swift */,
 				0FC48B522017468C009B5CB0 /* SignatureRequest+CoreDataProperties.swift */,
-				0F4D8E791FB9412C000F259D /* authreq.entitlements */,
-				0F4D8E491FB93780000F259D /* AppDelegate.swift */,
-				0FA1FBFE201784CF00CD5DBF /* DetailViewController.swift */,
-				0FA1FBFD201784CE00CD5DBF /* MasterViewController.swift */,
-				0F4D8E4F1FB93780000F259D /* Main.storyboard */,
 				0FC48B54201762BB009B5CB0 /* SignatureRequestTableViewCell.swift */,
-				0F3181C82015516700ACF407 /* EllipticCurveKeyPair.swift */,
-				0F7CAA211FC24B330026278E /* SHA256.swift */,
 				0F7CAA251FC24D480026278E /* Utils.swift */,
-				0F9797B820169AC8001799B4 /* authreq.xcdatamodel */,
-				0F4D8E521FB93780000F259D /* Assets.xcassets */,
-				0F4D8E541FB93780000F259D /* LaunchScreen.storyboard */,
-				0F4D8E571FB93780000F259D /* Info.plist */,
 			);
 			path = authreq;
 			sourceTree = "<group>";
