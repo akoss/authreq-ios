@@ -10,7 +10,7 @@
 		0F3181C92015516700ACF407 /* EllipticCurveKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3181C82015516700ACF407 /* EllipticCurveKeyPair.swift */; };
 		0F4D8E4A1FB93780000F259D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D8E491FB93780000F259D /* AppDelegate.swift */; };
 		0F4D8E4C1FB93780000F259D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D8E4B1FB93780000F259D /* FirstViewController.swift */; };
-		0F4D8E4E1FB93780000F259D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D8E4D1FB93780000F259D /* SecondViewController.swift */; };
+		0F4D8E4E1FB93780000F259D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D8E4D1FB93780000F259D /* HistoryViewController.swift */; };
 		0F4D8E511FB93780000F259D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D8E4F1FB93780000F259D /* Main.storyboard */; };
 		0F4D8E531FB93780000F259D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D8E521FB93780000F259D /* Assets.xcassets */; };
 		0F4D8E561FB93780000F259D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D8E541FB93780000F259D /* LaunchScreen.storyboard */; };
@@ -19,6 +19,9 @@
 		0F7CAA231FC24B330026278E /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7CAA211FC24B330026278E /* SHA256.swift */; };
 		0F7CAA261FC24D480026278E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7CAA251FC24D480026278E /* Utils.swift */; };
 		0F9797B920169AC8001799B4 /* authreq.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 0F9797B820169AC8001799B4 /* authreq.xcdatamodel */; };
+		0FC48B502017335F009B5CB0 /* SignatureRequest+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC48B4E2017335F009B5CB0 /* SignatureRequest+CoreDataClass.swift */; };
+		0FC48B532017468C009B5CB0 /* SignatureRequest+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC48B522017468C009B5CB0 /* SignatureRequest+CoreDataProperties.swift */; };
+		0FC48B55201762BB009B5CB0 /* SignatureRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC48B54201762BB009B5CB0 /* SignatureRequestTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +46,7 @@
 		0F4D8E461FB93780000F259D /* authreq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = authreq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4D8E491FB93780000F259D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F4D8E4B1FB93780000F259D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		0F4D8E4D1FB93780000F259D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		0F4D8E4D1FB93780000F259D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		0F4D8E501FB93780000F259D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F4D8E521FB93780000F259D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F4D8E551FB93780000F259D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +61,9 @@
 		0F7CAA211FC24B330026278E /* SHA256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA256.swift; sourceTree = "<group>"; };
 		0F7CAA251FC24D480026278E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0F9797B820169AC8001799B4 /* authreq.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = authreq.xcdatamodel; sourceTree = "<group>"; };
+		0FC48B4E2017335F009B5CB0 /* SignatureRequest+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignatureRequest+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0FC48B522017468C009B5CB0 /* SignatureRequest+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignatureRequest+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0FC48B54201762BB009B5CB0 /* SignatureRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureRequestTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,11 +114,14 @@
 		0F4D8E481FB93780000F259D /* authreq */ = {
 			isa = PBXGroup;
 			children = (
+				0FC48B4E2017335F009B5CB0 /* SignatureRequest+CoreDataClass.swift */,
+				0FC48B522017468C009B5CB0 /* SignatureRequest+CoreDataProperties.swift */,
 				0F4D8E791FB9412C000F259D /* authreq.entitlements */,
 				0F4D8E491FB93780000F259D /* AppDelegate.swift */,
 				0F4D8E4B1FB93780000F259D /* FirstViewController.swift */,
-				0F4D8E4D1FB93780000F259D /* SecondViewController.swift */,
+				0F4D8E4D1FB93780000F259D /* HistoryViewController.swift */,
 				0F4D8E4F1FB93780000F259D /* Main.storyboard */,
+				0FC48B54201762BB009B5CB0 /* SignatureRequestTableViewCell.swift */,
 				0F3181C82015516700ACF407 /* EllipticCurveKeyPair.swift */,
 				0F7CAA211FC24B330026278E /* SHA256.swift */,
 				0F7CAA251FC24D480026278E /* Utils.swift */,
@@ -212,6 +221,9 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -281,12 +293,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC48B532017468C009B5CB0 /* SignatureRequest+CoreDataProperties.swift in Sources */,
 				0F7CAA231FC24B330026278E /* SHA256.swift in Sources */,
-				0F4D8E4E1FB93780000F259D /* SecondViewController.swift in Sources */,
+				0F4D8E4E1FB93780000F259D /* HistoryViewController.swift in Sources */,
 				0F4D8E4A1FB93780000F259D /* AppDelegate.swift in Sources */,
+				0FC48B55201762BB009B5CB0 /* SignatureRequestTableViewCell.swift in Sources */,
 				0F4D8E4C1FB93780000F259D /* FirstViewController.swift in Sources */,
 				0F9797B920169AC8001799B4 /* authreq.xcdatamodel in Sources */,
 				0F3181C92015516700ACF407 /* EllipticCurveKeyPair.swift in Sources */,
+				0FC48B502017335F009B5CB0 /* SignatureRequest+CoreDataClass.swift in Sources */,
 				0F7CAA261FC24D480026278E /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

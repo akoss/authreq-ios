@@ -73,7 +73,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        print("removing current notifications")
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     }
@@ -142,6 +141,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let aps = userInfo["aps"] as! [String: AnyObject]
         print("notification in foreground")
         print(aps)
+        
+        SignatureRequest.saveFromAps(aps: aps)
+        
+        if(application.applicationState == UIApplicationState.inactive)
+        {
+            print("Inactive")
+            //Show the view with the content of the push
+            completionHandler(.newData)
+            
+        }else if (application.applicationState == UIApplicationState.background){
+            
+            print("Background")
+            //Refresh the local model
+            completionHandler(.newData)
+            
+        }else{
+            
+            print("Active")
+            //Show an in-app banner
+            completionHandler(.newData)
+        }
     }
     
     func declineAction(aps: [String: AnyObject]) {
@@ -176,31 +196,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func allowAction(aps: [String: AnyObject]) {
         print(aps)
         let content = UNMutableNotificationContent()
-        guard let alertDict = aps["alert"] as? [String:String] else {
-            NSLog("alertDict not a dictionary")
-            return
-        }
-        
-        guard let additional_data = aps["additional_data"] as? [String: AnyObject] else {
-            print("additional_data not found")
-            return
-        }
-        
-        guard let nonce = additional_data["nonce"] as? String else {
-            return
-        }
-        
-        print("NONCE: " + nonce)
-        
-        guard let alertSubtitle = alertDict["subtitle"] else {
-            return
-        }
-        guard let alertBody = alertDict["body"] else {
-            return
-        }
 
+        let signatureRequest = SignatureRequest.saveFromAps(aps: aps)
         
-        do {
+        /*do {
             let pem = try Shared.keypair.publicKey().data().PEM
             print("PEM: " + pem)
             
@@ -216,8 +215,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             try Shared.keypair.verify(signature: signature, originalDigest: digest, hash: .sha256)
             try printVerifySignatureInOpenssl(manager: Shared.keypair, signed: signature, digest: digest, shaAlgorithm: "sha256")
-            
-            self.save(name: nonce)
             
             content.title = "✅ Allowed"
             content.subtitle = alertSubtitle
@@ -237,33 +234,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         center.add(request) { (error) in
             print(error)
-        }
-    }
-    
-    func save(name: String) {
-        
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
-        
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
-        
-        let entity =
-            NSEntityDescription.entity(forEntityName: "Request",
-                                       in: managedContext)!
-        
-        let request = NSManagedObject(entity: entity,
-                                     insertInto: managedContext)
-        
-        request.setValue(name, forKeyPath: "nonce")
-        
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
+        }*/
     }
     
     // MARK: - Core Data stack
