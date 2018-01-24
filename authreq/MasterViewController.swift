@@ -19,12 +19,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.leftBarButtonItem = editButtonItem
-
-        let settingsButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         
         let button = UIButton.init(type: .custom)
         let image = UIImage(named: "settings")?.withRenderingMode(.alwaysTemplate)
-        //button.setImage(image, for: UIControlState.normal)
+
         button.addTarget(self, action: #selector(insertNewObject(_:)), for: UIControlEvents.touchUpInside)
         
         button.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
@@ -32,7 +30,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         let barButton = UIBarButtonItem(customView: button)
         self.navigationItem.rightBarButtonItem = barButton
-        //button.backgroundColor = UIColor.red
+        UIApplication.shared.statusBarStyle = .lightContent
         
         if let split = splitViewController {
             let controllers = split.viewControllers

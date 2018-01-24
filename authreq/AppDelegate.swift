@@ -32,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
     
     var window: UIWindow?
-    var context: LAContext! = LAContext()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -63,7 +62,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
         let controller = masterNavigationController.topViewController as! MasterViewController
         controller.managedObjectContext = self.persistentContainer.viewContext
-        return true
         
         return true
     }
@@ -165,13 +163,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         print("notification in foreground")
         print(aps)
         
-        SignatureRequest.saveFromAps(aps: aps)
+        _ = SignatureRequest.createFromAps(aps: aps)
         
         if(application.applicationState == UIApplicationState.inactive)
         {
             print("Inactive")
             //Show the view with the content of the push
-            completionHandler(.newData)
+            completionHandler(  .newData)
             
         }else if (application.applicationState == UIApplicationState.background){
             
@@ -188,124 +186,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
     
     func declineAction(aps: [String: AnyObject]) {
-        
-        let content = UNMutableNotificationContent()
-        guard let alertDict = aps["alert"] as? [String:String] else {
-            NSLog("alertDict not a dictionary")
-            return
-        }
-        
-        guard let alertSubtitle = alertDict["subtitle"] else {
-            return
-        }
-        guard let alertbody = alertDict["body"] else {
-            return
-        }
-        
-        content.title = "Request Declined"
-        content.subtitle = alertSubtitle
-        content.body = alertbody
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1,
-                                                        repeats: false)
-        let request = UNNotificationRequest(identifier: "declineConfirmation", content: content, trigger: trigger)
-        
-        let center = UNUserNotificationCenter.current()
-        center.add(request) { (error) in
-            print(error)
-        }
+        let request = SignatureRequest.createFromAps(aps: aps)
+        request?.decline()
     }
     
     func allowAction(aps: [String: AnyObject]) {
-        print(aps)
-        let content = UNMutableNotificationContent()
-
-        let signatureRequest = SignatureRequest.saveFromAps(aps: aps)
-        /*
-
-        guard let alertDict = aps["alert"] as? [String:String] else {
-            NSLog("alertDict not a dictionary")
-            return
-        }
-        
-        guard let additional_data = aps["additional_data"] as? [String: AnyObject] else {
-            print("additional_data not found")
-            return
-        }
-        
-        
-        guard (aps["category"] as? String) != nil else {
-            print("category not found")
-            return
-        }
-        
-        guard let nonce = additional_data["nonce"] as? String else {
-            print("nonce not found")
-            return
-        }
-        print("NONCE: " + nonce)
-        
-        guard let signature = additional_data["signature"] as? String else {
-            print("signature not found")
-            return
-        }
-        guard let response_url = additional_data["response_url"] as? String else {
-            print("response_url not found")
-            return
-        }
-        
-        guard let short_title = additional_data["short_title"] as? String else {
-            print("short_title not found")
-            return
-        }
-        
-        guard let message_id = additional_data["message_id"] as? NSInteger else {
-            print("message_id not found")
-            return
-        }
-        
-        guard let expiry = additional_data["expiry"] as? NSInteger else {
-            print("expiry not found")
-            return
-        }
-        
-        
-        do {
-            let pem = try Shared.keypair.publicKey().data().PEM
-            print("PEM: " + pem)
-            
-            guard let digest = nonce.data(using: .utf8) else {
-                return
-            }
-                
-            let signature = try Shared.keypair.sign(digest, hash: .sha256, context: self.context)
-            
-            let newAlertBody = alertBody + "\n\n" + "Nonce: " + nonce + "\n\nSignature: " + signature.base64EncodedString() + "\n\n" + "Public key: " + pem
-            print(newAlertBody)
-            UIPasteboard.general.string = newAlertBody
-            
-            try Shared.keypair.verify(signature: signature, originalDigest: digest, hash: .sha256)
-            try printVerifySignatureInOpenssl(manager: Shared.keypair, signed: signature, digest: digest, shaAlgorithm: "sha256")
-            
-            content.title = "✅ Allowed"
-            content.subtitle = alertSubtitle
-            content.body = newAlertBody
-        } catch {
-            print("Error: \(error)")
-            content.title = "⚠️ Please open authreq to continue"
-            content.body = alertSubtitle + " - " + alertBody
-            content.badge = 1
-        }
-
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5,
-                                                        repeats: false)
-        let request = UNNotificationRequest(identifier: "successConfirmation", content: content, trigger: trigger)
-        
-        let center = UNUserNotificationCenter.current()
-
-        center.add(request) { (error) in
-            print(error)
-        }*/
+        let request = SignatureRequest.createFromAps(aps: aps)
+        print("created")
+        _ = request?.sign()
+        print("signed")
     }
     
     // MARK: - Core Data stack
@@ -359,9 +248,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
-        // 1
+
         let userInfo = response.notification.request.content.userInfo
-        let aps = userInfo["aps"] as! [String: AnyObject]
+        
+        guard let aps = userInfo["aps"] as? [String: AnyObject] else {
+            completionHandler()
+            return;
+        }
         
         if(response.actionIdentifier == "allowaction") {
             allowAction(aps: aps);
@@ -369,7 +262,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             declineAction(aps: aps);
         }
         
-        // 2
         print("actionIdentifier: " + response.actionIdentifier + ", url: ")
         
         completionHandler()
