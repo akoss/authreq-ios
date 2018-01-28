@@ -12,6 +12,7 @@ import CoreData
 import UIKit
 import UserNotifications
 import LocalAuthentication
+import Alamofire
 
 @objc(SignatureRequest)
 public class SignatureRequest: NSManagedObject {
@@ -217,58 +218,92 @@ public class SignatureRequest: NSManagedObject {
         center.add(request)
     }
     
-    func sign() -> Bool {
-        let content = UNMutableNotificationContent()
-        var toReturn = true
+    func continueSignature(signature: Data, digest: Data) -> Bool {
+        print("continuing signature")
         do {
-            guard let digest = self.nonce?.data(using: .utf8) else {
-                print("Unable to create nonce")
-                return false
-            }
-            
             let pem = try AppDelegate.Shared.keypair.publicKey().data().PEM
             
-            let lacontext: LAContext! = LAContext()
-            
-            let signature = try AppDelegate.Shared.keypair.sign(digest, hash: .sha256, context: lacontext)
-            
+            try AppDelegate.Shared.keypair.verify(signature: signature, originalDigest: digest, hash: .sha256)
+            try printVerifySignatureInOpenssl(manager: AppDelegate.Shared.keypair, signed: signature, digest: digest, shaAlgorithm: "sha256")
             
             let newAlertBody = self.push_text! + "\n\n" + "Nonce: " + self.nonce! + "\n\nSignature: " + signature.base64EncodedString() + "\n\n" + "Public key: " + pem
             
-            
-
             UIPasteboard.general.string = newAlertBody
             
             self.setValue(1, forKey: "reply_status")
             self.setValue(Date(), forKey: "reply_timestamp")
             
             try self.managedObjectContext?.save()
-
-            try AppDelegate.Shared.keypair.verify(signature: signature, originalDigest: digest, hash: .sha256)
-            try printVerifySignatureInOpenssl(manager: AppDelegate.Shared.keypair, signed: signature, digest: digest, shaAlgorithm: "sha256")
+            
+            let content = UNMutableNotificationContent()
             
             content.title = "✅ Allowed"
             content.subtitle = self.push_subtitle!
             content.body = self.push_text!
-        } catch {
-            print("Error: \(error)")
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5,
+                                                            repeats: false)
+            let request = UNNotificationRequest(identifier: "successConfirmation", content: content, trigger: trigger)
+            
+            let center = UNUserNotificationCenter.current()
+            
+            print("Posting notification")
+            
+            center.add(request) { (error) in
+                print(error ?? "")
+            }
+            
+            NotificationCenter.default.post(name: Notification.Name("SignatureRequestUpdated"), object: nil)
+        }
+        catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+            return false
+        }
+        return true
+    }
+    
+    func signOnMainThread() -> Bool {
+        let lacontext: LAContext! = LAContext()
+        print("Starting signature (signOnMainThread())")
+        
+        guard let digest = self.nonce?.data(using: .utf8) else {
+            print("Unable to create nonce")
+            return false
+        }
+        do {
+            let signature = try AppDelegate.Shared.keypair.sign(digest, hash: .sha256, context: lacontext)
+            return self.continueSignature(signature: signature, digest: digest)
+        }
+        catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+            return false
+        }
+    }
+    
+    func sign() -> Bool {
+        let lacontext: LAContext! = LAContext()
+        print("Starting signature (sign())")
+        
+        DispatchQueue.roundTrip({
+            guard let digest = self.nonce?.data(using: .utf8) else {
+                print("Unable to create nonce")
+                throw "Missing text in unencrypted text field"
+            }
+            return digest
+        }, thenAsync: { digest in
+            return try AppDelegate.Shared.keypair.sign(digest, hash: .sha256, context: lacontext)
+        }, thenOnMain: { digest, signature in
+            _ = self.continueSignature(signature: signature, digest: digest)
+        }, catchToMain: { error in
+            print(error)
+        })
+
+            /*print("Error: \(error)")
             content.title = "⚠️ Please open authreq to continue"
             content.body = self.push_title! + " - " + self.push_subtitle!
-            content.badge = 1
-            toReturn = false
-        }
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5,
-                                                        repeats: false)
-        let request = UNNotificationRequest(identifier: "successConfirmation", content: content, trigger: trigger)
-        
-        let center = UNUserNotificationCenter.current()
-        
-        center.add(request) { (error) in
-            print(error ?? "")
-        }
-        
-        return toReturn
+            content.badge = 1*/
+
+        return true
     }
     
     func isExpired() -> Bool {

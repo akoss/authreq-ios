@@ -193,7 +193,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func allowAction(aps: [String: AnyObject]) {
         let request = SignatureRequest.createFromAps(aps: aps)
         print("created")
-        _ = request?.sign()
+        _ = request?.signOnMainThread()
         print("signed")
     }
     

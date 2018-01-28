@@ -20,7 +20,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var declineButton: UIButton!
     @IBOutlet weak var acceptButton: UIButton!
     @IBOutlet weak var timestampLabel: TopAlignedLabel!
-    func configureView() {
+    @objc func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
             if let item = titleLabel {
@@ -110,6 +110,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        NotificationCenter.default.addObserver(self, selector: #selector(configureView), name: Notification.Name("SignatureRequestUpdated"), object: nil)
+
         configureView()
     }
 
