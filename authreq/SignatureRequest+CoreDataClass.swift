@@ -146,19 +146,19 @@ public class SignatureRequest: NSManagedObject {
         let managedContext =
             appDelegate.persistentContainer.viewContext
         
-        let entity =
-            NSEntityDescription.entity(forEntityName: "SignatureRequest",
-                                       in: managedContext)!
-        
-        let request = NSManagedObject(entity: entity,
-                                      insertInto: managedContext)
-        
         let hash = SignatureRequest.calculateHashFor(body: push_text, title: title, subtitle: subtitle, category: category, response_url: response_url, message_id: String(message_id), short_title: short_title, nonce: nonce, signature: signature, expiry: String(expiry))
         
         let existingRecord = SignatureRequest.getRecordForHash(hash: hash!)
         if(existingRecord != nil) {
             return existingRecord
         }
+        
+        let entity =
+            NSEntityDescription.entity(forEntityName: "SignatureRequest",
+                                       in: managedContext)!
+        
+        let request = NSManagedObject(entity: entity,
+                                      insertInto: managedContext)
         
         print("beginning save")
         

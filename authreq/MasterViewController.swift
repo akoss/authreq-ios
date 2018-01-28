@@ -75,13 +75,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     // MARK: - Table View
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        print("Section: " + String(section))
-        
         let firstObject = self.fetchedResultsController.object(at: IndexPath(row: self.fetchedResultsController.sections![section].numberOfObjects-1, section: section)) as SignatureRequest
         if(firstObject.expired) {
             return "Archive"
         } else {
-            return "Recents"
+            return nil
         }
     }
 
@@ -209,11 +207,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         switch type {
             case .insert:
                 tableView.insertRows(at: [newIndexPath!], with: .fade)
-                let symphony: [Piano.Note] = [
-                    .hapticFeedback(.impact(.medium)),
-                    .sound(.system(.voicemail))
-                ]
-                Piano.play(symphony)
+                let request = (anObject as! SignatureRequest)
+                if !request.expired && request.reply_status == 0 {
+                    let symphony: [Piano.Note] = [
+                        .hapticFeedback(.impact(.medium)),
+                        .sound(.system(.voicemail))
+                    ]
+                    Piano.play(symphony)
+                }
             case .delete:
                 tableView.deleteRows(at: [indexPath!], with: .fade)
             case .update:

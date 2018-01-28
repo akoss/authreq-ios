@@ -115,7 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                                                   options: [UNNotificationActionOptions.authenticationRequired])
 
             let declineAction = UNNotificationAction(identifier: "declineaction",
-                                                  title: "❌ Decline",
+                                                  title: "❌ Deny",
                                                   options: [])
 
             let moreinfoAction = UNNotificationAction(identifier: "moreinfoaction",
