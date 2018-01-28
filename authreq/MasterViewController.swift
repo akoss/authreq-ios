@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Piano
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
@@ -36,9 +37,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.completeReload), name: Notification.Name("UIApplicationDidBecomeActiveNotification"), object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        SignatureRequest.updateExpiry()
+        completeReload()
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
@@ -68,6 +73,17 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     // MARK: - Table View
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        print("Section: " + String(section))
+        
+        let firstObject = self.fetchedResultsController.object(at: IndexPath(row: self.fetchedResultsController.sections![section].numberOfObjects-1, section: section)) as SignatureRequest
+        if(firstObject.expired) {
+            return "Archive"
+        } else {
+            return "Recents"
+        }
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 0
@@ -119,7 +135,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         } else if(signatureRequest.reply_status == 2) {
             cell.statusImageView.image = UIImage(named: "failure")
         } else if(signatureRequest.reply_status == 0) {
-            if(Double(signatureRequest.expiry)  < NSDate().timeIntervalSince1970) {
+            if(signatureRequest.isExpired()) {
                 cell.statusImageView.image = UIImage(named: "timeout")
             } else {
                 cell.statusImageView.image = UIImage(named: "new")
@@ -128,8 +144,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
         
         if(isGray) {
-            cell.titleLabel?.textColor = UIColor.darkGray
-            cell.subtitleLabel?.textColor = UIColor.darkGray
+            cell.titleLabel?.textColor = UIColor.gray
+            cell.subtitleLabel?.textColor = UIColor.lightGray
+        } else {
+            cell.titleLabel?.textColor = UIColor.black
+            cell.subtitleLabel?.textColor = UIColor.lightGray
         }
     }
 
@@ -147,12 +166,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         // Edit the sort key as appropriate.
         let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
+        let expiredSortDescriptor = NSSortDescriptor(key: "expired", ascending: true)
         
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchRequest.sortDescriptors = [expiredSortDescriptor, sortDescriptor]
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: "Master")
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: "expired", cacheName: "Master")
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         
@@ -185,9 +205,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        print("Change: " + String(describing: type))
         switch type {
             case .insert:
                 tableView.insertRows(at: [newIndexPath!], with: .fade)
+                let symphony: [Piano.Note] = [
+                    .hapticFeedback(.impact(.medium)),
+                    .sound(.system(.voicemail))
+                ]
+                Piano.play(symphony)
             case .delete:
                 tableView.deleteRows(at: [indexPath!], with: .fade)
             case .update:
@@ -202,6 +228,25 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         tableView.endUpdates()
     }
 
+    @objc func completeReload() {
+        print("Reloading tableView")
+        _fetchedResultsController = nil
+        let name = "Master" as String
+        NSFetchedResultsController<NSFetchRequestResult>.deleteCache(withName:name)
+        
+        _fetchedResultsController = self.fetchedResultsController
+
+        do {
+            try _fetchedResultsController!.performFetch()
+            self.tableView.reloadData()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+    }
+    
     /*
      // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.
      
@@ -210,6 +255,5 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
          tableView.reloadData()
      }
      */
-
 }
 

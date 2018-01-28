@@ -35,7 +35,6 @@ public class SignatureRequest: NSManagedObject {
             }
         } catch {
             fatalError("Failed to fetch employees: \(error)")
-            return nil
         }
         print("(SignatureRequest doesn't already exist)")
         return nil
@@ -193,6 +192,17 @@ public class SignatureRequest: NSManagedObject {
     }
     
     func decline() {
+
+        do {
+            self.setValue(2, forKey: "reply_status")
+            self.setValue(Date(), forKey: "reply_timestamp")
+            
+            try self.managedObjectContext?.save()
+        } catch let error as NSError {
+            print(error)
+            return
+        }
+        
         let center = UNUserNotificationCenter.current()
         
         let content = UNMutableNotificationContent()
@@ -218,16 +228,22 @@ public class SignatureRequest: NSManagedObject {
             
             let pem = try AppDelegate.Shared.keypair.publicKey().data().PEM
             
-            let context: LAContext! = LAContext()
+            let lacontext: LAContext! = LAContext()
             
-            let signature = try AppDelegate.Shared.keypair.sign(digest, hash: .sha256, context: context)
+            let signature = try AppDelegate.Shared.keypair.sign(digest, hash: .sha256, context: lacontext)
             
             
             let newAlertBody = self.push_text! + "\n\n" + "Nonce: " + self.nonce! + "\n\nSignature: " + signature.base64EncodedString() + "\n\n" + "Public key: " + pem
             
+            
 
             UIPasteboard.general.string = newAlertBody
             
+            self.setValue(1, forKey: "reply_status")
+            self.setValue(Date(), forKey: "reply_timestamp")
+            
+            try self.managedObjectContext?.save()
+
             try AppDelegate.Shared.keypair.verify(signature: signature, originalDigest: digest, hash: .sha256)
             try printVerifySignatureInOpenssl(manager: AppDelegate.Shared.keypair, signed: signature, digest: digest, shaAlgorithm: "sha256")
             
@@ -254,4 +270,31 @@ public class SignatureRequest: NSManagedObject {
         
         return toReturn
     }
+    
+    func isExpired() -> Bool {
+        return (Double(self.expiry) < NSDate().timeIntervalSince1970)
+    }
+    
+    static func updateExpiry() {
+        print("updating expiry")
+        let request = NSBatchUpdateRequest(entityName: "SignatureRequest")
+        let predicate = NSPredicate(format: "expiry < %lf", NSDate().timeIntervalSince1970)
+        request.predicate = predicate
+        
+        request.propertiesToUpdate = ["expired" : true]
+        
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let moc = appDelegate.persistentContainer.viewContext
+        
+        do {
+            _ = try moc.execute(request)
+        } catch {
+            fatalError("Failed to execute request: \(error)")
+        }
+    }
+    
 }

@@ -23,6 +23,7 @@
  */
 
 import Foundation
+import UIKit
 
 extension String: Error {}
 
@@ -38,42 +39,6 @@ func printVerifySignatureInOpenssl(manager: EllipticCurveKeyPair.Manager, signed
     shell.append("cat > key.pem <<EOF\n-----BEGIN PUBLIC KEY-----\n\(publicKeyBase)\n-----END PUBLIC KEY-----\nEOF")
     shell.append("/usr/local/opt/openssl/bin/openssl dgst -\(shaAlgorithm) -verify key.pem -signature signature.dat dataToSign.dat")
     print(shell.joined(separator: "\n"))
-}
-
-extension DispatchQueue {
-    
-    static func roundTrip<T, Y>(_ block: () throws -> T,
-                                       thenAsync: @escaping (T) throws -> Y,
-                                       thenOnMain: @escaping (T, Y) throws -> Void,
-                                       catchToMain: @escaping (Error) -> Void) {
-        do {
-            let resultFromMain = try block()
-            DispatchQueue.global(qos: .userInitiated).async {
-                do {
-                    let resultFromBackground = try thenAsync(resultFromMain)
-                    DispatchQueue.main.async {
-                        do {
-                            try thenOnMain(resultFromMain, resultFromBackground)
-                        } catch {
-                            catchToMain(error)
-                        }
-                    }
-                } catch {
-                    DispatchQueue.main.async {
-                        catchToMain(error)
-                    }
-                }
-            }
-        } catch {
-            catchToMain(error)
-        }
-    }
-}
-
-func delay( _ delay: Double, queue: DispatchQueue = DispatchQueue.main, completion: @escaping () -> () ) {
-    queue.asyncAfter(deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) { () -> Void in
-        completion()
-    }
 }
 
 @available(iOS 10, *)
@@ -152,3 +117,82 @@ func allAlgorithms() -> [SecKeyAlgorithm] {
             .ecdhKeyExchangeCofactorX963SHA512]
 }
 
+@IBDesignable class TopAlignedLabel: UILabel {
+    override func drawText(in rect: CGRect) {
+        if let stringText = text {
+            let stringTextAsNSString = stringText as NSString
+            let labelStringSize = stringTextAsNSString.boundingRect(with: CGSize(width: self.frame.width,height: CGFloat.greatestFiniteMagnitude),
+                                                                    options: NSStringDrawingOptions.usesLineFragmentOrigin,
+                                                                    attributes: [NSAttributedStringKey.font: font],
+                                                                    context: nil).size
+            super.drawText(in: CGRect(x:0,y: 0,width: self.frame.width, height:ceil(labelStringSize.height)))
+        } else {
+            super.drawText(in: rect)
+        }
+    }
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.black.cgColor
+    }
+}
+
+extension Date {
+    
+    func getElapsedInterval() -> String {
+        
+        let interval = Calendar.current.dateComponents([.year, .month, .day], from: self, to: Date())
+        
+        if let year = interval.year, year > 0 {
+            return year == 1 ? "\(year)" + " " + "year" :
+                "\(year)" + " " + "years"
+        } else if let month = interval.month, month > 0 {
+            return month == 1 ? "\(month)" + " " + "month" :
+                "\(month)" + " " + "months"
+        } else if let day = interval.day, day > 0 {
+            return day == 1 ? "\(day)" + " " + "day" :
+                "\(day)" + " " + "days"
+        } else {
+            return "a moment ago"
+            
+        }
+        
+    }
+}
+
+
+extension DispatchQueue {
+    
+    static func roundTrip<T, Y>(_ block: () throws -> T,
+                                thenAsync: @escaping (T) throws -> Y,
+                                thenOnMain: @escaping (T, Y) throws -> Void,
+                                catchToMain: @escaping (Error) -> Void) {
+        do {
+            let resultFromMain = try block()
+            DispatchQueue.global(qos: .userInitiated).async {
+                do {
+                    let resultFromBackground = try thenAsync(resultFromMain)
+                    DispatchQueue.main.async {
+                        do {
+                            try thenOnMain(resultFromMain, resultFromBackground)
+                        } catch {
+                            catchToMain(error)
+                        }
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        catchToMain(error)
+                    }
+                }
+            }
+        } catch {
+            catchToMain(error)
+        }
+    }
+}
+
+func delay( _ delay: Double, queue: DispatchQueue = DispatchQueue.main, completion: @escaping () -> () ) {
+    queue.asyncAfter(deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) { () -> Void in
+        completion()
+    }
+}
