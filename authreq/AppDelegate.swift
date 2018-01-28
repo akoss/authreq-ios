@@ -197,6 +197,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         print("signed")
     }
     
+    func moreInfoAction(aps: [String: AnyObject]) {
+        guard let request = SignatureRequest.createFromAps(aps: aps) as! SignatureRequest! else {
+            return
+        }
+        let splitViewController = self.window!.rootViewController as! UISplitViewController
+        let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
+        
+        if let controller = masterNavigationController.topViewController as? MasterViewController {
+            controller.showDetailViewForItem(request: request)
+        }
+    }
+    
     // MARK: - Core Data stack
     
     lazy var persistentContainer: NSPersistentContainer = {
@@ -257,9 +269,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
         
         if(response.actionIdentifier == "allowaction") {
-            allowAction(aps: aps);
+            allowAction(aps: aps)
         }  else if(response.actionIdentifier == "declineaction") {
-            declineAction(aps: aps);
+            declineAction(aps: aps)
+        } else {
+            moreInfoAction(aps: aps)
         }
         
         print("actionIdentifier: " + response.actionIdentifier + ", url: ")

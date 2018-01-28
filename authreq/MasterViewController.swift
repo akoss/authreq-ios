@@ -59,15 +59,24 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     // MARK: - Segues
+    
+    func showDetailViewForItem(request: SignatureRequest) {
+        detailViewController?.detailItem = request
+        self.performSegue(withIdentifier: "showDetail", sender: request)
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
+            let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+            controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+            controller.navigationItem.leftItemsSupplementBackButton = true
+            
             if let indexPath = tableView.indexPathForSelectedRow {
-            let object = fetchedResultsController.object(at: indexPath)
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+                let object = fetchedResultsController.object(at: indexPath)
                 controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+            if let detail = sender as? SignatureRequest {
+                controller.detailItem = detail
             }
         }
     }
