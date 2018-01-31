@@ -108,6 +108,10 @@ Line 4</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lWq-pV-BaR">
+                                        <rect key="frame" x="150" y="271" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -125,6 +129,7 @@ Line 4</string>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="acceptButton" destination="gOD-9u-KYK" id="iA5-s8-6gu"/>
+                        <outlet property="activityIndicatorView" destination="lWq-pV-BaR" id="4JZ-QZ-tgf"/>
                         <outlet property="declineButton" destination="qAr-av-QGn" id="bhW-hO-Wbp"/>
                         <outlet property="detailDescriptionLabel" destination="sXR-L1-Bqb" id="rWL-WF-dNF"/>
                         <outlet property="imageView" destination="KVp-uV-uK6" id="2wF-sq-iuw"/>

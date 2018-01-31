@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var signatureStatusLabel: UILabel!
     @IBOutlet weak var declineButton: UIButton!
@@ -30,11 +31,18 @@ class DetailViewController: UIViewController {
                 item.text = detail.push_text
             }
             
+            if let item = activityIndicatorView {
+                item.isHidden = true
+                item.stopAnimating()
+            }
+            
             if let item = timestampLabel {
                 if let date = detail.timestamp as Date? {
                     item.text = date.getElapsedInterval()
                 }
             }
+            
+            declineButton?.isEnabled = true
             
             let formatter = DateFormatter()
             formatter.dateStyle = DateFormatter.Style.long
@@ -85,15 +93,24 @@ class DetailViewController: UIViewController {
     
     @IBAction func acceptTap(_ sender: Any) {
         if let detail = detailItem {
-            if(detail.sign()) {
-                let symphony: [Piano.Note] = [
-                    .sound(.asset(name: "payment_success")),
-                    .hapticFeedback(.notification(.success))
-                ]
+            if(detail.isExpired()) {
+                configureView()
+            } else {
+                detail.sign()
+
+                if let item = activityIndicatorView {
+                    item.isHidden = false
+                    item.startAnimating()
+                }
                 
-                Piano.play(symphony)
+                if let item = acceptButton {
+                    item.isHidden = true
+                }
+                
+                if let item = declineButton {
+                    item.isEnabled = false
+                }
             }
-            configureView()
         }
     }
     @IBAction func declineTap(_ sender: Any) {
@@ -111,7 +128,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         NotificationCenter.default.addObserver(self, selector: #selector(configureView), name: Notification.Name("SignatureRequestUpdated"), object: nil)
-
         configureView()
     }
 

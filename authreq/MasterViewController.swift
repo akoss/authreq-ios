@@ -73,7 +73,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             
             if let indexPath = tableView.indexPathForSelectedRow {
                 let object = fetchedResultsController.object(at: indexPath)
-                controller.detailItem = object
+                controller.detailItem = object as? SignatureRequest
             }
             if let detail = sender as? SignatureRequest {
                 controller.detailItem = detail
@@ -84,8 +84,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     // MARK: - Table View
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let firstObject = self.fetchedResultsController.object(at: IndexPath(row: self.fetchedResultsController.sections![section].numberOfObjects-1, section: section)) as SignatureRequest
-        if(firstObject.expired) {
+        let firstObject = self.fetchedResultsController.object(at: IndexPath(row: self.fetchedResultsController.sections![section].numberOfObjects-1, section: section)) as? SignatureRequest
+        
+        guard let fo = firstObject else {
+            return nil
+        }
+        
+        if(fo.expired) {
             return "Archive"
         } else {
             return nil
@@ -104,7 +109,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "signatureRequestCell", for: indexPath)
         let signatureRequest = fetchedResultsController.object(at: indexPath)
-        configureCell(cell as! SignatureRequestTableViewCell, withSignatureRequest: signatureRequest)
+        configureCell(cell as! SignatureRequestTableViewCell, withSignatureRequest: signatureRequest as! SignatureRequest)
         return cell
     }
 
@@ -227,7 +232,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             case .delete:
                 tableView.deleteRows(at: [indexPath!], with: .fade)
             case .update:
-                configureCell(tableView.cellForRow(at: indexPath!)! as! SignatureRequestTableViewCell, withSignatureRequest: anObject as! SignatureRequest)
+                guard let cellToConfigure = tableView.cellForRow(at: indexPath!) as? SignatureRequestTableViewCell else {
+                    return
+                }
+                configureCell(cellToConfigure, withSignatureRequest: anObject as! SignatureRequest)
             case .move:
                 configureCell(tableView.cellForRow(at: indexPath!)! as! SignatureRequestTableViewCell, withSignatureRequest: anObject as! SignatureRequest)
                 tableView.moveRow(at: indexPath!, to: newIndexPath!)

@@ -15,12 +15,7 @@ import LocalAuthentication
 import Alamofire
 
 @objc(SignatureRequest)
-public class SignatureRequest: NSManagedObject {
-    
-    lazy var downloadsSession: URLSession = {
-        let configuration = URLSessionConfiguration.default
-        return URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
-    }()
+public class SignatureRequest: NSManagedObject, URLSessionDelegate {
     
     static func getRecordForHash(hash: String) -> SignatureRequest? {
 
@@ -197,10 +192,37 @@ public class SignatureRequest: NSManagedObject {
         
     }
     
-    func decline() {
 
+    
+    func isExpired() -> Bool {
+        return (Double(self.expiry) < NSDate().timeIntervalSince1970)
+    }
+    
+    static func updateExpiry() {
+        print("updating expiry")
+        let request = NSBatchUpdateRequest(entityName: "SignatureRequest")
+        let predicate = NSPredicate(format: "expiry < %lf", NSDate().timeIntervalSince1970)
+        request.predicate = predicate
+        
+        request.propertiesToUpdate = ["expired" : true]
+        
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let moc = appDelegate.persistentContainer.viewContext
+        
         do {
-            self.setValue(2, forKey: "reply_status")
+            _ = try moc.execute(request)
+        } catch {
+            fatalError("Failed to execute request: \(error)")
+        }
+    }
+    
+    func setReplyStatus(status: Int) {
+        do {
+            self.setValue(status, forKey: "reply_status")
             self.setValue(Date(), forKey: "reply_timestamp")
             
             try self.managedObjectContext?.save()
@@ -208,6 +230,20 @@ public class SignatureRequest: NSManagedObject {
             print(error)
             return
         }
+    }
+    
+    func getDigest() -> Data? {
+        return self.nonce?.data(using: .utf8)
+    }
+    
+    lazy var downloadsSession: URLSession = {
+        let configuration = URLSessionConfiguration.default
+        return URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
+    }()
+    
+    func decline() {
+        
+        self.setReplyStatus(status: 2)
         
         let center = UNUserNotificationCenter.current()
         
@@ -215,7 +251,7 @@ public class SignatureRequest: NSManagedObject {
         content.title = "Request Declined"
         content.subtitle = self.push_subtitle!
         content.body = self.push_text!
-
+        
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5,
                                                         repeats: false)
         let request = UNNotificationRequest(identifier: "successConfirmation", content: content, trigger: trigger)
@@ -225,16 +261,6 @@ public class SignatureRequest: NSManagedObject {
     
     func signatureSuccessful(signature: Data, digest: Data) -> Bool {
         
-        self.setValue(1, forKey: "reply_status")
-        self.setValue(Date(), forKey: "reply_timestamp")
-        
-        do {
-            try self.managedObjectContext?.save()
-        }
-        catch {
-            fatalError()
-        }
-        
         let newAlertBody = self.push_text! + "\n\n" + "Nonce: " + self.nonce! + "\n\nSignature: " + signature.base64EncodedString()
         UIPasteboard.general.string = newAlertBody
         
@@ -243,6 +269,8 @@ public class SignatureRequest: NSManagedObject {
         content.title = "✅ Allowed"
         content.subtitle = self.push_subtitle!
         content.body = self.push_text!
+        
+        content.sound = UNNotificationSound(named: "success.caf")
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5,
                                                         repeats: false)
@@ -257,33 +285,33 @@ public class SignatureRequest: NSManagedObject {
         }
         
         NotificationCenter.default.post(name: Notification.Name("SignatureRequestUpdated"), object: nil)
-
+        
         return true
     }
     
     func signatureUnsuccessful(signature: Data?, digest: Data?) -> Bool {
         let content = UNMutableNotificationContent()
         
-         content.title = "⚠️ Please open authreq to continue"
-         content.body = self.push_title! + " - " + self.push_subtitle!
-         content.badge = 1
+        content.title = "⚠️ Please open authreq to continue"
+        content.body = self.push_title! + " - " + self.push_subtitle!
+        content.badge = 1
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5,
                                                         repeats: false)
         let request = UNNotificationRequest(identifier: "successConfirmation", content: content, trigger: trigger)
-
+        
         let center = UNUserNotificationCenter.current()
-
+        
         print("Posting notification")
-
+        
         center.add(request) { (error) in
-        print(error ?? "")
+            print(error ?? "")
         }
-
+        
         NotificationCenter.default.post(name: Notification.Name("SignatureRequestUpdated"), object: nil)
-
+        
         return true
-
+        
     }
     
     func continueSignature(signature: Data, digest: Data, isSynchronous: Bool) -> Bool {
@@ -313,6 +341,7 @@ public class SignatureRequest: NSManagedObject {
         let postString = "teszt"
         
         urlRequest.httpBody = postString.data(using: .utf8)
+        urlRequest.timeoutInterval = TimeInterval(15.0)
         
         if(isSynchronous) {
             let reply = self.downloadsSession.sendSynchronousRequest(urlRequest, timeout: 5.0) as [String:Any]?
@@ -320,45 +349,76 @@ public class SignatureRequest: NSManagedObject {
                 _ = self.signatureUnsuccessful(signature: signature, digest: digest)
                 return false
             }
+            
+            self.setReplyStatus(status: 1)
             _ = self.signatureSuccessful(signature: signature, digest: digest)
         } else {
-            self.downloadsSession.dataTask(with: urlRequest).resume()
+            self.downloadsSession.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+                if let response = response {
+                    print("Sending SignatureRequestUpdated")
+                    print(response)
+                    self.setReplyStatus(status: 1)
+                    DispatchQueue.main.async {
+                        NotificationCenter.default.post(name: Notification.Name("SignatureRequestSuccessful"), object: nil)
+                    }
+                }
+                if let error = error {
+                    print(error)
+                }
+                DispatchQueue.main.async {
+                    NotificationCenter.default.post(name: Notification.Name("SignatureRequestUpdated"), object: nil)
+                }
+            }).resume()
         }
         
         print("continueSignature finished")
         return true
     }
     
-    func signOnMainThread() -> Bool {
+    func getSignature() throws -> Data {
         let lacontext: LAContext! = LAContext()
+        guard let digest = self.getDigest() else {
+            throw "Missing text in unencrypted text field"
+        }
+        
+        return try AppDelegate.Shared.keypair.sign(digest, hash: .sha256, context: lacontext)
+    }
+    
+    func signOnMainThread() -> Bool {
         print("Starting signature (signOnMainThread())")
         
-        guard let digest = self.nonce?.data(using: .utf8) else {
+        guard let digest = self.getDigest() else {
             print("Unable to create nonce")
             return false
         }
+        
+        let signature: Data?
         do {
-            let signature = try AppDelegate.Shared.keypair.sign(digest, hash: .sha256, context: lacontext)
-            return self.continueSignature(signature: signature, digest: digest, isSynchronous: true)
+            signature = try self.getSignature()
         }
         catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
+            signature = nil
+        }
+        
+        if let sig = signature {
+            return self.continueSignature(signature: sig, digest: digest, isSynchronous: true)
+        } else {
             return false
         }
     }
     
     func sign() -> Bool {
-        let lacontext: LAContext! = LAContext()
         print("Starting signature (sign())")
         
         DispatchQueue.roundTrip({
-            guard let digest = self.nonce?.data(using: .utf8) else {
+            guard let digest = self.getDigest() else {
                 print("Unable to create nonce")
                 throw "Missing text in unencrypted text field"
             }
             return digest
         }, thenAsync: { digest in
-            return try AppDelegate.Shared.keypair.sign(digest, hash: .sha256, context: lacontext)
+            return try self.getSignature()
         }, thenOnMain: { digest, signature in
             _ = self.continueSignature(signature: signature, digest: digest, isSynchronous: false)
         }, catchToMain: { error in
@@ -368,54 +428,5 @@ public class SignatureRequest: NSManagedObject {
         })
         return true
     }
-    
-    func isExpired() -> Bool {
-        return (Double(self.expiry) < NSDate().timeIntervalSince1970)
-    }
-    
-    static func updateExpiry() {
-        print("updating expiry")
-        let request = NSBatchUpdateRequest(entityName: "SignatureRequest")
-        let predicate = NSPredicate(format: "expiry < %lf", NSDate().timeIntervalSince1970)
-        request.predicate = predicate
-        
-        request.propertiesToUpdate = ["expired" : true]
-        
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
-        
-        let moc = appDelegate.persistentContainer.viewContext
-        
-        do {
-            _ = try moc.execute(request)
-        } catch {
-            fatalError("Failed to execute request: \(error)")
-        }
-    }
 }
 
-extension SignatureRequest: URLSessionTaskDelegate {
-    public func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-        print("GECI MUKODIK?")
-    }
-}
-
-extension SignatureRequest: URLSessionDelegate {
-    
-    // Standard background session handler
-    public func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
-        fatalError()
-        print("urlSessionDidFinishEvents a")
-        DispatchQueue.main.async {
-            print("urlSessionDidFinishEvents b")
-            if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
-                let completionHandler = appDelegate.backgroundSessionCompletionHandler {
-                appDelegate.backgroundSessionCompletionHandler = nil
-                completionHandler()
-            }
-        }
-    }
-    
-}

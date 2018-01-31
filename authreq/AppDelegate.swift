@@ -10,6 +10,7 @@ import UIKit
 import UserNotifications
 import LocalAuthentication
 import CoreData
+import Piano
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -30,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             return EllipticCurveKeyPair.Manager(config: config)
         }()
     }
-    
+
     var backgroundSessionCompletionHandler: (() -> Void)?
     
     var window: UIWindow?
@@ -64,6 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
         let controller = masterNavigationController.topViewController as! MasterViewController
         controller.managedObjectContext = self.persistentContainer.viewContext
+        NotificationCenter.default.addObserver(self, selector: #selector(requestSuccessful), name: Notification.Name("SignatureRequestSuccessful"), object: nil)
         
         return true
     }
@@ -165,7 +167,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         let aps = userInfo["aps"] as! [String: AnyObject]
-        print("notification in foreground")
+        print("Received notification in foreground: ")
         print(aps)
         
         _ = SignatureRequest.createFromAps(aps: aps)
@@ -197,14 +199,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     func allowAction(aps: [String: AnyObject]) {
         let request = SignatureRequest.createFromAps(aps: aps)
-        print("created")
-        request?.signOnMainThread()
-        
-        print("signed")
+        _ = request?.signOnMainThread()
     }
     
     func moreInfoAction(aps: [String: AnyObject]) {
-        guard let request = SignatureRequest.createFromAps(aps: aps) as! SignatureRequest! else {
+        guard let request = SignatureRequest.createFromAps(aps: aps) else {
             return
         }
         let splitViewController = self.window!.rootViewController as! UISplitViewController
@@ -260,11 +259,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         }
     }
     
-    func application(_ application: UIApplication, handleEventsForBackgroundURLSession
-        identifier: String, completionHandler: @escaping () -> Void) {
-        print("mi a fasz van mar")
-        fatalError()
-        backgroundSessionCompletionHandler = completionHandler
+    @objc func requestSuccessful() {
+        let symphony: [Piano.Note] = [
+            .sound(.asset(name: "payment_success")),
+            .hapticFeedback(.notification(.success))
+        ]
+        
+        Piano.play(symphony)
     }
 }
 
