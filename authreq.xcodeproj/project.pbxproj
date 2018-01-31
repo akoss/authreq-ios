@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06C6B61873157001D90260D1 /* Pods_authreq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BA617125E9B14A2704421C /* Pods_authreq.framework */; };
 		0F3181C92015516700ACF407 /* EllipticCurveKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3181C82015516700ACF407 /* EllipticCurveKeyPair.swift */; };
 		0F4D8E4A1FB93780000F259D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D8E491FB93780000F259D /* AppDelegate.swift */; };
 		0F4D8E511FB93780000F259D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D8E4F1FB93780000F259D /* Main.storyboard */; };
@@ -64,6 +65,9 @@
 		0FC48B4E2017335F009B5CB0 /* SignatureRequest+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignatureRequest+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0FC48B522017468C009B5CB0 /* SignatureRequest+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignatureRequest+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0FC48B54201762BB009B5CB0 /* SignatureRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureRequestTableViewCell.swift; sourceTree = "<group>"; };
+		1861379649296E0368E148A0 /* Pods-authreq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-authreq.debug.xcconfig"; path = "Pods/Target Support Files/Pods-authreq/Pods-authreq.debug.xcconfig"; sourceTree = "<group>"; };
+		68149E7BDAE91072AFA9FF36 /* Pods-authreq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-authreq.release.xcconfig"; path = "Pods/Target Support Files/Pods-authreq/Pods-authreq.release.xcconfig"; sourceTree = "<group>"; };
+		80BA617125E9B14A2704421C /* Pods_authreq.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_authreq.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C6B61873157001D90260D1 /* Pods_authreq.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00A7A02118C271A10B7632CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1861379649296E0368E148A0 /* Pods-authreq.debug.xcconfig */,
+				68149E7BDAE91072AFA9FF36 /* Pods-authreq.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		0F4D8E3D1FB9377F000F259D = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +112,8 @@
 				0F4D8E5F1FB93780000F259D /* authreqTests */,
 				0F4D8E6A1FB93780000F259D /* authreqUITests */,
 				0F4D8E471FB93780000F259D /* Products */,
+				00A7A02118C271A10B7632CA /* Pods */,
+				2AD22FB53092921F812E8D26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +167,14 @@
 			path = authreqUITests;
 			sourceTree = "<group>";
 		};
+		2AD22FB53092921F812E8D26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80BA617125E9B14A2704421C /* Pods_authreq.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F4D8E701FB93780000F259D /* Build configuration list for PBXNativeTarget "authreq" */;
 			buildPhases = (
+				7E356073A2D392145F529FB4 /* [CP] Check Pods Manifest.lock */,
 				0F4D8E421FB93780000F259D /* Sources */,
 				0F4D8E431FB93780000F259D /* Frameworks */,
 				0F4D8E441FB93780000F259D /* Resources */,
+				24979C60B32B4EB83DCD569A /* [CP] Embed Pods Frameworks */,
+				ACE74A337975E52B91E47088 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,6 +314,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24979C60B32B4EB83DCD569A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-authreq/Pods-authreq-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Piano/Piano.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Piano.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-authreq/Pods-authreq-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E356073A2D392145F529FB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-authreq-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACE74A337975E52B91E47088 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-authreq/Pods-authreq-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F4D8E421FB93780000F259D /* Sources */ = {
@@ -466,6 +549,7 @@
 		};
 		0F4D8E711FB93780000F259D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1861379649296E0368E148A0 /* Pods-authreq.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = authreq/authreq.entitlements;
@@ -483,6 +567,7 @@
 		};
 		0F4D8E721FB93780000F259D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68149E7BDAE91072AFA9FF36 /* Pods-authreq.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = authreq/authreq.entitlements;

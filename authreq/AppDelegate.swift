@@ -31,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         }()
     }
     
+    var backgroundSessionCompletionHandler: (() -> Void)?
+    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -82,8 +84,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        print("Removing all notifications")
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+
+        UIApplication.shared.applicationIconBadgeNumber = 0
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -193,7 +198,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func allowAction(aps: [String: AnyObject]) {
         let request = SignatureRequest.createFromAps(aps: aps)
         print("created")
-        _ = request?.signOnMainThread()
+        request?.signOnMainThread()
+        
         print("signed")
     }
     
@@ -252,6 +258,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    func application(_ application: UIApplication, handleEventsForBackgroundURLSession
+        identifier: String, completionHandler: @escaping () -> Void) {
+        print("mi a fasz van mar")
+        fatalError()
+        backgroundSessionCompletionHandler = completionHandler
     }
 }
 

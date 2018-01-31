@@ -196,3 +196,37 @@ func delay( _ delay: Double, queue: DispatchQueue = DispatchQueue.main, completi
         completion()
     }
 }
+
+extension URLSession {
+    func sendSynchronousRequest(_ request:URLRequest,
+                                timeout:TimeInterval = -1)  -> (Data?,URLResponse?,NSError?)?
+    {
+        let sem = DispatchSemaphore(value: 0)
+        var result:(Data?,URLResponse?,NSError?)
+        let task = self.dataTask(with: request, completionHandler: { (theData, theResponse, theError) in
+            result = (theData,theResponse,theError as NSError?)
+            sem.signal()
+        })
+        task.resume()
+        let t = timeout == -1 ? DispatchTime.distantFuture : DispatchTime.now() + Double(Int64(NSEC_PER_SEC) * Int64(timeout)) / Double(NSEC_PER_SEC)
+        let noTimeout = sem.wait(timeout: t)
+        if noTimeout == .timedOut {
+            return nil
+        }
+        return result
+    }
+    
+    /// Synchronously launches a URL request, returning JSON or nil on timeout
+    func sendSynchronousRequest(_ request:URLRequest,
+                                timeout:TimeInterval = -1)  -> [String:Any]?
+    {
+        guard
+            let result:(Data?,URLResponse?,NSError?) = sendSynchronousRequest(request,timeout:timeout),
+            let data = result.0,
+            let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
+            let jsonDict = jsonObject as? [String:Any]
+            else { return nil }
+        
+        return jsonDict
+    }
+}
