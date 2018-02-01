@@ -73,7 +73,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             
             if let indexPath = tableView.indexPathForSelectedRow {
                 let object = fetchedResultsController.object(at: indexPath)
-                controller.detailItem = object as? SignatureRequest
+                controller.detailItem = object
             }
             if let detail = sender as? SignatureRequest {
                 controller.detailItem = detail
@@ -84,13 +84,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     // MARK: - Table View
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let firstObject = self.fetchedResultsController.object(at: IndexPath(row: self.fetchedResultsController.sections![section].numberOfObjects-1, section: section)) as? SignatureRequest
+        let firstObject = self.fetchedResultsController.object(at: IndexPath(row: self.fetchedResultsController.sections![section].numberOfObjects-1, section: section))
         
-        guard let fo = firstObject else {
-            return nil
-        }
-        
-        if(fo.expired) {
+        if((firstObject as SignatureRequest).expired) {
             return "Archive"
         } else {
             return nil
@@ -109,7 +105,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "signatureRequestCell", for: indexPath)
         let signatureRequest = fetchedResultsController.object(at: indexPath)
-        configureCell(cell as! SignatureRequestTableViewCell, withSignatureRequest: signatureRequest as! SignatureRequest)
+        configureCell(cell as! SignatureRequestTableViewCell, withSignatureRequest: signatureRequest )
         return cell
     }
 

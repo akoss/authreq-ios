@@ -393,7 +393,7 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
         
         if(isSynchronous) {
             let reply = self.downloadsSession.sendSynchronousRequest(urlRequest, timeout: 5.0) as [String:Any]?
-            guard let replyDict = reply else {
+            guard reply != nil else {
                 _ = self.signatureUnsuccessful(signature: signature, digest: digest)
                 return false
             }

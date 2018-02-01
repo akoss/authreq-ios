@@ -96,7 +96,7 @@ class DetailViewController: UIViewController {
             if(detail.isExpired()) {
                 configureView()
             } else {
-                detail.sign()
+                _ = detail.sign()
 
                 if let item = activityIndicatorView {
                     item.isHidden = false
