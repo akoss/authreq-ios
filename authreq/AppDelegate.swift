@@ -66,6 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let controller = masterNavigationController.topViewController as! MasterViewController
         controller.managedObjectContext = self.persistentContainer.viewContext
         NotificationCenter.default.addObserver(self, selector: #selector(requestSuccessful), name: Notification.Name("SignatureRequestSuccessful"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(requestUnsuccessful), name: Notification.Name("SignatureRequestUnsuccessful"), object: nil)
         
         return true
     }
@@ -259,9 +260,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         }
     }
     
+    @objc func requestUnsuccessful() {
+        let symphony: [Piano.Note] = [
+            .sound(.file(name: "failure", extension: "caf")),
+            .hapticFeedback(.notification(.failure))
+        ]
+        
+        Piano.play(symphony)
+    }
+    
     @objc func requestSuccessful() {
         let symphony: [Piano.Note] = [
-            .sound(.asset(name: "payment_success")),
+            .sound(.file(name: "success", extension: "caf")),
             .hapticFeedback(.notification(.success))
         ]
         

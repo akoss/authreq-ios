@@ -212,9 +212,26 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
         
         request.setValue(hash, forKeyPath: "hashcalc")
         
+        guard let req = (request as? SignatureRequest) else {
+            print("Failed to create object")
+            return nil
+        }
+        
+        if req.checkSrvSignature() != true {
+            print("INVALID SIGNATURE")
+            do {
+                managedContext.delete(req)
+                try managedContext.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+                return nil
+            }
+            return nil
+        }
+
         do {
             try managedContext.save()
-            return request as? SignatureRequest
+            return req
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
             return nil
@@ -278,7 +295,7 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
         let center = UNUserNotificationCenter.current()
         
         let content = UNMutableNotificationContent()
-        content.title = "Request Declined"
+        content.title = "Request Denied"
         content.subtitle = self.push_subtitle!
         content.body = self.push_text!
         
@@ -325,10 +342,11 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
         content.title = "⚠️ Please open authreq to continue"
         content.body = self.push_title! + " - " + self.push_subtitle!
         content.badge = 1
+        content.sound = UNNotificationSound(named: "failure.caf")
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5,
                                                         repeats: false)
-        let request = UNNotificationRequest(identifier: "successConfirmation", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: "failureConfirmation", content: content, trigger: trigger)
         
         let center = UNUserNotificationCenter.current()
         
@@ -358,7 +376,7 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
             return false
         }
         
-        let todoEndpoint: String = "http://172.20.10.9:8080/authreq-srv/callback_test.php"
+        let todoEndpoint: String = "http://192.168.100.139:8080/authreq-srv/callback_test.php"
         
         guard let url = URL(string: todoEndpoint) else {
             print("Error: cannot create URL")
@@ -384,16 +402,22 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
             _ = self.signatureSuccessful(signature: signature, digest: digest)
         } else {
             self.downloadsSession.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
-                if let response = response {
-                    print("Sending SignatureRequestUpdated")
-                    print(response)
-                    self.setReplyStatus(status: 1)
-                    DispatchQueue.main.async {
-                        NotificationCenter.default.post(name: Notification.Name("SignatureRequestSuccessful"), object: nil)
-                    }
-                }
                 if let error = error {
                     print(error)
+                    DispatchQueue.main.async {
+                        NotificationCenter.default.post(name: Notification.Name("SignatureRequestUnsuccessful"), object: nil)
+                    }
+                } else if let response = response {
+                        print("Sending SignatureRequestUpdated")
+                        print(response)
+                        self.setReplyStatus(status: 1)
+                        DispatchQueue.main.async {
+                            NotificationCenter.default.post(name: Notification.Name("SignatureRequestSuccessful"), object: nil)
+                        }
+                } else {
+                    DispatchQueue.main.async {
+                        NotificationCenter.default.post(name: Notification.Name("SignatureRequestUnsuccessful"), object: nil)
+                    }
                 }
                 DispatchQueue.main.async {
                     NotificationCenter.default.post(name: Notification.Name("SignatureRequestUpdated"), object: nil)
@@ -448,6 +472,9 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
         
         if(self.checkSrvSignature() != true) {
             print("INVALID SIGNATURE")
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: Notification.Name("SignatureRequestUnsuccessful"), object: nil)
+            }
             return false
         }
         

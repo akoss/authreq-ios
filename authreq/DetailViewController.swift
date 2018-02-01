@@ -77,12 +77,12 @@ class DetailViewController: UIViewController {
                 declineButton?.isHidden = true
                 
                 if(detail.reply_status == 1) {
-                    signatureStatusLabel?.text = "Signed at " + dateString
+                    signatureStatusLabel?.text = "Allowed at " + dateString
                     imageView?.image = UIImage(named: "tick")
                     imageView?.isHidden = false
                     signatureStatusLabel?.isHidden = false
                 } else if(detail.reply_status == 2) {
-                    signatureStatusLabel?.text = "Declined at " + dateString
+                    signatureStatusLabel?.text = "Denied at " + dateString
                     imageView?.image = UIImage(named: "failure")
                     imageView?.isHidden = false
                     signatureStatusLabel?.isHidden = false
