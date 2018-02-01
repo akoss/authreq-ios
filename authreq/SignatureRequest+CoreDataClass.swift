@@ -12,7 +12,7 @@ import CoreData
 import UIKit
 import UserNotifications
 import LocalAuthentication
-import Alamofire
+import SwiftyRSA
 
 @objc(SignatureRequest)
 public class SignatureRequest: NSManagedObject, URLSessionDelegate {
@@ -41,34 +41,64 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
         return nil
     }
     
-    func calculateHash() -> String? {
-        return SignatureRequest.calculateHashFor(body: self.push_text!, title: self.push_title!, subtitle: self.push_subtitle!, category: self.push_category!, response_url: self.response_url!, message_id: String(self.message_id), short_title: self.short_title!, nonce: self.nonce!, signature: self.srv_signature!, expiry: String(self.expiry))
+    func checkSrvSignature() -> Bool {
+        guard let sig = self.srv_signature else {
+            return false
+        }
+        do {
+            guard let asset = NSDataAsset(name: "publickey")?.data else {
+                print("unable to gather public key asset")
+                return false
+            }
+            
+            guard let clearmessage = String(data: self.bencode() as Data, encoding: .utf8) else {
+                print("unable to convert bencode to clearmessage")
+                return false
+            }
+            print("clearmessage")
+            print(clearmessage)
+            
+            guard let pem = String(data: asset, encoding: .utf8) else {
+                print("unable to convert asset to pem")
+                return false
+            }
+            
+            let publicKey = try PublicKey(pemEncoded: pem)
+            let signature = try Signature(base64Encoded: sig)
+            let clear = try ClearMessage(string: clearmessage, using: .utf8)
+            let isSuccessful = try clear.verify(with: publicKey, signature: signature, digestType: .sha256)
+            
+            return isSuccessful
+        }
+        catch let error as NSError {
+            print(error)
+            return false
+        }
     }
     
-    static func calculateHashFor(body: String, title: String, subtitle: String, category: String, response_url: String, message_id: String, short_title: String, nonce: String, signature: String, expiry: String) -> String? {
-     
-        let jsonObject: NSMutableDictionary = NSMutableDictionary()
+    func calculateHash() -> String? {
+        return SignatureRequest.calculateHashFor(body: self.push_text!, title: self.push_title!, subtitle: self.push_subtitle!, category: self.push_category!, response_url: self.response_url!, message_id: self.message_id, short_title: self.short_title!, nonce: self.nonce!, expiry: self.expiry)
+    }
+    
+    func bencode() -> Data {
+        return SignatureRequest.bencodeFor(body: self.push_text ?? "", title: self.push_title ?? "", subtitle: self.push_subtitle ?? "", category: self.push_category ?? "", response_url: self.response_url ?? "", message_id: self.message_id, short_title: self.short_title ?? "", nonce: self.nonce ?? "", expiry: self.expiry)
+    }
+    
+    static func bencodeFor(body: String, title: String, subtitle: String, category: String, response_url: String, message_id: Int32, short_title: String, nonce: String, expiry: Int64) -> Data {
+        return authreq.bencode(dict: ["body": body as AnyObject, "title": title as AnyObject, "subtitle": subtitle as AnyObject, "category": category as AnyObject, "response_url": response_url as AnyObject, "message_id": message_id as AnyObject, "short_title": short_title as AnyObject, "nonce": nonce as AnyObject, "expiry": expiry as AnyObject]) as Data
+    }
+    
+    static func calculateHashFor(body: String, title: String, subtitle: String, category: String, response_url: String, message_id: Int32, short_title: String, nonce: String, expiry: Int64) -> String? {
         
-        jsonObject.setValue(body, forKey: "body")
-        jsonObject.setValue(subtitle, forKey: "subtitle")
-        jsonObject.setValue(category, forKey: "category")
-        jsonObject.setValue(response_url, forKey: "response_url")
-        jsonObject.setValue(message_id, forKey: "message_id")
-        jsonObject.setValue(short_title, forKey: "short_title")
-        jsonObject.setValue(nonce, forKey: "nonce")
-        jsonObject.setValue(signature, forKey: "signature")
-        jsonObject.setValue(expiry, forKey: "expiry")
+        let bencoded = bencodeFor(body: body, title: title, subtitle: subtitle, category: category, response_url: response_url, message_id: message_id, short_title: short_title, nonce: nonce, expiry: expiry)
         
-        let jsonData: Data
+        print("BENCODED:")
+        print(String(data: bencoded as Data, encoding: .utf8) ?? "")
         
-        do {
-            jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: JSONSerialization.WritingOptions()) as Data
-            let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
-            print("json string: " + jsonString)
-            return jsonData.sha256().base64EncodedString()
-        } catch _ {
-            return nil
-        }
+        let hash = (bencoded as Data).sha256().base64EncodedString()
+        
+        print("hash: " + hash)
+        return hash
     }
     
     static func getExistingElement(aps: [String: AnyObject]) -> SignatureRequest? {
@@ -146,7 +176,7 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
         let managedContext =
             appDelegate.persistentContainer.viewContext
         
-        let hash = SignatureRequest.calculateHashFor(body: push_text, title: title, subtitle: subtitle, category: category, response_url: response_url, message_id: String(message_id), short_title: short_title, nonce: nonce, signature: signature, expiry: String(expiry))
+        let hash = SignatureRequest.calculateHashFor(body: push_text, title: title, subtitle: subtitle, category: category, response_url: response_url, message_id: Int32(message_id), short_title: short_title, nonce: nonce, expiry: Int64(expiry))
         
         let existingRecord = SignatureRequest.getRecordForHash(hash: hash!)
         if(existingRecord != nil) {
@@ -328,7 +358,7 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
             return false
         }
         
-        let todoEndpoint: String = "http://192.168.100.139:8080/authreq-srv/callback_test.php"
+        let todoEndpoint: String = "http://172.20.10.9:8080/authreq-srv/callback_test.php"
         
         guard let url = URL(string: todoEndpoint) else {
             print("Error: cannot create URL")
@@ -387,6 +417,11 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
     func signOnMainThread() -> Bool {
         print("Starting signature (signOnMainThread())")
         
+        if(self.checkSrvSignature() != true) {
+            print("INVALID SIGNATURE")
+            return false
+        }
+        
         guard let digest = self.getDigest() else {
             print("Unable to create nonce")
             return false
@@ -410,6 +445,11 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
     
     func sign() -> Bool {
         print("Starting signature (sign())")
+        
+        if(self.checkSrvSignature() != true) {
+            print("INVALID SIGNATURE")
+            return false
+        }
         
         DispatchQueue.roundTrip({
             guard let digest = self.getDigest() else {
