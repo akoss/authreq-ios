@@ -359,7 +359,13 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
         NotificationCenter.default.post(name: Notification.Name("SignatureRequestUpdated"), object: nil)
         
         return true
-        
+    }
+    
+    static func checkResponse(response: [String: Any]) -> Bool {
+        guard let success = response["success"] as? Int else {
+            return false
+        }
+        return (success == 1)
     }
     
     func continueSignature(signature: Data, digest: Data, isSynchronous: Bool) -> Bool {
@@ -376,9 +382,12 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
             return false
         }
         
-        let todoEndpoint: String = "http://192.168.100.139:8080/authreq-srv/callback_test.php"
+        guard let apistring = self.response_url else {
+            print("No API url found")
+            return false
+        }
         
-        guard let url = URL(string: todoEndpoint) else {
+        guard let url = URL(string: apistring) else {
             print("Error: cannot create URL")
             return false
         }
@@ -392,28 +401,42 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
         urlRequest.timeoutInterval = TimeInterval(15.0)
         
         if(isSynchronous) {
-            let reply = self.downloadsSession.sendSynchronousRequest(urlRequest, timeout: 5.0) as [String:Any]?
-            guard reply != nil else {
+            let dict = self.downloadsSession.sendSynchronousRequest(urlRequest, timeout: 5.0) as [String:Any]?
+            var answer = false
+            if let response = dict as? [String: Any] {
+                answer = SignatureRequest.checkResponse(response: response)
+            }
+            
+            if(answer) {
+                self.setReplyStatus(status: 1)
+                _ = self.signatureSuccessful(signature: signature, digest: digest)
+            } else {
                 _ = self.signatureUnsuccessful(signature: signature, digest: digest)
                 return false
             }
-            
-            self.setReplyStatus(status: 1)
-            _ = self.signatureSuccessful(signature: signature, digest: digest)
         } else {
             self.downloadsSession.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+                var success = false
                 if let error = error {
                     print(error)
-                    DispatchQueue.main.async {
-                        NotificationCenter.default.post(name: Notification.Name("SignatureRequestUnsuccessful"), object: nil)
-                    }
                 } else if let response = response {
-                        print("Sending SignatureRequestUpdated")
-                        print(response)
-                        self.setReplyStatus(status: 1)
-                        DispatchQueue.main.async {
-                            NotificationCenter.default.post(name: Notification.Name("SignatureRequestSuccessful"), object: nil)
+                    print("RESPONSE: ")
+                    print(response)
+                    
+                    if let responseData = data as? Data {
+                        let jsonObject = try? JSONSerialization.jsonObject(with: responseData, options: [])
+                        print("JSON Object")
+                        print(jsonObject)
+                        if let jsonDict = jsonObject as? [String: Any] {
+                            success = SignatureRequest.checkResponse(response: jsonDict)
                         }
+                    }
+                }
+                if(success) {
+                    self.setReplyStatus(status: 1)
+                    DispatchQueue.main.async {
+                        NotificationCenter.default.post(name: Notification.Name("SignatureRequestSuccessful"), object: nil)
+                    }
                 } else {
                     DispatchQueue.main.async {
                         NotificationCenter.default.post(name: Notification.Name("SignatureRequestUnsuccessful"), object: nil)
