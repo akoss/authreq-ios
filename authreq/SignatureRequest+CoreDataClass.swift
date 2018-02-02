@@ -280,7 +280,7 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
     }
     
     func getDigest() -> Data? {
-        return self.nonce?.data(using: .utf8)
+        return self.bencode()
     }
     
     lazy var downloadsSession: URLSession = {
@@ -382,6 +382,11 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
             return false
         }
         
+        var publicKeyBase = (try? AppDelegate.Shared.keypair.publicKey().data().DER.base64EncodedString()) ?? "error fetching public key"
+        publicKeyBase.insert("\n", at: publicKeyBase.index(publicKeyBase.startIndex, offsetBy: 64))
+        
+        let publicKeyString = "-----BEGIN PUBLIC KEY-----\n\(publicKeyBase)\n-----END PUBLIC KEY-----"
+        
         guard let apistring = self.response_url else {
             print("No API url found")
             return false
@@ -395,9 +400,17 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         
-        let postString = "teszt"
+        let json: [String: Any] = ["publickey": publicKeyString,
+                                   "bencodedOriginalMessage": self.bencode().base64EncodedString(),
+                                   "signature": signature.map { String(format: "%02hhx", $0) }.joined()
+                                    ]
         
-        urlRequest.httpBody = postString.data(using: .utf8)
+        print("json: ")
+        print(json)
+        
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        
+        urlRequest.httpBody = jsonData
         urlRequest.timeoutInterval = TimeInterval(15.0)
         
         if(isSynchronous) {
@@ -424,6 +437,7 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
                     print(response)
                     
                     if let responseData = data as? Data {
+                        print(String(data: responseData, encoding: .utf8))
                         let jsonObject = try? JSONSerialization.jsonObject(with: responseData, options: [])
                         print("JSON Object")
                         print(jsonObject)
