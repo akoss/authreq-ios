@@ -401,7 +401,7 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
         urlRequest.httpMethod = "POST"
         
         let json: [String: Any] = ["publickey": publicKeyString,
-                                   "bencodedOriginalMessage": self.bencode().base64EncodedString(),
+                                   "message_id": self.message_id,
                                    "signature": signature.map { String(format: "%02hhx", $0) }.joined()
                                     ]
         
