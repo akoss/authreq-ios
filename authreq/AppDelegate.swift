@@ -70,6 +70,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         return true
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        let message = url.host?.removingPercentEncoding
+        
+        guard let bdata = message else {return false}
+        guard let data = Data(base64Encoded: bdata) else { return false }
+        
+        do {
+            if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [String: AnyObject]
+            {
+                guard let aps = jsonArray["aps"] as? [String: AnyObject] else { return false }
+                _ = SignatureRequest.createFromAps(aps: aps)
+            }
+        } catch let error as NSError {
+            print(error)
+        }
+        
+        return true
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -158,6 +178,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         }
         
         let token = tokenParts.joined()
+        UserDefaults.standard.set(token, forKey: "token")
         print("Device Token: \(token)")
     }
     

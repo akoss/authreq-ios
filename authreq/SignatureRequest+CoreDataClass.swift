@@ -402,7 +402,8 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
         
         let json: [String: Any] = ["publickey": publicKeyString,
                                    "message_id": self.message_id,
-                                   "signature": signature.map { String(format: "%02hhx", $0) }.joined()
+                                   "signature": signature.map { String(format: "%02hhx", $0) }.joined(),
+                                   "token": UserDefaults.standard.string(forKey: "token") ?? ""
                                     ]
         
         print("json: ")
