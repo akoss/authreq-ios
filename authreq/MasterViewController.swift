@@ -24,7 +24,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let button = UIButton.init(type: .custom)
         let image = UIImage(named: "settings")?.withRenderingMode(.alwaysTemplate)
 
-        button.addTarget(self, action: #selector(insertNewObject(_:)), for: UIControlEvents.touchUpInside)
+        button.addTarget(self, action: #selector(settingsPressed(_:)), for: UIControlEvents.touchUpInside)
         
         button.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         button.setBackgroundImage(image, for: .normal)
@@ -47,15 +47,69 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        pushNotificationPermissionGuard()
+        super.viewDidAppear(animated)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func pushNotificationPermissionGuard() {
+        if(UserDefaults.standard.bool(forKey: "beenRunBefore")) {
+            if(!UIApplication.shared.isRegisteredForRemoteNotifications) {
+                print("pushNotificationPermissionGuard: Not registered for remote notifications")
+                let alertController = UIAlertController(title: "Authreq requires push notifications to work", message: "Push notifications are vital to authreq. Without them, we will not be able to relay signature requests.", preferredStyle: .alert)
+                
+                let actionSettings = UIAlertAction(title: "Settings", style: .default) { (action:UIAlertAction) in
+                    DispatchQueue.main.async {
+                        guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+                            return
+                        }
+                        
+                        if UIApplication.shared.canOpenURL(settingsUrl) {
+                            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                                print("pushNotificationPermissionGuard: Settings opened: \(success)") // Prints true
+                            })
+                            UserDefaults.standard.set(false, forKey: "beenRunBefore")
+                            UserDefaults.standard.synchronize()
+                        }
+                    }
+                }
+                
+                let actionCancel = UIAlertAction(title: "Skip", style: .cancel) { (action:UIAlertAction) in
+                }
+                
+                alertController.addAction(actionSettings)
+                alertController.addAction(actionCancel)
+                self.present(alertController, animated: true, completion: nil)
+            } else {
+                print("pushNotificationPermissionGuard: Registered for remote notifications")
+            }
+        } else {
+            print("pushNotificationPermissionGuard: First run")
+            UserDefaults.standard.set(true, forKey: "beenRunBefore")
+            UserDefaults.standard.synchronize()
+        }
+    }
 
     @objc
-    func insertNewObject(_ sender: Any) {
-        print("click")
+    func settingsPressed(_ sender: Any) {
+        let alertController = UIAlertController(title: nil, message: "To enrol your device to a new service, open Camera on your iPhone and scan the QR code provided by the website.", preferredStyle: .alert)
+        
+        let actionCancel = UIAlertAction(title: "OK", style: .cancel) { (action:UIAlertAction) in
+        }
+        
+        /*let actionCamera = UIAlertAction(title: "Open Camera", style: .default) { (action:UIAlertAction) in
+            UIApplication.shared.open(URL(string: "apple.com.camera://")!, options: [:], completionHandler: nil)
+        }
+        
+        alertController.addAction(actionCamera)*/
+        alertController.addAction(actionCancel)
+        self.present(alertController, animated: true, completion: nil)
     }
 
     // MARK: - Segues

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		06C6B61873157001D90260D1 /* Pods_authreq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BA617125E9B14A2704421C /* Pods_authreq.framework */; };
+		0F007140202174B70073E284 /* success.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0F00713B2021744B0073E284 /* success.caf */; };
+		0F0AE2872023291300C9A941 /* Bencode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0AE2862023291300C9A941 /* Bencode.swift */; };
 		0F3181C92015516700ACF407 /* EllipticCurveKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3181C82015516700ACF407 /* EllipticCurveKeyPair.swift */; };
 		0F4D8E4A1FB93780000F259D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D8E491FB93780000F259D /* AppDelegate.swift */; };
 		0F4D8E511FB93780000F259D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D8E4F1FB93780000F259D /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		0F4D8E561FB93780000F259D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D8E541FB93780000F259D /* LaunchScreen.storyboard */; };
 		0F4D8E611FB93780000F259D /* authreqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D8E601FB93780000F259D /* authreqTests.swift */; };
 		0F4D8E6C1FB93780000F259D /* authreqUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D8E6B1FB93780000F259D /* authreqUITests.swift */; };
+		0F5CA38E20239A2F008B982D /* failure.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0F5CA38D20239A26008B982D /* failure.caf */; };
 		0F7CAA231FC24B330026278E /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7CAA211FC24B330026278E /* SHA256.swift */; };
 		0F7CAA261FC24D480026278E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7CAA251FC24D480026278E /* Utils.swift */; };
 		0F9797B920169AC8001799B4 /* authreq.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 0F9797B820169AC8001799B4 /* authreq.xcdatamodel */; };
@@ -43,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F00713B2021744B0073E284 /* success.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = success.caf; sourceTree = "<group>"; };
+		0F0AE2862023291300C9A941 /* Bencode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bencode.swift; path = authreq/Bencode.swift; sourceTree = "<group>"; };
 		0F3181C82015516700ACF407 /* EllipticCurveKeyPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EllipticCurveKeyPair.swift; path = "../../../../Downloads/EllipticCurveKeyPair-master/Sources/EllipticCurveKeyPair.swift"; sourceTree = "<group>"; };
 		0F4D8E461FB93780000F259D /* authreq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = authreq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4D8E491FB93780000F259D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 		0F4D8E6B1FB93780000F259D /* authreqUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authreqUITests.swift; sourceTree = "<group>"; };
 		0F4D8E6D1FB93780000F259D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F4D8E791FB9412C000F259D /* authreq.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = authreq.entitlements; sourceTree = "<group>"; };
+		0F5CA38D20239A26008B982D /* failure.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = failure.caf; sourceTree = "<group>"; };
 		0F7CAA211FC24B330026278E /* SHA256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA256.swift; sourceTree = "<group>"; };
 		0F7CAA251FC24D480026278E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0F9797B820169AC8001799B4 /* authreq.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = authreq.xcdatamodel; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 		0F4D8E3D1FB9377F000F259D = {
 			isa = PBXGroup;
 			children = (
+				0F0AE2862023291300C9A941 /* Bencode.swift */,
 				0F4D8E481FB93780000F259D /* authreq */,
 				0F4D8E5F1FB93780000F259D /* authreqTests */,
 				0F4D8E6A1FB93780000F259D /* authreqUITests */,
@@ -144,6 +151,8 @@
 				0FC48B4E2017335F009B5CB0 /* SignatureRequest+CoreDataClass.swift */,
 				0FC48B522017468C009B5CB0 /* SignatureRequest+CoreDataProperties.swift */,
 				0FC48B54201762BB009B5CB0 /* SignatureRequestTableViewCell.swift */,
+				0F5CA38D20239A26008B982D /* failure.caf */,
+				0F00713B2021744B0073E284 /* success.caf */,
 				0F7CAA251FC24D480026278E /* Utils.swift */,
 			);
 			path = authreq;
@@ -295,6 +304,8 @@
 			files = (
 				0F4D8E561FB93780000F259D /* LaunchScreen.storyboard in Resources */,
 				0F4D8E531FB93780000F259D /* Assets.xcassets in Resources */,
+				0F007140202174B70073E284 /* success.caf in Resources */,
+				0F5CA38E20239A2F008B982D /* failure.caf in Resources */,
 				0F4D8E511FB93780000F259D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,13 +334,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-authreq/Pods-authreq-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Piano/Piano.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyRSA/SwiftyRSA.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Piano.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyRSA.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -385,6 +396,7 @@
 				0F9797B920169AC8001799B4 /* authreq.xcdatamodel in Sources */,
 				0F3181C92015516700ACF407 /* EllipticCurveKeyPair.swift in Sources */,
 				0FC48B502017335F009B5CB0 /* SignatureRequest+CoreDataClass.swift in Sources */,
+				0F0AE2872023291300C9A941 /* Bencode.swift in Sources */,
 				0F7CAA261FC24D480026278E /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,12 +568,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MP8PV49J76;
 				INFOPLIST_FILE = authreq/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = info.szente.authreq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -574,12 +586,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MP8PV49J76;
 				INFOPLIST_FILE = authreq/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = info.szente.authreq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
