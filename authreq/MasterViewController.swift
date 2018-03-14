@@ -14,14 +14,20 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
+    var originalBackgroundView: UIView? = nil
+    var noRecentsBackgroundView: UIView? = nil
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        navigationItem.leftBarButtonItem = editButtonItem
         
-        let button = UIButton.init(type: .custom)
+        let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+        noRecentsBackgroundView = NoRequestView(frame: rect)
+        
+        navigationItem.leftBarButtonItem = editButtonItem
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(settingsPressed(_:)))
+        
+        /*let button = UIButton.init(type: .custom)
         let image = UIImage(named: "settings")?.withRenderingMode(.alwaysTemplate)
 
         button.addTarget(self, action: #selector(settingsPressed(_:)), for: UIControlEvents.touchUpInside)
@@ -30,13 +36,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         button.setBackgroundImage(image, for: .normal)
         
         let barButton = UIBarButtonItem(customView: button)
-        self.navigationItem.rightBarButtonItem = barButton
+        self.navigationItem.rightBarButtonItem = barButton*/
         UIApplication.shared.statusBarStyle = .lightContent
         
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        originalBackgroundView = self.tableView.backgroundView
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.completeReload), name: Notification.Name("UIApplicationDidBecomeActiveNotification"), object: nil)
     }
@@ -98,7 +106,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     @objc
     func settingsPressed(_ sender: Any) {
-        let alertController = UIAlertController(title: nil, message: "To enrol your device to a new service, open Camera on your iPhone and scan the QR code provided by the website.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "New requests will appear automatically", message: "To enrol your device to a supported service, scan the provided QR code with your device's camera or log in from your iPhone and press 'Enrol to authreq'.", preferredStyle: .alert)
         
         let actionCancel = UIAlertAction(title: "OK", style: .cancel) { (action:UIAlertAction) in
         }
@@ -148,7 +156,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return fetchedResultsController.sections?.count ?? 0
+        let result = fetchedResultsController.sections?.count ?? 0
+        
+        shouldShowEmptyMessage(result == 0)
+        
+        return result
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -312,6 +324,18 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+    }
+    
+    func shouldShowEmptyMessage(_ show: Bool) {
+        if(show) {
+            self.tableView.backgroundView = noRecentsBackgroundView;
+            self.tableView.isScrollEnabled = false
+            self.tableView.separatorStyle = .none;
+        } else {
+            self.tableView.backgroundView = originalBackgroundView;
+            self.tableView.isScrollEnabled = true
+            self.tableView.separatorStyle = .singleLine;
         }
     }
     
