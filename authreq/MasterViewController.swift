@@ -24,7 +24,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
         noRecentsBackgroundView = NoRequestView(frame: rect)
         
-        navigationItem.leftBarButtonItem = editButtonItem
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(settingsPressed(_:)))
         
         /*let button = UIButton.init(type: .custom)
@@ -329,10 +328,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     
     func shouldShowEmptyMessage(_ show: Bool) {
         if(show) {
+            navigationItem.leftBarButtonItem = nil
             self.tableView.backgroundView = noRecentsBackgroundView;
             self.tableView.isScrollEnabled = false
             self.tableView.separatorStyle = .none;
         } else {
+            navigationItem.leftBarButtonItem = editButtonItem
             self.tableView.backgroundView = originalBackgroundView;
             self.tableView.isScrollEnabled = true
             self.tableView.separatorStyle = .singleLine;
