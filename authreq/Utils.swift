@@ -27,6 +27,37 @@ import UIKit
 
 extension String: Error {}
 
+func getPushErrorAlert() -> UIAlertController {
+    let alertController = UIAlertController(title: "Authreq requires push notifications to work", message: "Push notifications are vital to authreq. Without them, we will not be able to relay signature requests.", preferredStyle: .alert)
+    
+    let actionSettings = UIAlertAction(title: "Settings", style: .default) { (action:UIAlertAction) in
+        DispatchQueue.main.async {
+            guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+                return
+            }
+            
+            if let del = UIApplication.shared.delegate as? AppDelegate {
+                del.registeredForPushNotifications = false
+            }
+            
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                    print("pushNotificationPermissionGuard: Settings opened: \(success)") // Prints true
+                })
+                UserDefaults.standard.set(false, forKey: "beenRunBefore")
+                UserDefaults.standard.synchronize()
+            }
+        }
+    }
+    
+    let actionCancel = UIAlertAction(title: "Skip", style: .cancel) { (action:UIAlertAction) in
+    }
+    
+    alertController.addAction(actionSettings)
+    alertController.addAction(actionCancel)
+    return alertController
+}
+
 func printVerifySignatureInOpenssl(manager: EllipticCurveKeyPair.Manager, signed: Data, digest: Data, shaAlgorithm: String) throws {
     assert(shaAlgorithm.hasPrefix("sha"))
     var publicKeyBase = (try? manager.publicKey().data().DER.base64EncodedString()) ?? "error fetching public key"

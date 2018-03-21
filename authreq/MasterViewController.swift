@@ -69,30 +69,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         if(UserDefaults.standard.bool(forKey: "beenRunBefore")) {
             if(!UIApplication.shared.isRegisteredForRemoteNotifications) {
                 print("pushNotificationPermissionGuard: Not registered for remote notifications")
-                let alertController = UIAlertController(title: "Authreq requires push notifications to work", message: "Push notifications are vital to authreq. Without them, we will not be able to relay signature requests.", preferredStyle: .alert)
-                
-                let actionSettings = UIAlertAction(title: "Settings", style: .default) { (action:UIAlertAction) in
-                    DispatchQueue.main.async {
-                        guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
-                            return
-                        }
-                        
-                        if UIApplication.shared.canOpenURL(settingsUrl) {
-                            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
-                                print("pushNotificationPermissionGuard: Settings opened: \(success)") // Prints true
-                            })
-                            UserDefaults.standard.set(false, forKey: "beenRunBefore")
-                            UserDefaults.standard.synchronize()
-                        }
-                    }
-                }
-                
-                let actionCancel = UIAlertAction(title: "Skip", style: .cancel) { (action:UIAlertAction) in
-                }
-                
-                alertController.addAction(actionSettings)
-                alertController.addAction(actionCancel)
-                self.present(alertController, animated: true, completion: nil)
+                self.present(getPushErrorAlert(), animated: true, completion: nil)
             } else {
                 print("pushNotificationPermissionGuard: Registered for remote notifications")
             }

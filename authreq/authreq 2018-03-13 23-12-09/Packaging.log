@@ -1,0 +1,2693 @@
+2018-03-13 23:11:28 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7f87ea1b0880; archive(resolved)='<IDEArchive: 0x7f8804f93140>', distributionTask(resolved)='2', distributionMethod(resolved)='<IDEDistributionMethodiOSAppStoreExport: 0x7f880645ee20>', team(resolved)='<IDEProvisioningBasicTeam 0x7f88066e6890: teamID: MP8PV49J76, teamName: Akos Szente>'>
+	Chain (11, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7f87ea1b0880; archive = '<IDEArchive: 0x7f8804f93140>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7f880645ee20>', team='<IDEProvisioningBasicTeam 0x7f88066e6890: teamID: MP8PV49J76, teamName: Akos Szente>'>
+	<IDEDistributionProcessingPipelineContext: 0x7f87ea06b050; archive = '<IDEArchive: 0x7f8804f93140>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7f880645ee20>', team='<IDEProvisioningBasicTeam 0x7f88066e6890: teamID: MP8PV49J76, teamName: Akos Szente>'>
+	<IDEDistributionContext: 0x7f88078cd990; archive = '<IDEArchive: 0x7f8804f93140>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7f880645ee20>', team='<IDEProvisioningBasicTeam 0x7f88066e6890: teamID: MP8PV49J76, teamName: Akos Szente>'>
+	<IDEDistributionContext: 0x7f87ea4996c0; archive = '<IDEArchive: 0x7f8804f93140>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7f880645ee20>', team='<IDEProvisioningBasicTeam 0x7f88066e6890: teamID: MP8PV49J76, teamName: Akos Szente>'>
+	<IDEDistributionContext: 0x7f87e9db6030; archive = '<IDEArchive: 0x7f8804f93140>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7f880645ee20>', team='<IDEProvisioningBasicTeam 0x7f88066e6890: teamID: MP8PV49J76, teamName: Akos Szente>'>
+	<IDEDistributionContext: 0x7f87e98a5330; archive = '<IDEArchive: 0x7f8804f93140>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7f880645ee20>', team='<IDEProvisioningBasicTeam 0x7f88066e6890: teamID: MP8PV49J76, teamName: Akos Szente>'>
+	<IDEDistributionContext: 0x7f88062f6520; archive = '<IDEArchive: 0x7f8804f93140>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7f880645ee20>', team='<IDEProvisioningBasicTeam 0x7f88066e6890: teamID: MP8PV49J76, teamName: Akos Szente>'>
+	<IDEDistributionContext: 0x7f8806341ae0; archive = '<IDEArchive: 0x7f8804f93140>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7f880645ee20>', team='<IDEProvisioningBasicTeam 0x7f88066e6890: teamID: MP8PV49J76, teamName: Akos Szente>'>
+	<IDEDistributionContext: 0x7f88062e6940; archive = '<IDEArchive: 0x7f8804f93140>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7f880645ee20>', team='<IDEProvisioningBasicTeam 0x7f88066e6890: teamID: MP8PV49J76, teamName: Akos Szente>'>
+	<IDEDistributionContext: 0x7f88060ed4c0; archive = '<IDEArchive: 0x7f8804f93140>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7f880645ee20>', team='(null)'>
+	<IDEDistributionContext: 0x7f8805751c50; archive = '<IDEArchive: 0x7f8804f93140>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7f87ea1b0880>
+2018-03-13 23:11:28 +0000  Processing step: IDEDistributionCreateDestRootStep
+2018-03-13 23:11:28 +0000  Processing step: IDEDistributionCopyItemStep
+2018-03-13 23:11:28 +0000  Running /usr/bin/ditto '-V' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app'
+2018-03-13 23:11:28 +0000  >>> Copying /Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app 
+2018-03-13 23:11:28 +0000  copying file ./_CodeSignature/CodeResources ... 
+2018-03-13 23:11:28 +0000  20541 bytes for ./_CodeSignature/CodeResources
+2018-03-13 23:11:28 +0000  copying file ./AppIcon20x20@2x.png ... 
+2018-03-13 23:11:28 +0000  2088 bytes for ./AppIcon20x20@2x.png
+2018-03-13 23:11:28 +0000  copying file ./AppIcon57x57.png ... 
+2018-03-13 23:11:28 +0000  3011 bytes for ./AppIcon57x57.png
+copying file ./AppIcon20x20@3x.png ... 
+2018-03-13 23:11:28 +0000  3138 bytes for ./AppIcon20x20@3x.png
+copying file ./AppIcon29x29.png ... 
+2018-03-13 23:11:28 +0000  1499 bytes for ./AppIcon29x29.png
+2018-03-13 23:11:28 +0000  copying file ./AppIcon60x60@2x.png ... 
+2018-03-13 23:11:28 +0000  7449 bytes for ./AppIcon60x60@2x.png
+copying file ./AppIcon29x29@2x.png ... 
+2018-03-13 23:11:28 +0000  3015 bytes for ./AppIcon29x29@2x.png
+2018-03-13 23:11:28 +0000  copying file ./AppIcon40x40@3x.png ... 
+2018-03-13 23:11:28 +0000  7449 bytes for ./AppIcon40x40@3x.png
+copying file ./AppIcon57x57@2x.png ... 
+2018-03-13 23:11:28 +0000  6943 bytes for ./AppIcon57x57@2x.png
+copying file ./AppIcon40x40@2x.png ... 
+2018-03-13 23:11:28 +0000  4473 bytes for ./AppIcon40x40@2x.png
+2018-03-13 23:11:28 +0000  copying file ./AppIcon29x29@3x.png ... 
+2018-03-13 23:11:28 +0000  5028 bytes for ./AppIcon29x29@3x.png
+copying file ./AppIcon60x60@3x.png ... 
+2018-03-13 23:11:28 +0000  15170 bytes for ./AppIcon60x60@3x.png
+2018-03-13 23:11:28 +0000  copying file ./Base.lproj/Main.storyboardc/UINavigationController-vC3-pB-5Vb.nib/objects-11.0+.nib ... 
+2018-03-13 23:11:28 +0000  1913 bytes for ./Base.lproj/Main.storyboardc/UINavigationController-vC3-pB-5Vb.nib/objects-11.0+.nib
+copying file ./Base.lproj/Main.storyboardc/UINavigationController-vC3-pB-5Vb.nib/runtime.nib ... 
+2018-03-13 23:11:28 +0000  1913 bytes for ./Base.lproj/Main.storyboardc/UINavigationController-vC3-pB-5Vb.nib/runtime.nib
+2018-03-13 23:11:28 +0000  copying file ./Base.lproj/Main.storyboardc/UISplitViewController-H1p-Uh-vWS.nib/objects-11.0+.nib ... 
+2018-03-13 23:11:28 +0000  3523 bytes for ./Base.lproj/Main.storyboardc/UISplitViewController-H1p-Uh-vWS.nib/objects-11.0+.nib
+copying file ./Base.lproj/Main.storyboardc/UISplitViewController-H1p-Uh-vWS.nib/runtime.nib ... 
+2018-03-13 23:11:28 +0000  3527 bytes for ./Base.lproj/Main.storyboardc/UISplitViewController-H1p-Uh-vWS.nib/runtime.nib
+2018-03-13 23:11:28 +0000  copying file ./Base.lproj/Main.storyboardc/JEX-9P-axG-view-svH-Pt-448.nib/objects-11.0+.nib ... 
+2018-03-13 23:11:28 +0000  6309 bytes for ./Base.lproj/Main.storyboardc/JEX-9P-axG-view-svH-Pt-448.nib/objects-11.0+.nib
+2018-03-13 23:11:28 +0000  copying file ./Base.lproj/Main.storyboardc/JEX-9P-axG-view-svH-Pt-448.nib/runtime.nib ... 
+2018-03-13 23:11:28 +0000  6365 bytes for ./Base.lproj/Main.storyboardc/JEX-9P-axG-view-svH-Pt-448.nib/runtime.nib
+2018-03-13 23:11:28 +0000  copying file ./Base.lproj/Main.storyboardc/7bK-jq-Zjz-view-r7i-6Z-zg0.nib/objects-11.0+.nib ... 
+2018-03-13 23:11:28 +0000  5231 bytes for ./Base.lproj/Main.storyboardc/7bK-jq-Zjz-view-r7i-6Z-zg0.nib/objects-11.0+.nib
+copying file ./Base.lproj/Main.storyboardc/7bK-jq-Zjz-view-r7i-6Z-zg0.nib/runtime.nib ... 
+2018-03-13 23:11:28 +0000  5372 bytes for ./Base.lproj/Main.storyboardc/7bK-jq-Zjz-view-r7i-6Z-zg0.nib/runtime.nib
+2018-03-13 23:11:28 +0000  copying file ./Base.lproj/Main.storyboardc/Info.plist ... 
+2018-03-13 23:11:28 +0000  360 bytes for ./Base.lproj/Main.storyboardc/Info.plist
+2018-03-13 23:11:28 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UINavigationController-h8n-a5-UBk.nib/objects-11.0+.nib ... 
+2018-03-13 23:11:28 +0000  2014 bytes for ./Base.lproj/LaunchScreen.storyboardc/UINavigationController-h8n-a5-UBk.nib/objects-11.0+.nib
+2018-03-13 23:11:28 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UINavigationController-h8n-a5-UBk.nib/runtime.nib ... 
+2018-03-13 23:11:28 +0000  2014 bytes for ./Base.lproj/LaunchScreen.storyboardc/UINavigationController-h8n-a5-UBk.nib/runtime.nib
+2018-03-13 23:11:28 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UBT-NA-80m-view-Ro2-zY-KbQ.nib/objects-11.0+.nib ... 
+2018-03-13 23:11:28 +0000  1567 bytes for ./Base.lproj/LaunchScreen.storyboardc/UBT-NA-80m-view-Ro2-zY-KbQ.nib/objects-11.0+.nib
+2018-03-13 23:11:28 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UBT-NA-80m-view-Ro2-zY-KbQ.nib/runtime.nib ... 
+2018-03-13 23:11:28 +0000  1704 bytes for ./Base.lproj/LaunchScreen.storyboardc/UBT-NA-80m-view-Ro2-zY-KbQ.nib/runtime.nib
+copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2018-03-13 23:11:28 +0000  276 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+2018-03-13 23:11:28 +0000  copying file ./archived-expanded-entitlements.xcent ... 
+2018-03-13 23:11:28 +0000  246 bytes for ./archived-expanded-entitlements.xcent
+copying file ./Assets.car ... 
+2018-03-13 23:11:28 +0000  1180744 bytes for ./Assets.car
+copying file ./failure.caf ... 
+2018-03-13 23:11:28 +0000  55368 bytes for ./failure.caf
+2018-03-13 23:11:28 +0000  copying file ./success.caf ... 
+2018-03-13 23:11:28 +0000  37076 bytes for ./success.caf
+2018-03-13 23:11:28 +0000  copying file ./Frameworks/libswiftCoreImage.dylib ... 
+2018-03-13 23:11:28 +0000  258272 bytes for ./Frameworks/libswiftCoreImage.dylib
+2018-03-13 23:11:28 +0000  copying file ./Frameworks/Piano.framework/_CodeSignature/CodeResources ... 
+2018-03-13 23:11:28 +0000  2202 bytes for ./Frameworks/Piano.framework/_CodeSignature/CodeResources
+2018-03-13 23:11:28 +0000  copying file ./Frameworks/Piano.framework/Piano ... 
+2018-03-13 23:11:28 +0000  1141776 bytes for ./Frameworks/Piano.framework/Piano
+copying file ./Frameworks/Piano.framework/Info.plist ... 
+2018-03-13 23:11:28 +0000  732 bytes for ./Frameworks/Piano.framework/Info.plist
+2018-03-13 23:11:28 +0000  copying file ./Frameworks/libswiftObjectiveC.dylib ... 
+2018-03-13 23:11:28 +0000  505792 bytes for ./Frameworks/libswiftObjectiveC.dylib
+copying file ./Frameworks/libswiftCore.dylib ... 
+2018-03-13 23:11:28 +0000  68838944 bytes for ./Frameworks/libswiftCore.dylib
+copying file ./Frameworks/libswiftCoreGraphics.dylib ... 
+2018-03-13 23:11:28 +0000  1268848 bytes for ./Frameworks/libswiftCoreGraphics.dylib
+copying file ./Frameworks/libswiftUIKit.dylib ... 
+2018-03-13 23:11:28 +0000  789184 bytes for ./Frameworks/libswiftUIKit.dylib
+2018-03-13 23:11:28 +0000  copying file ./Frameworks/libswiftMetal.dylib ... 
+2018-03-13 23:11:28 +0000  399376 bytes for ./Frameworks/libswiftMetal.dylib
+copying file ./Frameworks/libswiftCoreData.dylib ... 
+2018-03-13 23:11:28 +0000  690560 bytes for ./Frameworks/libswiftCoreData.dylib
+copying file ./Frameworks/libswiftDispatch.dylib ... 
+2018-03-13 23:11:28 +0000  2440736 bytes for ./Frameworks/libswiftDispatch.dylib
+copying file ./Frameworks/libswiftos.dylib ... 
+2018-03-13 23:11:28 +0000  446400 bytes for ./Frameworks/libswiftos.dylib
+2018-03-13 23:11:28 +0000  copying file ./Frameworks/libswiftCoreFoundation.dylib ... 
+2018-03-13 23:11:28 +0000  257696 bytes for ./Frameworks/libswiftCoreFoundation.dylib
+copying file ./Frameworks/libswiftDarwin.dylib ... 
+2018-03-13 23:11:28 +0000  599280 bytes for ./Frameworks/libswiftDarwin.dylib
+2018-03-13 23:11:28 +0000  copying file ./Frameworks/libswiftQuartzCore.dylib ... 
+2018-03-13 23:11:28 +0000  310976 bytes for ./Frameworks/libswiftQuartzCore.dylib
+2018-03-13 23:11:28 +0000  copying file ./Frameworks/libswiftCoreAudio.dylib ... 
+2018-03-13 23:11:28 +0000  650064 bytes for ./Frameworks/libswiftCoreAudio.dylib
+copying file ./Frameworks/libswiftAVFoundation.dylib ... 
+2018-03-13 23:11:28 +0000  1212064 bytes for ./Frameworks/libswiftAVFoundation.dylib
+2018-03-13 23:11:28 +0000  copying file ./Frameworks/libswiftFoundation.dylib ... 
+2018-03-13 23:11:28 +0000  27762864 bytes for ./Frameworks/libswiftFoundation.dylib
+2018-03-13 23:11:28 +0000  copying file ./Frameworks/libswiftCoreMedia.dylib ... 
+2018-03-13 23:11:28 +0000  434544 bytes for ./Frameworks/libswiftCoreMedia.dylib
+2018-03-13 23:11:28 +0000  copying file ./Frameworks/SwiftyRSA.framework/_CodeSignature/CodeResources ... 
+2018-03-13 23:11:28 +0000  2202 bytes for ./Frameworks/SwiftyRSA.framework/_CodeSignature/CodeResources
+2018-03-13 23:11:28 +0000  copying file ./Frameworks/SwiftyRSA.framework/SwiftyRSA ... 
+2018-03-13 23:11:28 +0000  1932240 bytes for ./Frameworks/SwiftyRSA.framework/SwiftyRSA
+copying file ./Frameworks/SwiftyRSA.framework/Info.plist ... 
+2018-03-13 23:11:28 +0000  739 bytes for ./Frameworks/SwiftyRSA.framework/Info.plist
+2018-03-13 23:11:28 +0000  copying file ./Frameworks/libswiftsimd.dylib ... 
+2018-03-13 23:11:28 +0000  3697392 bytes for ./Frameworks/libswiftsimd.dylib
+2018-03-13 23:11:28 +0000  copying file ./embedded.mobileprovision ... 
+9549 bytes for ./embedded.mobileprovision
+copying file ./authreq ... 
+2018-03-13 23:11:28 +0000  3415904 bytes for ./authreq
+copying file ./authreq.mom ... 
+2018-03-13 23:11:28 +0000  3012 bytes for ./authreq.mom
+copying file ./Info.plist ... 
+1749 bytes for ./Info.plist
+copying file ./PkgInfo ... 
+2018-03-13 23:11:28 +0000  8 bytes for ./PkgInfo
+2018-03-13 23:11:28 +0000  
+2018-03-13 23:11:28 +0000  2018-03-13 23:11:28 +0000  /usr/bin/ditto exited with 0
+
+2018-03-13 23:11:28 +0000  
+2018-03-13 23:11:28 +0000  Processing step: IDEDistributionEmbedProfileStep
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f88055b64e0 'org.cocoapods.Piano' '<DVTFilePath:0x7f88056c6f50:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/Piano.framework'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f87e9a657e0 'org.cocoapods.SwiftyRSA' '<DVTFilePath:0x7f88079a25d0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/SwiftyRSA.framework'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f87e9c85a80 'com.apple.dt.runtime.swiftAVFoundation' '<DVTFilePath:0x7f88062e3980:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftAVFoundation.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8805695a30 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7f87e8c11260:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCore.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f87e9950730 'com.apple.dt.runtime.swiftCoreAudio' '<DVTFilePath:0x7f88062dedc0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreAudio.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f87e9f3d390 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7f87e8cd9180:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreData.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f87e98390b0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7f8806523fa0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreFoundation.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f87ea04ed50 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7f87e8cd91f0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreGraphics.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f87e9f3d300 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7f88056e6890:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreImage.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f88063acd90 'com.apple.dt.runtime.swiftCoreMedia' '<DVTFilePath:0x7f87e8fa5f70:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreMedia.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8807959010 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7f87ea44b090:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftDarwin.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f88079970e0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7f87ea40f9f0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftDispatch.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f87ea6f3d70 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7f88052c5280:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftFoundation.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f87ea71fd90 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7f8807a50e20:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftMetal.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f87ea435fe0 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7f87e9ae33b0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftObjectiveC.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f87ffa8bc10 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7f88050d5b10:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftQuartzCore.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f87ffd95cc0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7f88062d7110:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftUIKit.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f880795f970 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7f88050a7c30:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftos.dylib'>'>
+2018-03-13 23:11:28 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f87fc28eee0 'com.apple.dt.runtime.swiftsimd' '<DVTFilePath:0x7f8806361910:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftsimd.dylib'>'>
+2018-03-13 23:11:28 +0000  Processing step: IDEDistributionItemRemovalStep
+2018-03-13 23:11:28 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2018-03-13 23:11:28 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2018-03-13 23:11:28 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2018-03-13 23:11:28 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2018-03-13 23:11:28 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2018-03-13 23:11:28 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2018-03-13 23:11:28 +0000  Running /usr/bin/ditto '-V' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/BCSymbolMaps/A21833A4-0247-3522-A748-3DD9944A3E5E.bcsymbolmap' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/BCSymbolMaps/A21833A4-0247-3522-A748-3DD9944A3E5E.bcsymbolmap'
+2018-03-13 23:11:28 +0000  >>> Copying /Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/BCSymbolMaps/A21833A4-0247-3522-A748-3DD9944A3E5E.bcsymbolmap 
+2018-03-13 23:11:28 +0000  copying file ./A21833A4-0247-3522-A748-3DD9944A3E5E.bcsymbolmap ... 
+2018-03-13 23:11:28 +0000  59400 bytes for ./A21833A4-0247-3522-A748-3DD9944A3E5E.bcsymbolmap
+2018-03-13 23:11:28 +0000  
+2018-03-13 23:11:28 +0000  
+2018-03-13 23:11:28 +0000  /usr/bin/ditto exited with 0
+2018-03-13 23:11:28 +0000  2018-03-13 23:11:28 +0000  Running /usr/bin/ditto '-V' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/BCSymbolMaps/C9DD3F5E-FCBA-3BF2-9FEE-34519FBEB8AC.bcsymbolmap' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/BCSymbolMaps/C9DD3F5E-FCBA-3BF2-9FEE-34519FBEB8AC.bcsymbolmap'
+
+2018-03-13 23:11:28 +0000  >>> Copying /Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/BCSymbolMaps/C9DD3F5E-FCBA-3BF2-9FEE-34519FBEB8AC.bcsymbolmap 
+2018-03-13 23:11:28 +0000  copying file ./C9DD3F5E-FCBA-3BF2-9FEE-34519FBEB8AC.bcsymbolmap ... 
+2018-03-13 23:11:28 +0000  57648 bytes for ./C9DD3F5E-FCBA-3BF2-9FEE-34519FBEB8AC.bcsymbolmap
+2018-03-13 23:11:28 +0000  
+2018-03-13 23:11:28 +0000  /usr/bin/ditto exited with 0
+2018-03-13 23:11:28 +0000  
+2018-03-13 23:11:28 +0000  
+2018-03-13 23:11:28 +0000  Running /usr/bin/ditto '-V' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/BCSymbolMaps/758362CB-27CE-3133-A198-7C6BD5EFE318.bcsymbolmap' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/BCSymbolMaps/758362CB-27CE-3133-A198-7C6BD5EFE318.bcsymbolmap'
+2018-03-13 23:11:28 +0000  >>> Copying /Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/BCSymbolMaps/758362CB-27CE-3133-A198-7C6BD5EFE318.bcsymbolmap 
+2018-03-13 23:11:28 +0000  copying file ./758362CB-27CE-3133-A198-7C6BD5EFE318.bcsymbolmap ... 
+2018-03-13 23:11:28 +0000  100589 bytes for ./758362CB-27CE-3133-A198-7C6BD5EFE318.bcsymbolmap
+2018-03-13 23:11:28 +0000  
+2018-03-13 23:11:28 +0000  /usr/bin/ditto exited with 0
+2018-03-13 23:11:28 +0000  2018-03-13 23:11:28 +0000  Running /usr/bin/ditto '-V' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/BCSymbolMaps/A0F2F7AA-0425-3DB8-AD85-D316F84EE458.bcsymbolmap' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/BCSymbolMaps/A0F2F7AA-0425-3DB8-AD85-D316F84EE458.bcsymbolmap'
+2018-03-13 23:11:28 +0000  
+
+2018-03-13 23:11:28 +0000  >>> Copying /Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/BCSymbolMaps/A0F2F7AA-0425-3DB8-AD85-D316F84EE458.bcsymbolmap 
+2018-03-13 23:11:28 +0000  copying file ./A0F2F7AA-0425-3DB8-AD85-D316F84EE458.bcsymbolmap ... 
+2018-03-13 23:11:28 +0000  98650 bytes for ./A0F2F7AA-0425-3DB8-AD85-D316F84EE458.bcsymbolmap
+2018-03-13 23:11:28 +0000  
+2018-03-13 23:11:28 +0000  /usr/bin/ditto exited with 0
+2018-03-13 23:11:28 +0000  2018-03-13 23:11:28 +0000  
+
+2018-03-13 23:11:29 +0000  Running /usr/bin/ditto '-V' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/BCSymbolMaps/D1222D3E-A191-33A8-95BE-A27AF9210533.bcsymbolmap' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/BCSymbolMaps/D1222D3E-A191-33A8-95BE-A27AF9210533.bcsymbolmap'
+2018-03-13 23:11:29 +0000  >>> Copying /Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/BCSymbolMaps/D1222D3E-A191-33A8-95BE-A27AF9210533.bcsymbolmap 
+2018-03-13 23:11:29 +0000  copying file ./D1222D3E-A191-33A8-95BE-A27AF9210533.bcsymbolmap ... 
+2018-03-13 23:11:29 +0000  206661 bytes for ./D1222D3E-A191-33A8-95BE-A27AF9210533.bcsymbolmap
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  /usr/bin/ditto exited with 0
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  Running /usr/bin/ditto '-V' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/BCSymbolMaps/BF9D6082-3043-321A-B117-39FAE3890155.bcsymbolmap' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/BCSymbolMaps/BF9D6082-3043-321A-B117-39FAE3890155.bcsymbolmap'
+2018-03-13 23:11:29 +0000  >>> Copying /Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/BCSymbolMaps/BF9D6082-3043-321A-B117-39FAE3890155.bcsymbolmap 
+2018-03-13 23:11:29 +0000  copying file ./BF9D6082-3043-321A-B117-39FAE3890155.bcsymbolmap ... 
+2018-03-13 23:11:29 +0000  205484 bytes for ./BF9D6082-3043-321A-B117-39FAE3890155.bcsymbolmap
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  
+
+2018-03-13 23:11:29 +0000  /usr/bin/ditto exited with 0
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  Processing step: IDEDistributionSymbolsStep
+2018-03-13 23:11:29 +0000  Excluding symbols for Piano.framework
+2018-03-13 23:11:29 +0000  Excluding symbols for SwiftyRSA.framework
+2018-03-13 23:11:29 +0000  Processing symbols for libswiftAVFoundation.dylib
+2018-03-13 23:11:29 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftAVFoundation.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:29 +0000  building file list ... 
+2018-03-13 23:11:29 +0000   0 files...2018-03-13 23:11:29 +0000  1 file to consider
+2018-03-13 23:11:29 +0000  
+sent 99 bytes  received 20 bytes  238.00 bytes/sec
+total size is 1.16M  speedup is 10185.41
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  
+
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  /usr/bin/rsync exited with 02018-03-13 23:11:29 +0000  
+
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:29 +0000  building file list ... 
+2018-03-13 23:11:29 +0000   0 files...2018-03-13 23:11:29 +0000  19 files to consider
+2018-03-13 23:11:29 +0000  ./
+2018-03-13 23:11:29 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+2018-03-13 23:11:29 +0000  Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:29 +0000  
+sent 630 bytes  received 98 bytes  1.42K bytes/sec
+total size is 4.74M  speedup is 6826.42
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  
+
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  /usr/bin/rsync exited with 0
+2018-03-13 23:11:29 +0000  
+
+2018-03-13 23:11:29 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftAVFoundation.dylib'
+2018-03-13 23:11:29 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftAVFoundation.dylib [armv7, 0.017902 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftAVFoundation.dylib [armv7s, 0.017902 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftAVFoundation.dylib [arm64, 0.017902 seconds]:
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  
+
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  
+
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  
+
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  
+
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  
+
+2018-03-13 23:11:29 +0000  Processing symbols for libswiftCore.dylib
+2018-03-13 23:11:29 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCore.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:29 +0000  building file list ... 
+2018-03-13 23:11:29 +0000   0 files...2018-03-13 23:11:29 +0000  1 file to consider
+2018-03-13 23:11:29 +0000  
+sent 91 bytes  received 20 bytes  222.00 bytes/sec
+total size is 65.65M  speedup is 620170.67
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  
+
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  
+
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  /usr/bin/rsync exited with 0
+
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:29 +0000  building file list ... 
+2018-03-13 23:11:29 +0000   0 files...2018-03-13 23:11:29 +0000  19 files to consider
+2018-03-13 23:11:29 +0000  ./
+2018-03-13 23:11:29 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+2018-03-13 23:11:29 +0000  SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:29 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  
+
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  2018-03-13 23:11:29 +0000  /usr/bin/rsync exited with 0
+
+2018-03-13 23:11:29 +0000  
+2018-03-13 23:11:29 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCore.dylib'
+2018-03-13 23:11:30 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCore.dylib [armv7, 0.509862 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCore.dylib [armv7s, 0.509862 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCore.dylib [arm64, 0.509862 seconds]:
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 02018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Processing symbols for libswiftCoreAudio.dylib
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreAudio.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  1 file to consider
+2018-03-13 23:11:30 +0000  
+sent 96 bytes  received 20 bytes  232.00 bytes/sec
+total size is 634.83K  speedup is 5604.00
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 02018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  19 files to consider
+2018-03-13 23:11:30 +0000  ./
+2018-03-13 23:11:30 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:30 +0000  SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:30 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 02018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreAudio.dylib'
+2018-03-13 23:11:30 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreAudio.dylib [armv7, 0.005582 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreAudio.dylib [armv7s, 0.005582 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreAudio.dylib [arm64, 0.005582 seconds]:
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+
+
+2018-03-13 23:11:30 +0000  Processing symbols for libswiftCoreData.dylib
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreData.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  1 file to consider
+2018-03-13 23:11:30 +0000  
+sent 95 bytes  received 20 bytes  230.00 bytes/sec
+total size is 674.38K  speedup is 6004.87
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 0
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  19 files to consider
+2018-03-13 23:11:30 +0000  ./
+2018-03-13 23:11:30 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+2018-03-13 23:11:30 +0000  authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:30 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 0
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreData.dylib'
+2018-03-13 23:11:30 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreData.dylib [armv7, 0.005259 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreData.dylib [armv7s, 0.005259 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreData.dylib [arm64, 0.005259 seconds]:
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Processing symbols for libswiftCoreFoundation.dylib
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreFoundation.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  1 file to consider
+2018-03-13 23:11:30 +0000  
+sent 101 bytes  received 20 bytes  242.00 bytes/sec
+total size is 251.66K  speedup is 2129.72
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 0
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  19 files to consider
+2018-03-13 23:11:30 +0000  ./
+2018-03-13 23:11:30 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+2018-03-13 23:11:30 +0000  authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:30 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 0
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreFoundation.dylib'
+2018-03-13 23:11:30 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreFoundation.dylib [armv7, 0.001781 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreFoundation.dylib [armv7s, 0.001781 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreFoundation.dylib [arm64, 0.001781 seconds]:
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Processing symbols for libswiftCoreGraphics.dylib
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreGraphics.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  1 file to consider
+2018-03-13 23:11:30 +0000  
+sent 99 bytes  received 20 bytes  238.00 bytes/sec
+total size is 1.21M  speedup is 10662.59
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 0
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  19 files to consider
+2018-03-13 23:11:30 +0000  ./
+2018-03-13 23:11:30 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 02018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreGraphics.dylib'
+2018-03-13 23:11:30 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreGraphics.dylib [armv7, 0.011060 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreGraphics.dylib [armv7s, 0.011060 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreGraphics.dylib [arm64, 0.011060 seconds]:
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 02018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  Processing symbols for libswiftCoreImage.dylib
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreImage.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  1 file to consider
+2018-03-13 23:11:30 +0000  
+sent 96 bytes  received 20 bytes  232.00 bytes/sec
+total size is 252.22K  speedup is 2226.48
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 0
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  19 files to consider
+2018-03-13 23:11:30 +0000  ./
+2018-03-13 23:11:30 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+2018-03-13 23:11:30 +0000  authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:30 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 0
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreImage.dylib'
+2018-03-13 23:11:30 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreImage.dylib [armv7, 0.001676 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreImage.dylib [armv7s, 0.001676 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreImage.dylib [arm64, 0.001676 seconds]:
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 02018-03-13 23:11:30 +0000  
+
+
+2018-03-13 23:11:30 +0000  Processing symbols for libswiftCoreMedia.dylib
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreMedia.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  1 file to consider
+2018-03-13 23:11:30 +0000  
+sent 96 bytes  received 20 bytes  232.00 bytes/sec
+total size is 424.36K  speedup is 3746.07
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 0
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  19 files to consider
+2018-03-13 23:11:30 +0000  ./
+2018-03-13 23:11:30 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:30 +0000  authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:30 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 0
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreMedia.dylib'
+2018-03-13 23:11:30 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreMedia.dylib [armv7, 0.003295 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreMedia.dylib [armv7s, 0.003295 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftCoreMedia.dylib [arm64, 0.003295 seconds]:
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Processing symbols for libswiftDarwin.dylib
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftDarwin.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  1 file to consider
+2018-03-13 23:11:30 +0000  
+sent 93 bytes  received 20 bytes  226.00 bytes/sec
+total size is 585.23K  speedup is 5303.36
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 02018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  19 files to consider
+2018-03-13 23:11:30 +0000  ./
+2018-03-13 23:11:30 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+2018-03-13 23:11:30 +0000  authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:30 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 02018-03-13 23:11:30 +0000  
+
+
+2018-03-13 23:11:30 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftDarwin.dylib'
+2018-03-13 23:11:30 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftDarwin.dylib [armv7, 0.005594 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftDarwin.dylib [armv7s, 0.005594 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftDarwin.dylib [arm64, 0.005594 seconds]:
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Processing symbols for libswiftDispatch.dylib
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftDispatch.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  1 file to consider
+2018-03-13 23:11:30 +0000  
+sent 95 bytes  received 20 bytes  230.00 bytes/sec
+total size is 2.33M  speedup is 21223.79
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 02018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  19 files to consider
+2018-03-13 23:11:30 +0000  ./
+2018-03-13 23:11:30 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:30 +0000  authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:30 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 02018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftDispatch.dylib'
+2018-03-13 23:11:30 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftDispatch.dylib [armv7, 0.023334 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftDispatch.dylib [armv7s, 0.023334 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftDispatch.dylib [arm64, 0.023334 seconds]:
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 02018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  Processing symbols for libswiftFoundation.dylib
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftFoundation.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  1 file to consider
+2018-03-13 23:11:30 +0000  
+sent 97 bytes  received 20 bytes  234.00 bytes/sec
+total size is 26.48M  speedup is 237289.44
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  /usr/bin/rsync exited with 02018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:30 +0000  building file list ... 
+2018-03-13 23:11:30 +0000   0 files...2018-03-13 23:11:30 +0000  19 files to consider
+2018-03-13 23:11:30 +0000  ./
+2018-03-13 23:11:30 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+2018-03-13 23:11:30 +0000  authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:30 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+2018-03-13 23:11:30 +0000  total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  2018-03-13 23:11:30 +0000  
+
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:30 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  /usr/bin/rsync exited with 0
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftFoundation.dylib'
+2018-03-13 23:11:31 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftFoundation.dylib [armv7, 0.159216 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftFoundation.dylib [armv7s, 0.159216 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftFoundation.dylib [arm64, 0.159216 seconds]:
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  Processing symbols for libswiftMetal.dylib
+2018-03-13 23:11:31 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftMetal.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:31 +0000  building file list ... 
+2018-03-13 23:11:31 +0000   0 files...2018-03-13 23:11:31 +0000  1 file to consider
+2018-03-13 23:11:31 +0000  
+sent 92 bytes  received 20 bytes  224.00 bytes/sec
+total size is 390.02K  speedup is 3565.86
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  /usr/bin/rsync exited with 0
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:31 +0000  building file list ... 
+2018-03-13 23:11:31 +0000   0 files...2018-03-13 23:11:31 +0000  19 files to consider
+2018-03-13 23:11:31 +0000  ./
+2018-03-13 23:11:31 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+2018-03-13 23:11:31 +0000  authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:31 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  /usr/bin/rsync exited with 0
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftMetal.dylib'
+2018-03-13 23:11:31 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftMetal.dylib [armv7, 0.002916 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftMetal.dylib [armv7s, 0.002916 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftMetal.dylib [arm64, 0.002916 seconds]:
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 02018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  Processing symbols for libswiftObjectiveC.dylib
+2018-03-13 23:11:31 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftObjectiveC.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:31 +0000  building file list ... 
+2018-03-13 23:11:31 +0000   0 files...2018-03-13 23:11:31 +0000  1 file to consider
+2018-03-13 23:11:31 +0000  
+sent 97 bytes  received 20 bytes  234.00 bytes/sec
+2018-03-13 23:11:31 +0000  total size is 493.94K  speedup is 4323.01
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  /usr/bin/rsync exited with 02018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:31 +0000  building file list ... 
+2018-03-13 23:11:31 +0000   0 files...2018-03-13 23:11:31 +0000  19 files to consider
+2018-03-13 23:11:31 +0000  ./
+2018-03-13 23:11:31 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:31 +0000  authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:31 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  /usr/bin/rsync exited with 02018-03-13 23:11:31 +0000  
+
+
+2018-03-13 23:11:31 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftObjectiveC.dylib'
+2018-03-13 23:11:31 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftObjectiveC.dylib [armv7, 0.003779 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftObjectiveC.dylib [armv7s, 0.003779 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftObjectiveC.dylib [arm64, 0.003779 seconds]:
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  Processing symbols for libswiftQuartzCore.dylib
+2018-03-13 23:11:31 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftQuartzCore.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:31 +0000  building file list ... 
+2018-03-13 23:11:31 +0000   0 files...2018-03-13 23:11:31 +0000  1 file to consider
+2018-03-13 23:11:31 +0000  
+sent 97 bytes  received 20 bytes  234.00 bytes/sec
+total size is 303.69K  speedup is 2657.91
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  /usr/bin/rsync exited with 0
+2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:31 +0000  building file list ... 
+2018-03-13 23:11:31 +0000   0 files...2018-03-13 23:11:31 +0000  19 files to consider
+2018-03-13 23:11:31 +0000  ./
+2018-03-13 23:11:31 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+2018-03-13 23:11:31 +0000  SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  /usr/bin/rsync exited with 0
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftQuartzCore.dylib'
+2018-03-13 23:11:31 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftQuartzCore.dylib [armv7, 0.002401 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftQuartzCore.dylib [armv7s, 0.002401 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftQuartzCore.dylib [arm64, 0.002401 seconds]:
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  Processing symbols for libswiftUIKit.dylib
+2018-03-13 23:11:31 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftUIKit.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:31 +0000  building file list ... 
+2018-03-13 23:11:31 +0000   0 files...2018-03-13 23:11:31 +0000  1 file to consider
+2018-03-13 23:11:31 +0000  
+sent 92 bytes  received 20 bytes  224.00 bytes/sec
+total size is 770.69K  speedup is 7046.29
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  /usr/bin/rsync exited with 02018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:31 +0000  building file list ... 
+2018-03-13 23:11:31 +0000   0 files...2018-03-13 23:11:31 +0000  19 files to consider
+2018-03-13 23:11:31 +0000  ./
+2018-03-13 23:11:31 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:31 +0000  authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:31 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  /usr/bin/rsync exited with 0
+
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftUIKit.dylib'
+2018-03-13 23:11:31 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftUIKit.dylib [armv7, 0.006966 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftUIKit.dylib [armv7s, 0.006966 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftUIKit.dylib [arm64, 0.006966 seconds]:
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  Processing symbols for libswiftos.dylib
+2018-03-13 23:11:31 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftos.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:31 +0000  building file list ... 
+2018-03-13 23:11:31 +0000   0 files...2018-03-13 23:11:31 +0000  1 file to consider
+2018-03-13 23:11:31 +0000  
+sent 89 bytes  received 20 bytes  218.00 bytes/sec
+total size is 435.94K  speedup is 4095.41
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  /usr/bin/rsync exited with 0
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:31 +0000  building file list ... 
+2018-03-13 23:11:31 +0000   0 files...2018-03-13 23:11:31 +0000  19 files to consider
+2018-03-13 23:11:31 +0000  ./
+2018-03-13 23:11:31 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+2018-03-13 23:11:31 +0000  SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:31 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  /usr/bin/rsync exited with 0
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftos.dylib'
+2018-03-13 23:11:31 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftos.dylib [armv7, 0.002759 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftos.dylib [armv7s, 0.002759 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftos.dylib [arm64, 0.002759 seconds]:
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  Processing symbols for libswiftsimd.dylib
+2018-03-13 23:11:31 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftsimd.dylib' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:31 +0000  building file list ... 
+2018-03-13 23:11:31 +0000   0 files...2018-03-13 23:11:31 +0000  1 file to consider
+2018-03-13 23:11:31 +0000  
+sent 91 bytes  received 20 bytes  222.00 bytes/sec
+total size is 3.53M  speedup is 33309.84
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  /usr/bin/rsync exited with 0
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '--link-dest' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/dSYMs/' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ'
+2018-03-13 23:11:31 +0000  building file list ... 
+ 0 files...2018-03-13 23:11:31 +0000  19 files to consider
+2018-03-13 23:11:31 +0000  ./
+2018-03-13 23:11:31 +0000  Piano.framework.dSYM/
+Piano.framework.dSYM/Contents/
+Piano.framework.dSYM/Contents/Resources/
+Piano.framework.dSYM/Contents/Resources/DWARF/
+SwiftyRSA.framework.dSYM/
+SwiftyRSA.framework.dSYM/Contents/
+SwiftyRSA.framework.dSYM/Contents/Resources/
+2018-03-13 23:11:31 +0000  SwiftyRSA.framework.dSYM/Contents/Resources/DWARF/
+authreq.app.dSYM/
+authreq.app.dSYM/Contents/
+authreq.app.dSYM/Contents/Resources/
+authreq.app.dSYM/Contents/Resources/DWARF/
+2018-03-13 23:11:31 +0000  
+sent 666 bytes  received 134 bytes  1.56K bytes/sec
+total size is 4.74M  speedup is 6212.05
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  /usr/bin/rsync exited with 0
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftsimd.dylib'
+2018-03-13 23:11:31 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftsimd.dylib [armv7, 0.033348 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftsimd.dylib [armv7s, 0.033348 seconds]:
+/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/libswiftsimd.dylib [arm64, 0.033348 seconds]:
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  2018-03-13 23:11:31 +0000  
+
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  
+2018-03-13 23:11:31 +0000  Excluding symbols for authreq.app
+2018-03-13 23:11:31 +0000  Processing step: IDEDistributionCopyAppleProvidedContentStep
+2018-03-13 23:11:31 +0000  Running /usr/bin/ditto '-V' '/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/SwiftSupport' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/SwiftSupport'
+2018-03-13 23:11:31 +0000  >>> Copying /Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/SwiftSupport 
+2018-03-13 23:11:31 +0000  copying file ./iphoneos/libswiftCoreImage.dylib ... 
+2018-03-13 23:11:31 +0000  302301 bytes for ./iphoneos/libswiftCoreImage.dylib
+copying file ./iphoneos/libswiftObjectiveC.dylib ... 
+2018-03-13 23:11:31 +0000  692593 bytes for ./iphoneos/libswiftObjectiveC.dylib
+2018-03-13 23:11:31 +0000  copying file ./iphoneos/libswiftCore.dylib ... 
+2018-03-13 23:11:32 +0000  102190104 bytes for ./iphoneos/libswiftCore.dylib
+copying file ./iphoneos/libswiftCoreGraphics.dylib ... 
+2018-03-13 23:11:32 +0000  1764939 bytes for ./iphoneos/libswiftCoreGraphics.dylib
+copying file ./iphoneos/libswiftUIKit.dylib ... 
+2018-03-13 23:11:32 +0000  1138426 bytes for ./iphoneos/libswiftUIKit.dylib
+2018-03-13 23:11:32 +0000  copying file ./iphoneos/libswiftMetal.dylib ... 
+2018-03-13 23:11:32 +0000  510611 bytes for ./iphoneos/libswiftMetal.dylib
+copying file ./iphoneos/libswiftCoreData.dylib ... 
+2018-03-13 23:11:32 +0000  882138 bytes for ./iphoneos/libswiftCoreData.dylib
+copying file ./iphoneos/libswiftDispatch.dylib ... 
+2018-03-13 23:11:32 +0000  3459837 bytes for ./iphoneos/libswiftDispatch.dylib
+copying file ./iphoneos/libswiftos.dylib ... 
+2018-03-13 23:11:32 +0000  598752 bytes for ./iphoneos/libswiftos.dylib
+copying file ./iphoneos/libswiftCoreFoundation.dylib ... 
+2018-03-13 23:11:32 +0000  288869 bytes for ./iphoneos/libswiftCoreFoundation.dylib
+copying file ./iphoneos/libswiftDarwin.dylib ... 
+2018-03-13 23:11:32 +0000  801691 bytes for ./iphoneos/libswiftDarwin.dylib
+copying file ./iphoneos/libswiftQuartzCore.dylib ... 
+2018-03-13 23:11:32 +0000  373669 bytes for ./iphoneos/libswiftQuartzCore.dylib
+copying file ./iphoneos/libswiftCoreAudio.dylib ... 
+2018-03-13 23:11:32 +0000  869000 bytes for ./iphoneos/libswiftCoreAudio.dylib
+copying file ./iphoneos/libswiftAVFoundation.dylib ... 
+2018-03-13 23:11:32 +0000  1734295 bytes for ./iphoneos/libswiftAVFoundation.dylib
+2018-03-13 23:11:32 +0000  copying file ./iphoneos/libswiftFoundation.dylib ... 
+2018-03-13 23:11:32 +0000  41486819 bytes for ./iphoneos/libswiftFoundation.dylib
+copying file ./iphoneos/libswiftCoreMedia.dylib ... 
+2018-03-13 23:11:32 +0000  557603 bytes for ./iphoneos/libswiftCoreMedia.dylib
+2018-03-13 23:11:32 +0000  copying file ./iphoneos/libswiftsimd.dylib ... 
+2018-03-13 23:11:32 +0000  4972148 bytes for ./iphoneos/libswiftsimd.dylib
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  2018-03-13 23:11:32 +0000  /usr/bin/ditto exited with 0
+
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  Processing step: IDEDistributionAppThinningStep
+2018-03-13 23:11:32 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2018-03-13 23:11:32 +0000  Processing step: IDEDistributionODRStep
+2018-03-13 23:11:32 +0000  Processing step: IDEDistributionStripXattrsStep
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f88055b64e0 'org.cocoapods.Piano' '<DVTFilePath:0x7f88056c6f50:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/Piano.framework'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f87e9a657e0 'org.cocoapods.SwiftyRSA' '<DVTFilePath:0x7f88079a25d0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/SwiftyRSA.framework'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f87e9c85a80 'com.apple.dt.runtime.swiftAVFoundation' '<DVTFilePath:0x7f88062e3980:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftAVFoundation.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8805695a30 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7f87e8c11260:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCore.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f87e9950730 'com.apple.dt.runtime.swiftCoreAudio' '<DVTFilePath:0x7f88062dedc0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreAudio.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f87e9f3d390 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7f87e8cd9180:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreData.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f87e98390b0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7f8806523fa0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreFoundation.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f87ea04ed50 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7f87e8cd91f0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreGraphics.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f87e9f3d300 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7f88056e6890:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreImage.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f88063acd90 'com.apple.dt.runtime.swiftCoreMedia' '<DVTFilePath:0x7f87e8fa5f70:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreMedia.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8807959010 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7f87ea44b090:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftDarwin.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f88079970e0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7f87ea40f9f0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftDispatch.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f87ea6f3d70 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7f88052c5280:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftFoundation.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f87ea71fd90 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7f8807a50e20:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftMetal.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f87ea435fe0 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7f87e9ae33b0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftObjectiveC.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f87ffa8bc10 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7f88050d5b10:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftQuartzCore.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f87ffd95cc0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7f88062d7110:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftUIKit.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f880795f970 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7f88050a7c30:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftos.dylib'>'>
+2018-03-13 23:11:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f87fc28eee0 'com.apple.dt.runtime.swiftsimd' '<DVTFilePath:0x7f8806361910:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftsimd.dylib'>'>
+2018-03-13 23:11:32 +0000  Running /usr/bin/xattr '-crs' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app'
+2018-03-13 23:11:32 +0000  2018-03-13 23:11:32 +0000  
+
+2018-03-13 23:11:32 +0000  /usr/bin/xattr exited with 0
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  Processing step: IDEDistributionCodesignStep
+2018-03-13 23:11:32 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f88055b64e0 'org.cocoapods.Piano' '<DVTFilePath:0x7f88056c6f50:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/Piano.framework'>'> from <IDEiCloudEntitlementsProcessor: 0x7f87e8cf30d0>: {
+}
+2018-03-13 23:11:32 +0000  Entitlements for <IDEDistributionItem: 0x7f88055b64e0 'org.cocoapods.Piano' '<DVTFilePath:0x7f88056c6f50:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/Piano.framework'>'>: {
+}
+2018-03-13 23:11:32 +0000  Writing entitlements for <IDEDistributionItem: 0x7f88055b64e0 'org.cocoapods.Piano' '<DVTFilePath:0x7f88056c6f50:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/Piano.framework'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsbEmI9h
+2018-03-13 23:11:32 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsbEmI9h' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/Piano.framework'
+2018-03-13 23:11:32 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/Piano.framework: signed bundle with Mach-O universal (armv7 arm64) [org.cocoapods.Piano]
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  2018-03-13 23:11:32 +0000  
+
+2018-03-13 23:11:32 +0000  /usr/bin/codesign exited with 02018-03-13 23:11:32 +0000  
+
+2018-03-13 23:11:32 +0000  
+2018-03-13 23:11:32 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f87e9a657e0 'org.cocoapods.SwiftyRSA' '<DVTFilePath:0x7f88079a25d0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/SwiftyRSA.framework'>'> from <IDEiCloudEntitlementsProcessor: 0x7f87fee724d0>: {
+}
+2018-03-13 23:11:32 +0000  Entitlements for <IDEDistributionItem: 0x7f87e9a657e0 'org.cocoapods.SwiftyRSA' '<DVTFilePath:0x7f88079a25d0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/SwiftyRSA.framework'>'>: {
+}
+2018-03-13 23:11:32 +0000  Writing entitlements for <IDEDistributionItem: 0x7f87e9a657e0 'org.cocoapods.SwiftyRSA' '<DVTFilePath:0x7f88079a25d0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/SwiftyRSA.framework'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsCyrEpU
+2018-03-13 23:11:32 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsCyrEpU' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/SwiftyRSA.framework'
+2018-03-13 23:11:33 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/SwiftyRSA.framework: signed bundle with Mach-O universal (armv7 arm64) [org.cocoapods.SwiftyRSA]
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  2018-03-13 23:11:33 +0000  
+
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  2018-03-13 23:11:33 +0000  
+
+2018-03-13 23:11:33 +0000  /usr/bin/codesign exited with 02018-03-13 23:11:33 +0000  2018-03-13 23:11:33 +0000  
+
+
+2018-03-13 23:11:33 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f87e9c85a80 'com.apple.dt.runtime.swiftAVFoundation' '<DVTFilePath:0x7f88062e3980:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftAVFoundation.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f8804e6f540>: {
+}
+2018-03-13 23:11:33 +0000  Entitlements for <IDEDistributionItem: 0x7f87e9c85a80 'com.apple.dt.runtime.swiftAVFoundation' '<DVTFilePath:0x7f88062e3980:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftAVFoundation.dylib'>'>: {
+}
+2018-03-13 23:11:33 +0000  Writing entitlements for <IDEDistributionItem: 0x7f87e9c85a80 'com.apple.dt.runtime.swiftAVFoundation' '<DVTFilePath:0x7f88062e3980:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftAVFoundation.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsWbHcpa
+2018-03-13 23:11:33 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsWbHcpa' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftAVFoundation.dylib'
+2018-03-13 23:11:33 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftAVFoundation.dylib: replacing existing signature
+2018-03-13 23:11:33 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftAVFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftAVFoundation]
+2018-03-13 23:11:33 +0000  2018-03-13 23:11:33 +0000  
+
+2018-03-13 23:11:33 +0000  2018-03-13 23:11:33 +0000  
+
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  2018-03-13 23:11:33 +0000  
+
+2018-03-13 23:11:33 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  
+2018-03-13 23:11:33 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f8805695a30 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7f87e8c11260:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCore.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f8807bcd480>: {
+}
+2018-03-13 23:11:33 +0000  Entitlements for <IDEDistributionItem: 0x7f8805695a30 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7f87e8c11260:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCore.dylib'>'>: {
+}
+2018-03-13 23:11:33 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8805695a30 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7f87e8c11260:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCore.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementshk782Q
+2018-03-13 23:11:33 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementshk782Q' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCore.dylib'
+2018-03-13 23:11:33 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCore.dylib: replacing existing signature
+2018-03-13 23:11:34 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCore.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCore]
+2018-03-13 23:11:34 +0000  2018-03-13 23:11:34 +0000  
+
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  2018-03-13 23:11:34 +0000  
+
+2018-03-13 23:11:34 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:34 +0000  2018-03-13 23:11:34 +0000  
+
+2018-03-13 23:11:34 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f87e9950730 'com.apple.dt.runtime.swiftCoreAudio' '<DVTFilePath:0x7f88062dedc0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreAudio.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f88052b9fd0>: {
+}
+2018-03-13 23:11:34 +0000  Entitlements for <IDEDistributionItem: 0x7f87e9950730 'com.apple.dt.runtime.swiftCoreAudio' '<DVTFilePath:0x7f88062dedc0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreAudio.dylib'>'>: {
+}
+2018-03-13 23:11:34 +0000  Writing entitlements for <IDEDistributionItem: 0x7f87e9950730 'com.apple.dt.runtime.swiftCoreAudio' '<DVTFilePath:0x7f88062dedc0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreAudio.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsBuG82T
+2018-03-13 23:11:34 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsBuG82T' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreAudio.dylib'
+2018-03-13 23:11:34 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreAudio.dylib: replacing existing signature
+2018-03-13 23:11:34 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreAudio.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreAudio]
+2018-03-13 23:11:34 +0000  2018-03-13 23:11:34 +0000  
+
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:34 +0000  2018-03-13 23:11:34 +0000  
+
+2018-03-13 23:11:34 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f87e9f3d390 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7f87e8cd9180:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreData.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f88062f51f0>: {
+}
+2018-03-13 23:11:34 +0000  Entitlements for <IDEDistributionItem: 0x7f87e9f3d390 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7f87e8cd9180:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreData.dylib'>'>: {
+}
+2018-03-13 23:11:34 +0000  Writing entitlements for <IDEDistributionItem: 0x7f87e9f3d390 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7f87e8cd9180:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreData.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlements1oTq3N
+2018-03-13 23:11:34 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlements1oTq3N' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreData.dylib'
+2018-03-13 23:11:34 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreData.dylib: replacing existing signature
+2018-03-13 23:11:34 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreData.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreData]
+2018-03-13 23:11:34 +0000  2018-03-13 23:11:34 +0000  
+
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  2018-03-13 23:11:34 +0000  
+
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  2018-03-13 23:11:34 +0000  /usr/bin/codesign exited with 0
+
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f87e98390b0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7f8806523fa0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreFoundation.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f87ea640330>: {
+}
+2018-03-13 23:11:34 +0000  Entitlements for <IDEDistributionItem: 0x7f87e98390b0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7f8806523fa0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreFoundation.dylib'>'>: {
+}
+2018-03-13 23:11:34 +0000  Writing entitlements for <IDEDistributionItem: 0x7f87e98390b0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7f8806523fa0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreFoundation.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsQiNo57
+2018-03-13 23:11:34 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsQiNo57' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreFoundation.dylib'
+2018-03-13 23:11:34 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreFoundation.dylib: replacing existing signature
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreFoundation]
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  2018-03-13 23:11:34 +0000  
+
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  2018-03-13 23:11:34 +0000  
+
+2018-03-13 23:11:34 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:34 +0000  
+2018-03-13 23:11:34 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f87ea04ed50 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7f87e8cd91f0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreGraphics.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f87feeb6740>: {
+}
+2018-03-13 23:11:34 +0000  Entitlements for <IDEDistributionItem: 0x7f87ea04ed50 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7f87e8cd91f0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreGraphics.dylib'>'>: {
+}
+2018-03-13 23:11:34 +0000  Writing entitlements for <IDEDistributionItem: 0x7f87ea04ed50 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7f87e8cd91f0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreGraphics.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsrMgen5
+2018-03-13 23:11:34 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsrMgen5' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreGraphics.dylib'
+2018-03-13 23:11:35 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreGraphics.dylib: replacing existing signature
+2018-03-13 23:11:35 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreGraphics.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreGraphics]
+2018-03-13 23:11:35 +0000  2018-03-13 23:11:35 +0000  
+
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  2018-03-13 23:11:35 +0000  
+
+2018-03-13 23:11:35 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:35 +0000  2018-03-13 23:11:35 +0000  
+
+2018-03-13 23:11:35 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f87e9f3d300 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7f88056e6890:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreImage.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f87e8c24700>: {
+}
+2018-03-13 23:11:35 +0000  Entitlements for <IDEDistributionItem: 0x7f87e9f3d300 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7f88056e6890:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreImage.dylib'>'>: {
+}
+2018-03-13 23:11:35 +0000  Writing entitlements for <IDEDistributionItem: 0x7f87e9f3d300 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7f88056e6890:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreImage.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsmWFl1f
+2018-03-13 23:11:35 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsmWFl1f' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreImage.dylib'
+2018-03-13 23:11:35 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreImage.dylib: replacing existing signature
+2018-03-13 23:11:35 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreImage.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreImage]
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:35 +0000  2018-03-13 23:11:35 +0000  
+
+2018-03-13 23:11:35 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f88063acd90 'com.apple.dt.runtime.swiftCoreMedia' '<DVTFilePath:0x7f87e8fa5f70:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreMedia.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f87ea020270>: {
+}
+2018-03-13 23:11:35 +0000  Entitlements for <IDEDistributionItem: 0x7f88063acd90 'com.apple.dt.runtime.swiftCoreMedia' '<DVTFilePath:0x7f87e8fa5f70:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreMedia.dylib'>'>: {
+}
+2018-03-13 23:11:35 +0000  Writing entitlements for <IDEDistributionItem: 0x7f88063acd90 'com.apple.dt.runtime.swiftCoreMedia' '<DVTFilePath:0x7f87e8fa5f70:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftCoreMedia.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsfCQ5GK
+2018-03-13 23:11:35 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsfCQ5GK' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreMedia.dylib'
+2018-03-13 23:11:35 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreMedia.dylib: replacing existing signature
+2018-03-13 23:11:35 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftCoreMedia.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreMedia]
+2018-03-13 23:11:35 +0000  2018-03-13 23:11:35 +0000  
+
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  2018-03-13 23:11:35 +0000  /usr/bin/codesign exited with 0
+
+2018-03-13 23:11:35 +0000  2018-03-13 23:11:35 +0000  
+
+2018-03-13 23:11:35 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f8807959010 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7f87ea44b090:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftDarwin.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f87ea733d30>: {
+}
+2018-03-13 23:11:35 +0000  Entitlements for <IDEDistributionItem: 0x7f8807959010 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7f87ea44b090:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftDarwin.dylib'>'>: {
+}
+2018-03-13 23:11:35 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8807959010 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7f87ea44b090:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftDarwin.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsvFWWFk
+2018-03-13 23:11:35 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsvFWWFk' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftDarwin.dylib'
+2018-03-13 23:11:35 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftDarwin.dylib: replacing existing signature
+2018-03-13 23:11:35 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftDarwin.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftDarwin]
+2018-03-13 23:11:35 +0000  2018-03-13 23:11:35 +0000  
+
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  
+2018-03-13 23:11:35 +0000  2018-03-13 23:11:35 +0000  
+
+2018-03-13 23:11:35 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:35 +0000  2018-03-13 23:11:35 +0000  
+
+2018-03-13 23:11:35 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f88079970e0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7f87ea40f9f0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftDispatch.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f87e8c20450>: {
+}
+2018-03-13 23:11:35 +0000  Entitlements for <IDEDistributionItem: 0x7f88079970e0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7f87ea40f9f0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftDispatch.dylib'>'>: {
+}
+2018-03-13 23:11:35 +0000  Writing entitlements for <IDEDistributionItem: 0x7f88079970e0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7f87ea40f9f0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftDispatch.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsDajOqw
+2018-03-13 23:11:35 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsDajOqw' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftDispatch.dylib'
+2018-03-13 23:11:35 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftDispatch.dylib: replacing existing signature
+2018-03-13 23:11:36 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftDispatch.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftDispatch]
+2018-03-13 23:11:36 +0000  2018-03-13 23:11:36 +0000  
+
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  2018-03-13 23:11:36 +0000  
+
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  2018-03-13 23:11:36 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:36 +0000  
+
+2018-03-13 23:11:36 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f87ea6f3d70 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7f88052c5280:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftFoundation.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f87fd350800>: {
+}
+2018-03-13 23:11:36 +0000  Entitlements for <IDEDistributionItem: 0x7f87ea6f3d70 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7f88052c5280:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftFoundation.dylib'>'>: {
+}
+2018-03-13 23:11:36 +0000  Writing entitlements for <IDEDistributionItem: 0x7f87ea6f3d70 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7f88052c5280:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftFoundation.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsveuZTn
+2018-03-13 23:11:36 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsveuZTn' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftFoundation.dylib'
+2018-03-13 23:11:36 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftFoundation.dylib: replacing existing signature
+2018-03-13 23:11:36 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftFoundation]
+2018-03-13 23:11:36 +0000  2018-03-13 23:11:36 +0000  
+
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+
+2018-03-13 23:11:36 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f87ea71fd90 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7f8807a50e20:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftMetal.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f87ea718ac0>: {
+}
+2018-03-13 23:11:36 +0000  Entitlements for <IDEDistributionItem: 0x7f87ea71fd90 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7f8807a50e20:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftMetal.dylib'>'>: {
+}
+2018-03-13 23:11:36 +0000  Writing entitlements for <IDEDistributionItem: 0x7f87ea71fd90 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7f8807a50e20:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftMetal.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsl4rvAG
+2018-03-13 23:11:36 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsl4rvAG' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftMetal.dylib'
+2018-03-13 23:11:36 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftMetal.dylib: replacing existing signature
+2018-03-13 23:11:36 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftMetal.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftMetal]
+2018-03-13 23:11:36 +0000  2018-03-13 23:11:36 +0000  
+
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  
+2018-03-13 23:11:36 +0000  2018-03-13 23:11:36 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:36 +0000  
+
+2018-03-13 23:11:36 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f87ea435fe0 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7f87e9ae33b0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftObjectiveC.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f87e9a7d7a0>: {
+}
+2018-03-13 23:11:36 +0000  Entitlements for <IDEDistributionItem: 0x7f87ea435fe0 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7f87e9ae33b0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftObjectiveC.dylib'>'>: {
+}
+2018-03-13 23:11:36 +0000  Writing entitlements for <IDEDistributionItem: 0x7f87ea435fe0 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7f87e9ae33b0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftObjectiveC.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsutE13U
+2018-03-13 23:11:36 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsutE13U' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftObjectiveC.dylib'
+2018-03-13 23:11:36 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftObjectiveC.dylib: replacing existing signature
+2018-03-13 23:11:37 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftObjectiveC.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftObjectiveC]
+2018-03-13 23:11:37 +0000  2018-03-13 23:11:37 +0000  
+
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  2018-03-13 23:11:37 +0000  
+
+2018-03-13 23:11:37 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:37 +0000  2018-03-13 23:11:37 +0000  
+
+2018-03-13 23:11:37 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f87ffa8bc10 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7f88050d5b10:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftQuartzCore.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f87e9860b90>: {
+}
+2018-03-13 23:11:37 +0000  Entitlements for <IDEDistributionItem: 0x7f87ffa8bc10 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7f88050d5b10:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftQuartzCore.dylib'>'>: {
+}
+2018-03-13 23:11:37 +0000  Writing entitlements for <IDEDistributionItem: 0x7f87ffa8bc10 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7f88050d5b10:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftQuartzCore.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlements3Uf6LI
+2018-03-13 23:11:37 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlements3Uf6LI' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftQuartzCore.dylib'
+2018-03-13 23:11:37 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftQuartzCore.dylib: replacing existing signature
+2018-03-13 23:11:37 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftQuartzCore.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftQuartzCore]
+2018-03-13 23:11:37 +0000  2018-03-13 23:11:37 +0000  
+
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  2018-03-13 23:11:37 +0000  
+
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f87ffd95cc0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7f88062d7110:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftUIKit.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f8806095300>: {
+}
+2018-03-13 23:11:37 +0000  Entitlements for <IDEDistributionItem: 0x7f87ffd95cc0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7f88062d7110:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftUIKit.dylib'>'>: {
+}
+2018-03-13 23:11:37 +0000  Writing entitlements for <IDEDistributionItem: 0x7f87ffd95cc0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7f88062d7110:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftUIKit.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlements8Ik82w
+2018-03-13 23:11:37 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlements8Ik82w' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftUIKit.dylib'
+2018-03-13 23:11:37 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftUIKit.dylib: replacing existing signature
+2018-03-13 23:11:37 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftUIKit.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftUIKit]
+2018-03-13 23:11:37 +0000  2018-03-13 23:11:37 +0000  
+
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  2018-03-13 23:11:37 +0000  
+
+2018-03-13 23:11:37 +0000  2018-03-13 23:11:37 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:37 +0000  
+
+2018-03-13 23:11:37 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f880795f970 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7f88050a7c30:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftos.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f8804e87750>: {
+}
+2018-03-13 23:11:37 +0000  Entitlements for <IDEDistributionItem: 0x7f880795f970 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7f88050a7c30:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftos.dylib'>'>: {
+}
+2018-03-13 23:11:37 +0000  Writing entitlements for <IDEDistributionItem: 0x7f880795f970 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7f88050a7c30:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftos.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsrCSEFU
+2018-03-13 23:11:37 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsrCSEFU' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftos.dylib'
+2018-03-13 23:11:37 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftos.dylib: replacing existing signature
+2018-03-13 23:11:37 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftos.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftos]
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  2018-03-13 23:11:37 +0000  
+
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  2018-03-13 23:11:37 +0000  /usr/bin/codesign exited with 0
+
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f87fc28eee0 'com.apple.dt.runtime.swiftsimd' '<DVTFilePath:0x7f8806361910:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftsimd.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7f87ea6a92a0>: {
+}
+2018-03-13 23:11:37 +0000  Entitlements for <IDEDistributionItem: 0x7f87fc28eee0 'com.apple.dt.runtime.swiftsimd' '<DVTFilePath:0x7f8806361910:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftsimd.dylib'>'>: {
+}
+2018-03-13 23:11:37 +0000  Writing entitlements for <IDEDistributionItem: 0x7f87fc28eee0 'com.apple.dt.runtime.swiftsimd' '<DVTFilePath:0x7f8806361910:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app/Frameworks/libswiftsimd.dylib'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsUPRsLy
+2018-03-13 23:11:37 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsUPRsLy' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftsimd.dylib'
+2018-03-13 23:11:37 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftsimd.dylib: replacing existing signature
+2018-03-13 23:11:37 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app/Frameworks/libswiftsimd.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftsimd]
+2018-03-13 23:11:37 +0000  2018-03-13 23:11:37 +0000  
+
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  
+2018-03-13 23:11:37 +0000  2018-03-13 23:11:37 +0000  /usr/bin/codesign exited with 0
+2018-03-13 23:11:37 +0000  
+
+2018-03-13 23:11:37 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7f88066e67a0 'info.szente.authreq' '<DVTFilePath:0x7f88079d75e0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app'>'> from <IDEiCloudEntitlementsProcessor: 0x7f88062dec10>: {
+}
+2018-03-13 23:11:37 +0000  Entitlements for <IDEDistributionItem: 0x7f88066e67a0 'info.szente.authreq' '<DVTFilePath:0x7f88079d75e0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app'>'>: {
+    "application-identifier" = "MP8PV49J76.info.szente.authreq";
+    "aps-environment" = production;
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = MP8PV49J76;
+    "get-task-allow" = 0;
+}
+2018-03-13 23:11:37 +0000  Writing entitlements for <IDEDistributionItem: 0x7f88066e67a0 'info.szente.authreq' '<DVTFilePath:0x7f88079d75e0:'/Users/harfox/Library/Developer/Xcode/Archives/2018-03-13/authreq 13-03-2018, 23.10.xcarchive/Products/Applications/authreq.app'>'> to: /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsi0276t
+2018-03-13 23:11:37 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D7F2DD38416914C9B1265FC7022D01081143BCC3' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/entitlementsi0276t' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app'
+2018-03-13 23:11:38 +0000  /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root/Payload/authreq.app: signed app bundle with Mach-O universal (armv7 arm64) [info.szente.authreq]
+2018-03-13 23:11:38 +0000  2018-03-13 23:11:38 +0000  
+
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  2018-03-13 23:11:38 +0000  
+
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  2018-03-13 23:11:38 +0000  /usr/bin/codesign exited with 0
+
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  Processing step: IDEDistributionStreamingZipItemStep
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-13 23:11:38 +0000  Processing step: IDEDistributionCreateIPAStep
+2018-03-13 23:11:38 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Symbols' '--link-dest' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root'
+2018-03-13 23:11:38 +0000  building file list ... 
+2018-03-13 23:11:38 +0000   0 files...2018-03-13 23:11:38 +0000  52 files to consider
+2018-03-13 23:11:38 +0000  Symbols/
+2018-03-13 23:11:38 +0000  
+sent 2.77K bytes  received 26 bytes  5.60K bytes/sec
+2018-03-13 23:11:38 +0000  total size is 20.02M  speedup is 7321.95
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  2018-03-13 23:11:38 +0000  /usr/bin/rsync exited with 0
+
+2018-03-13 23:11:38 +0000  
+2018-03-13 23:11:38 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root' '/var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Packages/authreq.ipa'
+2018-03-13 23:11:38 +0000  >>> Copying /var/folders/_b/5hxd0l1j3sx_rwr1yqmrj_cw0000gn/T/XcodeDistPipeline.GcZ/Root 
+2018-03-13 23:11:38 +0000  copying file ./BCSymbolMaps/C9DD3F5E-FCBA-3BF2-9FEE-34519FBEB8AC.bcsymbolmap ... 
+2018-03-13 23:11:38 +0000  57648 bytes for ./BCSymbolMaps/C9DD3F5E-FCBA-3BF2-9FEE-34519FBEB8AC.bcsymbolmap
+copying file ./BCSymbolMaps/D1222D3E-A191-33A8-95BE-A27AF9210533.bcsymbolmap ... 
+2018-03-13 23:11:38 +0000  206661 bytes for ./BCSymbolMaps/D1222D3E-A191-33A8-95BE-A27AF9210533.bcsymbolmap
+copying file ./BCSymbolMaps/A0F2F7AA-0425-3DB8-AD85-D316F84EE458.bcsymbolmap ... 
+2018-03-13 23:11:38 +0000  98650 bytes for ./BCSymbolMaps/A0F2F7AA-0425-3DB8-AD85-D316F84EE458.bcsymbolmap
+2018-03-13 23:11:38 +0000  copying file ./BCSymbolMaps/758362CB-27CE-3133-A198-7C6BD5EFE318.bcsymbolmap ... 
+2018-03-13 23:11:38 +0000  100589 bytes for ./BCSymbolMaps/758362CB-27CE-3133-A198-7C6BD5EFE318.bcsymbolmap
+2018-03-13 23:11:38 +0000  copying file ./BCSymbolMaps/A21833A4-0247-3522-A748-3DD9944A3E5E.bcsymbolmap ... 
+2018-03-13 23:11:38 +0000  59400 bytes for ./BCSymbolMaps/A21833A4-0247-3522-A748-3DD9944A3E5E.bcsymbolmap
+copying file ./BCSymbolMaps/BF9D6082-3043-321A-B117-39FAE3890155.bcsymbolmap ... 
+2018-03-13 23:11:38 +0000  205484 bytes for ./BCSymbolMaps/BF9D6082-3043-321A-B117-39FAE3890155.bcsymbolmap
+2018-03-13 23:11:38 +0000  copying file ./Payload/authreq.app/_CodeSignature/CodeResources ... 
+2018-03-13 23:11:38 +0000  20541 bytes for ./Payload/authreq.app/_CodeSignature/CodeResources
+copying file ./Payload/authreq.app/AppIcon20x20@2x.png ... 
+2018-03-13 23:11:38 +0000  2088 bytes for ./Payload/authreq.app/AppIcon20x20@2x.png
+copying file ./Payload/authreq.app/AppIcon57x57.png ... 
+2018-03-13 23:11:38 +0000  3011 bytes for ./Payload/authreq.app/AppIcon57x57.png
+copying file ./Payload/authreq.app/AppIcon20x20@3x.png ... 
+2018-03-13 23:11:38 +0000  3138 bytes for ./Payload/authreq.app/AppIcon20x20@3x.png
+copying file ./Payload/authreq.app/AppIcon29x29.png ... 
+2018-03-13 23:11:38 +0000  1499 bytes for ./Payload/authreq.app/AppIcon29x29.png
+copying file ./Payload/authreq.app/AppIcon60x60@2x.png ... 
+2018-03-13 23:11:38 +0000  7449 bytes for ./Payload/authreq.app/AppIcon60x60@2x.png
+2018-03-13 23:11:38 +0000  copying file ./Payload/authreq.app/AppIcon29x29@2x.png ... 
+2018-03-13 23:11:38 +0000  3015 bytes for ./Payload/authreq.app/AppIcon29x29@2x.png
+copying file ./Payload/authreq.app/AppIcon40x40@3x.png ... 
+2018-03-13 23:11:38 +0000  7449 bytes for ./Payload/authreq.app/AppIcon40x40@3x.png
+copying file ./Payload/authreq.app/AppIcon57x57@2x.png ... 
+2018-03-13 23:11:38 +0000  6943 bytes for ./Payload/authreq.app/AppIcon57x57@2x.png
+copying file ./Payload/authreq.app/AppIcon40x40@2x.png ... 
+2018-03-13 23:11:38 +0000  4473 bytes for ./Payload/authreq.app/AppIcon40x40@2x.png
+copying file ./Payload/authreq.app/AppIcon29x29@3x.png ... 
+2018-03-13 23:11:38 +0000  5028 bytes for ./Payload/authreq.app/AppIcon29x29@3x.png
+copying file ./Payload/authreq.app/AppIcon60x60@3x.png ... 
+2018-03-13 23:11:38 +0000  15170 bytes for ./Payload/authreq.app/AppIcon60x60@3x.png
+2018-03-13 23:11:38 +0000  copying file ./Payload/authreq.app/Base.lproj/Main.storyboardc/UINavigationController-vC3-pB-5Vb.nib/objects-11.0+.nib ... 
+2018-03-13 23:11:38 +0000  1913 bytes for ./Payload/authreq.app/Base.lproj/Main.storyboardc/UINavigationController-vC3-pB-5Vb.nib/objects-11.0+.nib
+copying file ./Payload/authreq.app/Base.lproj/Main.storyboardc/UINavigationController-vC3-pB-5Vb.nib/runtime.nib ... 
+2018-03-13 23:11:38 +0000  1913 bytes for ./Payload/authreq.app/Base.lproj/Main.storyboardc/UINavigationController-vC3-pB-5Vb.nib/runtime.nib
+copying file ./Payload/authreq.app/Base.lproj/Main.storyboardc/UISplitViewController-H1p-Uh-vWS.nib/objects-11.0+.nib ... 
+2018-03-13 23:11:38 +0000  3523 bytes for ./Payload/authreq.app/Base.lproj/Main.storyboardc/UISplitViewController-H1p-Uh-vWS.nib/objects-11.0+.nib
+copying file ./Payload/authreq.app/Base.lproj/Main.storyboardc/UISplitViewController-H1p-Uh-vWS.nib/runtime.nib ... 
+2018-03-13 23:11:38 +0000  3527 bytes for ./Payload/authreq.app/Base.lproj/Main.storyboardc/UISplitViewController-H1p-Uh-vWS.nib/runtime.nib
+2018-03-13 23:11:38 +0000  copying file ./Payload/authreq.app/Base.lproj/Main.storyboardc/JEX-9P-axG-view-svH-Pt-448.nib/objects-11.0+.nib ... 
+2018-03-13 23:11:38 +0000  6309 bytes for ./Payload/authreq.app/Base.lproj/Main.storyboardc/JEX-9P-axG-view-svH-Pt-448.nib/objects-11.0+.nib
+copying file ./Payload/authreq.app/Base.lproj/Main.storyboardc/JEX-9P-axG-view-svH-Pt-448.nib/runtime.nib ... 
+2018-03-13 23:11:38 +0000  6365 bytes for ./Payload/authreq.app/Base.lproj/Main.storyboardc/JEX-9P-axG-view-svH-Pt-448.nib/runtime.nib
+2018-03-13 23:11:38 +0000  copying file ./Payload/authreq.app/Base.lproj/Main.storyboardc/7bK-jq-Zjz-view-r7i-6Z-zg0.nib/objects-11.0+.nib ... 
+2018-03-13 23:11:38 +0000  5231 bytes for ./Payload/authreq.app/Base.lproj/Main.storyboardc/7bK-jq-Zjz-view-r7i-6Z-zg0.nib/objects-11.0+.nib
+copying file ./Payload/authreq.app/Base.lproj/Main.storyboardc/7bK-jq-Zjz-view-r7i-6Z-zg0.nib/runtime.nib ... 
+2018-03-13 23:11:38 +0000  5372 bytes for ./Payload/authreq.app/Base.lproj/Main.storyboardc/7bK-jq-Zjz-view-r7i-6Z-zg0.nib/runtime.nib
+2018-03-13 23:11:38 +0000  copying file ./Payload/authreq.app/Base.lproj/Main.storyboardc/Info.plist ... 
+360 bytes for ./Payload/authreq.app/Base.lproj/Main.storyboardc/Info.plist
+2018-03-13 23:11:38 +0000  copying file ./Payload/authreq.app/Base.lproj/LaunchScreen.storyboardc/UINavigationController-h8n-a5-UBk.nib/objects-11.0+.nib ... 
+2018-03-13 23:11:38 +0000  2014 bytes for ./Payload/authreq.app/Base.lproj/LaunchScreen.storyboardc/UINavigationController-h8n-a5-UBk.nib/objects-11.0+.nib
+copying file ./Payload/authreq.app/Base.lproj/LaunchScreen.storyboardc/UINavigationController-h8n-a5-UBk.nib/runtime.nib ... 
+2018-03-13 23:11:38 +0000  2014 bytes for ./Payload/authreq.app/Base.lproj/LaunchScreen.storyboardc/UINavigationController-h8n-a5-UBk.nib/runtime.nib
+copying file ./Payload/authreq.app/Base.lproj/LaunchScreen.storyboardc/UBT-NA-80m-view-Ro2-zY-KbQ.nib/objects-11.0+.nib ... 
+2018-03-13 23:11:38 +0000  1567 bytes for ./Payload/authreq.app/Base.lproj/LaunchScreen.storyboardc/UBT-NA-80m-view-Ro2-zY-KbQ.nib/objects-11.0+.nib
+copying file ./Payload/authreq.app/Base.lproj/LaunchScreen.storyboardc/UBT-NA-80m-view-Ro2-zY-KbQ.nib/runtime.nib ... 
+2018-03-13 23:11:38 +0000  1704 bytes for ./Payload/authreq.app/Base.lproj/LaunchScreen.storyboardc/UBT-NA-80m-view-Ro2-zY-KbQ.nib/runtime.nib
+copying file ./Payload/authreq.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2018-03-13 23:11:38 +0000  276 bytes for ./Payload/authreq.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./Payload/authreq.app/archived-expanded-entitlements.xcent ... 
+2018-03-13 23:11:38 +0000  246 bytes for ./Payload/authreq.app/archived-expanded-entitlements.xcent
+copying file ./Payload/authreq.app/Assets.car ... 
+2018-03-13 23:11:38 +0000  1180744 bytes for ./Payload/authreq.app/Assets.car
+copying file ./Payload/authreq.app/failure.caf ... 
+2018-03-13 23:11:38 +0000  55368 bytes for ./Payload/authreq.app/failure.caf
+2018-03-13 23:11:38 +0000  copying file ./Payload/authreq.app/success.caf ... 
+2018-03-13 23:11:38 +0000  37076 bytes for ./Payload/authreq.app/success.caf
+2018-03-13 23:11:38 +0000  copying file ./Payload/authreq.app/Frameworks/libswiftCoreImage.dylib ... 
+2018-03-13 23:11:38 +0000  258624 bytes for ./Payload/authreq.app/Frameworks/libswiftCoreImage.dylib
+2018-03-13 23:11:38 +0000  copying file ./Payload/authreq.app/Frameworks/Piano.framework/_CodeSignature/CodeResources ... 
+2202 bytes for ./Payload/authreq.app/Frameworks/Piano.framework/_CodeSignature/CodeResources
+2018-03-13 23:11:38 +0000  copying file ./Payload/authreq.app/Frameworks/Piano.framework/Piano ... 
+2018-03-13 23:11:38 +0000  757216 bytes for ./Payload/authreq.app/Frameworks/Piano.framework/Piano
+copying file ./Payload/authreq.app/Frameworks/Piano.framework/Info.plist ... 
+2018-03-13 23:11:38 +0000  732 bytes for ./Payload/authreq.app/Frameworks/Piano.framework/Info.plist
+copying file ./Payload/authreq.app/Frameworks/libswiftObjectiveC.dylib ... 
+2018-03-13 23:11:38 +0000  506144 bytes for ./Payload/authreq.app/Frameworks/libswiftObjectiveC.dylib
+copying file ./Payload/authreq.app/Frameworks/libswiftCore.dylib ... 
+2018-03-13 23:11:41 +0000  68839312 bytes for ./Payload/authreq.app/Frameworks/libswiftCore.dylib
+copying file ./Payload/authreq.app/Frameworks/libswiftCoreGraphics.dylib ... 
+2018-03-13 23:11:41 +0000  1269200 bytes for ./Payload/authreq.app/Frameworks/libswiftCoreGraphics.dylib
+copying file ./Payload/authreq.app/Frameworks/libswiftUIKit.dylib ... 
+2018-03-13 23:11:41 +0000  789536 bytes for ./Payload/authreq.app/Frameworks/libswiftUIKit.dylib
+copying file ./Payload/authreq.app/Frameworks/libswiftMetal.dylib ... 
+399744 bytes for ./Payload/authreq.app/Frameworks/libswiftMetal.dylib
+copying file ./Payload/authreq.app/Frameworks/libswiftCoreData.dylib ... 
+2018-03-13 23:11:41 +0000  690912 bytes for ./Payload/authreq.app/Frameworks/libswiftCoreData.dylib
+2018-03-13 23:11:41 +0000  copying file ./Payload/authreq.app/Frameworks/libswiftDispatch.dylib ... 
+2018-03-13 23:11:41 +0000  2441104 bytes for ./Payload/authreq.app/Frameworks/libswiftDispatch.dylib
+copying file ./Payload/authreq.app/Frameworks/libswiftos.dylib ... 
+2018-03-13 23:11:41 +0000  446752 bytes for ./Payload/authreq.app/Frameworks/libswiftos.dylib
+2018-03-13 23:11:41 +0000  copying file ./Payload/authreq.app/Frameworks/libswiftCoreFoundation.dylib ... 
+2018-03-13 23:11:41 +0000  258064 bytes for ./Payload/authreq.app/Frameworks/libswiftCoreFoundation.dylib
+copying file ./Payload/authreq.app/Frameworks/libswiftDarwin.dylib ... 
+2018-03-13 23:11:41 +0000  599632 bytes for ./Payload/authreq.app/Frameworks/libswiftDarwin.dylib
+copying file ./Payload/authreq.app/Frameworks/libswiftQuartzCore.dylib ... 
+2018-03-13 23:11:41 +0000  311328 bytes for ./Payload/authreq.app/Frameworks/libswiftQuartzCore.dylib
+copying file ./Payload/authreq.app/Frameworks/libswiftCoreAudio.dylib ... 
+2018-03-13 23:11:41 +0000  650432 bytes for ./Payload/authreq.app/Frameworks/libswiftCoreAudio.dylib
+2018-03-13 23:11:41 +0000  copying file ./Payload/authreq.app/Frameworks/libswiftAVFoundation.dylib ... 
+2018-03-13 23:11:41 +0000  1212432 bytes for ./Payload/authreq.app/Frameworks/libswiftAVFoundation.dylib
+copying file ./Payload/authreq.app/Frameworks/libswiftFoundation.dylib ... 
+2018-03-13 23:11:43 +0000  27763232 bytes for ./Payload/authreq.app/Frameworks/libswiftFoundation.dylib
+copying file ./Payload/authreq.app/Frameworks/libswiftCoreMedia.dylib ... 
+2018-03-13 23:11:43 +0000  434912 bytes for ./Payload/authreq.app/Frameworks/libswiftCoreMedia.dylib
+2018-03-13 23:11:43 +0000  copying file ./Payload/authreq.app/Frameworks/SwiftyRSA.framework/_CodeSignature/CodeResources ... 
+2202 bytes for ./Payload/authreq.app/Frameworks/SwiftyRSA.framework/_CodeSignature/CodeResources
+copying file ./Payload/authreq.app/Frameworks/SwiftyRSA.framework/SwiftyRSA ... 
+2018-03-13 23:11:43 +0000  1220272 bytes for ./Payload/authreq.app/Frameworks/SwiftyRSA.framework/SwiftyRSA
+copying file ./Payload/authreq.app/Frameworks/SwiftyRSA.framework/Info.plist ... 
+2018-03-13 23:11:43 +0000  739 bytes for ./Payload/authreq.app/Frameworks/SwiftyRSA.framework/Info.plist
+copying file ./Payload/authreq.app/Frameworks/libswiftsimd.dylib ... 
+2018-03-13 23:11:43 +0000  3697744 bytes for ./Payload/authreq.app/Frameworks/libswiftsimd.dylib
+2018-03-13 23:11:43 +0000  copying file ./Payload/authreq.app/embedded.mobileprovision ... 
+7549 bytes for ./Payload/authreq.app/embedded.mobileprovision
+copying file ./Payload/authreq.app/authreq ... 
+2018-03-13 23:11:43 +0000  2606048 bytes for ./Payload/authreq.app/authreq
+copying file ./Payload/authreq.app/authreq.mom ... 
+2018-03-13 23:11:43 +0000  3012 bytes for ./Payload/authreq.app/authreq.mom
+copying file ./Payload/authreq.app/Info.plist ... 
+1749 bytes for ./Payload/authreq.app/Info.plist
+copying file ./Payload/authreq.app/PkgInfo ... 
+8 bytes for ./Payload/authreq.app/PkgInfo
+copying file ./SwiftSupport/iphoneos/libswiftCoreImage.dylib ... 
+2018-03-13 23:11:43 +0000  258160 bytes for ./SwiftSupport/iphoneos/libswiftCoreImage.dylib
+2018-03-13 23:11:43 +0000  copying file ./SwiftSupport/iphoneos/libswiftObjectiveC.dylib ... 
+2018-03-13 23:11:43 +0000  505680 bytes for ./SwiftSupport/iphoneos/libswiftObjectiveC.dylib
+copying file ./SwiftSupport/iphoneos/libswiftCore.dylib ... 
+2018-03-13 23:11:47 +0000  68838832 bytes for ./SwiftSupport/iphoneos/libswiftCore.dylib
+copying file ./SwiftSupport/iphoneos/libswiftCoreGraphics.dylib ... 
+2018-03-13 23:11:47 +0000  1268736 bytes for ./SwiftSupport/iphoneos/libswiftCoreGraphics.dylib
+copying file ./SwiftSupport/iphoneos/libswiftUIKit.dylib ... 
+2018-03-13 23:11:47 +0000  789072 bytes for ./SwiftSupport/iphoneos/libswiftUIKit.dylib
+2018-03-13 23:11:47 +0000  copying file ./SwiftSupport/iphoneos/libswiftMetal.dylib ... 
+2018-03-13 23:11:47 +0000  399264 bytes for ./SwiftSupport/iphoneos/libswiftMetal.dylib
+2018-03-13 23:11:47 +0000  copying file ./SwiftSupport/iphoneos/libswiftCoreData.dylib ... 
+2018-03-13 23:11:47 +0000  690448 bytes for ./SwiftSupport/iphoneos/libswiftCoreData.dylib
+2018-03-13 23:11:47 +0000  copying file ./SwiftSupport/iphoneos/libswiftDispatch.dylib ... 
+2018-03-13 23:11:47 +0000  2440624 bytes for ./SwiftSupport/iphoneos/libswiftDispatch.dylib
+copying file ./SwiftSupport/iphoneos/libswiftos.dylib ... 
+2018-03-13 23:11:47 +0000  446288 bytes for ./SwiftSupport/iphoneos/libswiftos.dylib
+copying file ./SwiftSupport/iphoneos/libswiftCoreFoundation.dylib ... 
+2018-03-13 23:11:47 +0000  257584 bytes for ./SwiftSupport/iphoneos/libswiftCoreFoundation.dylib
+copying file ./SwiftSupport/iphoneos/libswiftDarwin.dylib ... 
+2018-03-13 23:11:47 +0000  599168 bytes for ./SwiftSupport/iphoneos/libswiftDarwin.dylib
+copying file ./SwiftSupport/iphoneos/libswiftQuartzCore.dylib ... 
+2018-03-13 23:11:47 +0000  310864 bytes for ./SwiftSupport/iphoneos/libswiftQuartzCore.dylib
+2018-03-13 23:11:47 +0000  copying file ./SwiftSupport/iphoneos/libswiftCoreAudio.dylib ... 
+2018-03-13 23:11:47 +0000  649952 bytes for ./SwiftSupport/iphoneos/libswiftCoreAudio.dylib
+copying file ./SwiftSupport/iphoneos/libswiftAVFoundation.dylib ... 
+2018-03-13 23:11:47 +0000  1211952 bytes for ./SwiftSupport/iphoneos/libswiftAVFoundation.dylib
+2018-03-13 23:11:47 +0000  copying file ./SwiftSupport/iphoneos/libswiftFoundation.dylib ... 
+2018-03-13 23:11:48 +0000  27746368 bytes for ./SwiftSupport/iphoneos/libswiftFoundation.dylib
+copying file ./SwiftSupport/iphoneos/libswiftCoreMedia.dylib ... 
+2018-03-13 23:11:48 +0000  434432 bytes for ./SwiftSupport/iphoneos/libswiftCoreMedia.dylib
+copying file ./SwiftSupport/iphoneos/libswiftsimd.dylib ... 
+2018-03-13 23:11:49 +0000  3697280 bytes for ./SwiftSupport/iphoneos/libswiftsimd.dylib
+2018-03-13 23:11:49 +0000  copying file ./Symbols/8F05AF83-ACCB-3468-96B3-5D9FBCCB678B.symbols ... 
+2018-03-13 23:11:49 +0000  23952 bytes for ./Symbols/8F05AF83-ACCB-3468-96B3-5D9FBCCB678B.symbols
+copying file ./Symbols/BEAE879C-0989-377F-A240-C66C1ECB5CA6.symbols ... 
+2018-03-13 23:11:49 +0000  96544 bytes for ./Symbols/BEAE879C-0989-377F-A240-C66C1ECB5CA6.symbols
+copying file ./Symbols/662D41BA-3CD9-3F65-839A-3664F1CE2FC5.symbols ... 
+2018-03-13 23:11:49 +0000  43800 bytes for ./Symbols/662D41BA-3CD9-3F65-839A-3664F1CE2FC5.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/C642D694-42C3-3F92-AE93-21CB863D89F0.symbols ... 
+2018-03-13 23:11:49 +0000  55664 bytes for ./Symbols/C642D694-42C3-3F92-AE93-21CB863D89F0.symbols
+copying file ./Symbols/669D67CE-A50D-33F2-A136-5CC770BE155D.symbols ... 
+2018-03-13 23:11:49 +0000  7384 bytes for ./Symbols/669D67CE-A50D-33F2-A136-5CC770BE155D.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/B077EDDE-C3A8-319D-8AD2-E70E3D7E8369.symbols ... 
+2018-03-13 23:11:49 +0000  2736 bytes for ./Symbols/B077EDDE-C3A8-319D-8AD2-E70E3D7E8369.symbols
+copying file ./Symbols/20EC95E3-B8F4-3324-BACB-478BC6D7C2BD.symbols ... 
+2018-03-13 23:11:49 +0000  13232 bytes for ./Symbols/20EC95E3-B8F4-3324-BACB-478BC6D7C2BD.symbols
+copying file ./Symbols/24177B58-E26B-39A4-A385-9719AC736960.symbols ... 
+2018-03-13 23:11:49 +0000  298920 bytes for ./Symbols/24177B58-E26B-39A4-A385-9719AC736960.symbols
+copying file ./Symbols/E23DA477-3010-39FE-BCD2-D28CD9CF0F54.symbols ... 
+2018-03-13 23:11:49 +0000  1595992 bytes for ./Symbols/E23DA477-3010-39FE-BCD2-D28CD9CF0F54.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/BFE40B3D-FE18-37BB-B500-9F381025E07F.symbols ... 
+2018-03-13 23:11:49 +0000  2456 bytes for ./Symbols/BFE40B3D-FE18-37BB-B500-9F381025E07F.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/BD876457-63BB-3D4A-91EA-01DDB74D22BD.symbols ... 
+2018-03-13 23:11:49 +0000  2824 bytes for ./Symbols/BD876457-63BB-3D4A-91EA-01DDB74D22BD.symbols
+copying file ./Symbols/DC3BBFE6-5D4F-3329-B275-4894140BA397.symbols ... 
+2018-03-13 23:11:49 +0000  96392 bytes for ./Symbols/DC3BBFE6-5D4F-3329-B275-4894140BA397.symbols
+copying file ./Symbols/0A2B3149-C0C8-34FB-8E0D-ADE27625A6A2.symbols ... 
+2018-03-13 23:11:49 +0000  37952 bytes for ./Symbols/0A2B3149-C0C8-34FB-8E0D-ADE27625A6A2.symbols
+copying file ./Symbols/01109810-5373-3C65-8881-DA326EA9814B.symbols ... 
+2018-03-13 23:11:49 +0000  71232 bytes for ./Symbols/01109810-5373-3C65-8881-DA326EA9814B.symbols
+copying file ./Symbols/9AF40A87-C38A-3111-AFD1-C247EA11F6A0.symbols ... 
+2018-03-13 23:11:49 +0000  232040 bytes for ./Symbols/9AF40A87-C38A-3111-AFD1-C247EA11F6A0.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/069E4D87-B9AF-3191-9461-CA8A03DB25EA.symbols ... 
+2018-03-13 23:11:49 +0000  71304 bytes for ./Symbols/069E4D87-B9AF-3191-9461-CA8A03DB25EA.symbols
+copying file ./Symbols/47F791B0-50C7-3E18-B842-7C2E86DEC6C0.symbols ... 
+2018-03-13 23:11:49 +0000  38552 bytes for ./Symbols/47F791B0-50C7-3E18-B842-7C2E86DEC6C0.symbols
+copying file ./Symbols/5F8B371E-2809-3217-8813-C6649614D790.symbols ... 
+2018-03-13 23:11:49 +0000  18808 bytes for ./Symbols/5F8B371E-2809-3217-8813-C6649614D790.symbols
+copying file ./Symbols/92C7DF67-8F71-323B-8170-CEE321C3A6C8.symbols ... 
+2018-03-13 23:11:49 +0000  44912 bytes for ./Symbols/92C7DF67-8F71-323B-8170-CEE321C3A6C8.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/0688048C-C8B0-38DF-9C3B-7974A1EBD9E4.symbols ... 
+2018-03-13 23:11:49 +0000  55696 bytes for ./Symbols/0688048C-C8B0-38DF-9C3B-7974A1EBD9E4.symbols
+copying file ./Symbols/0EC3AB9A-D4CE-3B63-A2AF-8872C7268DD2.symbols ... 
+2018-03-13 23:11:49 +0000  12128 bytes for ./Symbols/0EC3AB9A-D4CE-3B63-A2AF-8872C7268DD2.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/A86469E0-988B-3731-8C5A-93FFFFF4D558.symbols ... 
+2018-03-13 23:11:49 +0000  23952 bytes for ./Symbols/A86469E0-988B-3731-8C5A-93FFFFF4D558.symbols
+copying file ./Symbols/4455217F-C1A0-30E6-A394-7CA00C8008B9.symbols ... 
+2018-03-13 23:11:49 +0000  24384 bytes for ./Symbols/4455217F-C1A0-30E6-A394-7CA00C8008B9.symbols
+copying file ./Symbols/97CC8CE2-958C-3A15-8B2E-C20D8736A5C5.symbols ... 
+2018-03-13 23:11:49 +0000  234272 bytes for ./Symbols/97CC8CE2-958C-3A15-8B2E-C20D8736A5C5.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/42181E01-A44D-399F-8D94-EED8BA6DE714.symbols ... 
+2018-03-13 23:11:49 +0000  300712 bytes for ./Symbols/42181E01-A44D-399F-8D94-EED8BA6DE714.symbols
+copying file ./Symbols/0B8AA04B-74BC-38BF-BD6F-895D9F96850E.symbols ... 
+2018-03-13 23:11:49 +0000  38552 bytes for ./Symbols/0B8AA04B-74BC-38BF-BD6F-895D9F96850E.symbols
+copying file ./Symbols/9B0D03E4-4CAB-3E80-8F13-9F9E52E5BEC1.symbols ... 
+2018-03-13 23:11:49 +0000  300712 bytes for ./Symbols/9B0D03E4-4CAB-3E80-8F13-9F9E52E5BEC1.symbols
+copying file ./Symbols/4AD01A7C-D52A-3FEF-B87B-8ADB5E65BFA0.symbols ... 
+2018-03-13 23:11:49 +0000  13056 bytes for ./Symbols/4AD01A7C-D52A-3FEF-B87B-8ADB5E65BFA0.symbols
+copying file ./Symbols/7A6C628E-C037-3BAA-99A4-7B65BF23F9EA.symbols ... 
+2018-03-13 23:11:49 +0000  1592304 bytes for ./Symbols/7A6C628E-C037-3BAA-99A4-7B65BF23F9EA.symbols
+copying file ./Symbols/B904A916-2DB3-312C-A21E-8F93517C80DF.symbols ... 
+2018-03-13 23:11:49 +0000  71112 bytes for ./Symbols/B904A916-2DB3-312C-A21E-8F93517C80DF.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/6296CF8D-A0E4-3A0D-9F67-0FACC01AC40C.symbols ... 
+2018-03-13 23:11:49 +0000  2352 bytes for ./Symbols/6296CF8D-A0E4-3A0D-9F67-0FACC01AC40C.symbols
+copying file ./Symbols/2EF7D5E4-1BAC-3D5A-9522-3EB738662406.symbols ... 
+2018-03-13 23:11:49 +0000  12304 bytes for ./Symbols/2EF7D5E4-1BAC-3D5A-9522-3EB738662406.symbols
+copying file ./Symbols/71EB68D6-724C-3CED-A52F-6260DF1BFC0E.symbols ... 
+2018-03-13 23:11:49 +0000  234128 bytes for ./Symbols/71EB68D6-724C-3CED-A52F-6260DF1BFC0E.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/F87B8EAC-7FEB-32FF-9C55-F8405FBAE71D.symbols ... 
+2018-03-13 23:11:49 +0000  44560 bytes for ./Symbols/F87B8EAC-7FEB-32FF-9C55-F8405FBAE71D.symbols
+copying file ./Symbols/964D2D36-EE64-3922-AD7F-5E03804DA319.symbols ... 
+2018-03-13 23:11:49 +0000  4443976 bytes for ./Symbols/964D2D36-EE64-3922-AD7F-5E03804DA319.symbols
+copying file ./Symbols/9399792D-76DE-3474-8B44-96D5D3015EB7.symbols ... 
+2018-03-13 23:11:49 +0000  4425016 bytes for ./Symbols/9399792D-76DE-3474-8B44-96D5D3015EB7.symbols
+copying file ./Symbols/4B032674-D782-3825-ABC0-6045510C9FFC.symbols ... 
+2018-03-13 23:11:49 +0000  18808 bytes for ./Symbols/4B032674-D782-3825-ABC0-6045510C9FFC.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/4C5D8A81-F864-3A3F-91A8-B24ED703414B.symbols ... 
+2018-03-13 23:11:49 +0000  44488 bytes for ./Symbols/4C5D8A81-F864-3A3F-91A8-B24ED703414B.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/1BD1C309-A736-3946-864D-E1061B2DCB1E.symbols ... 
+2018-03-13 23:11:49 +0000  55696 bytes for ./Symbols/1BD1C309-A736-3946-864D-E1061B2DCB1E.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/6B675DA0-5BE8-3835-AFE7-31BCB0AB0A93.symbols ... 
+2018-03-13 23:11:49 +0000  4443392 bytes for ./Symbols/6B675DA0-5BE8-3835-AFE7-31BCB0AB0A93.symbols
+copying file ./Symbols/A548F79E-879A-3AB8-AE05-DCB5EBC6499E.symbols ... 
+2018-03-13 23:11:49 +0000  18408 bytes for ./Symbols/A548F79E-879A-3AB8-AE05-DCB5EBC6499E.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/19839AB0-4E91-3B65-98FE-BFC72D158F74.symbols ... 
+2018-03-13 23:11:49 +0000  96608 bytes for ./Symbols/19839AB0-4E91-3B65-98FE-BFC72D158F74.symbols
+copying file ./Symbols/5BCB6005-A832-3842-887E-311F8FFF7F3F.symbols ... 
+2018-03-13 23:11:49 +0000  13056 bytes for ./Symbols/5BCB6005-A832-3842-887E-311F8FFF7F3F.symbols
+copying file ./Symbols/C260F959-AC44-39B0-A834-D5DE99D6C799.symbols ... 
+2018-03-13 23:11:49 +0000  12304 bytes for ./Symbols/C260F959-AC44-39B0-A834-D5DE99D6C799.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/BBDABE60-3B44-3238-AFFC-82B59BCB0D17.symbols ... 
+2018-03-13 23:11:49 +0000  2736 bytes for ./Symbols/BBDABE60-3B44-3238-AFFC-82B59BCB0D17.symbols
+copying file ./Symbols/EEFCBBC7-BA36-3752-A08C-A401C4A9DD06.symbols ... 
+2018-03-13 23:11:49 +0000  7384 bytes for ./Symbols/EEFCBBC7-BA36-3752-A08C-A401C4A9DD06.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/A4CA2C4A-E953-3A43-A2CE-BC7E6D9D59E6.symbols ... 
+2018-03-13 23:11:49 +0000  7656 bytes for ./Symbols/A4CA2C4A-E953-3A43-A2CE-BC7E6D9D59E6.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/146EDC47-FB62-3143-A82E-029841EA24D0.symbols ... 
+2018-03-13 23:11:49 +0000  44696 bytes for ./Symbols/146EDC47-FB62-3143-A82E-029841EA24D0.symbols
+copying file ./Symbols/3A708B33-F4DE-362F-B769-CFBDFF462A35.symbols ... 
+2018-03-13 23:11:49 +0000  1595848 bytes for ./Symbols/3A708B33-F4DE-362F-B769-CFBDFF462A35.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/29D0F78B-257B-32F7-BB43-41B2C9751162.symbols ... 
+2018-03-13 23:11:49 +0000  2352 bytes for ./Symbols/29D0F78B-257B-32F7-BB43-41B2C9751162.symbols
+2018-03-13 23:11:49 +0000  copying file ./Symbols/BD0E4C4F-2827-305D-9C36-B3996E8EE267.symbols ... 
+2018-03-13 23:11:49 +0000  44696 bytes for ./Symbols/BD0E4C4F-2827-305D-9C36-B3996E8EE267.symbols
+2018-03-13 23:11:49 +0000  
+2018-03-13 23:11:49 +0000  2018-03-13 23:11:49 +0000  /usr/bin/ditto exited with 0
+
+2018-03-13 23:11:49 +0000  
+2018-03-13 23:11:49 +0000  
+2018-03-13 23:11:49 +0000  Processing step: IDEDistributionCreateManifestStep
+2018-03-13 23:11:49 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so

@@ -35,10 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     var backgroundSessionCompletionHandler: (() -> Void)?
     
     var window: UIWindow?
+    
+    public var registeredForPushNotifications = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        registerForPushNotifications()
         
         do {
             //try Shared.keypair.deleteKeyPair()
@@ -108,6 +109,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         print("Removing all notifications")
+        
+        if(!registeredForPushNotifications) {
+            registeredForPushNotifications = true
+            registerForPushNotifications()
+        }
+        
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
 
@@ -132,6 +139,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
 
     func registerForPushNotifications() {
+        print("registerForPushNotifications - requestAuthorization")
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
             (granted, error) in
             print("Permission granted: \(granted)")
@@ -162,10 +170,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
     
     func getNotificationSettings() {
+        print("getNotificationSettings - start")
         UNUserNotificationCenter.current().getNotificationSettings { (settings) in
             print("Notification settings: \(settings)")
             guard settings.authorizationStatus == .authorized else { return }
             DispatchQueue.main.async {
+                print("getNotificationSettings - calling registerForRemoteNotifications")
                 UIApplication.shared.registerForRemoteNotifications()
             }
         }

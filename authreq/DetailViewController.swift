@@ -96,19 +96,24 @@ class DetailViewController: UIViewController {
             if(detail.isExpired()) {
                 configureView()
             } else {
-                _ = detail.sign()
-
-                if let item = activityIndicatorView {
-                    item.isHidden = false
-                    item.startAnimating()
-                }
                 
-                if let item = acceptButton {
-                    item.isHidden = true
-                }
-                
-                if let item = declineButton {
-                    item.isEnabled = false
+                if(!UIApplication.shared.isRegisteredForRemoteNotifications) {
+                    self.present(getPushErrorAlert(), animated: true, completion: nil)
+                } else {
+                    _ = detail.sign()
+                    
+                    if let item = activityIndicatorView {
+                        item.isHidden = false
+                        item.startAnimating()
+                    }
+                    
+                    if let item = acceptButton {
+                        item.isHidden = true
+                    }
+                    
+                    if let item = declineButton {
+                        item.isEnabled = false
+                    }
                 }
             }
         }
