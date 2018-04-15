@@ -82,7 +82,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     @objc
     func settingsPressed(_ sender: Any) {
-        let alertController = UIAlertController(title: "New requests will appear automatically", message: "To enrol your device to a supported service, scan the provided QR code with your device's camera or log in from your iPhone and press 'Add to authreq'.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "New requests will appear automatically", message: "To link your device to supported services, visit the service's website from your iPhone and tap on 'Add to authreq', or scan the provided QR code with your device's camera.", preferredStyle: .alert)
         
         let actionCancel = UIAlertAction(title: "OK", style: .cancel) { (action:UIAlertAction) in
         }
