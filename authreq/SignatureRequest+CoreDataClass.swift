@@ -66,7 +66,7 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
             let publicKey = try PublicKey(pemEncoded: pem)
             let signature = try Signature(base64Encoded: sig)
             let clear = try ClearMessage(string: clearmessage, using: .utf8)
-            let isSuccessful = try clear.verify(with: publicKey, signature: signature, digestType: .sha256)
+            let isSuccessful = try clear.verify(with: publicKey, signature: signature, digestType: .sha384)
             
             return isSuccessful
         }
@@ -372,8 +372,8 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
         print("continuing signature")
         
         do {
-            try AppDelegate.Shared.keypair.verify(signature: signature, originalDigest: digest, hash: .sha256)
-            try printVerifySignatureInOpenssl(manager: AppDelegate.Shared.keypair, signed: signature, digest: digest, shaAlgorithm: "sha256")
+            try AppDelegate.Shared.keypair.verify(signature: signature, originalDigest: digest, hash: .sha384)
+            try printVerifySignatureInOpenssl(manager: AppDelegate.Shared.keypair, signed: signature, digest: digest, shaAlgorithm: "sha384")
         }
         catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
@@ -473,7 +473,7 @@ public class SignatureRequest: NSManagedObject, URLSessionDelegate {
             throw "Missing text in unencrypted text field"
         }
         
-        return try AppDelegate.Shared.keypair.sign(digest, hash: .sha256, context: lacontext)
+        return try AppDelegate.Shared.keypair.sign(digest, hash: .sha384, context: lacontext)
     }
     
     func signOnMainThread() -> Bool {

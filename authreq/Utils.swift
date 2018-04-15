@@ -28,7 +28,7 @@ import UIKit
 extension String: Error {}
 
 func getPushErrorAlert() -> UIAlertController {
-    let alertController = UIAlertController(title: "Authreq requires push notifications to work", message: "Push notifications are vital to authreq. Without them, we will not be able to relay signature requests.", preferredStyle: .alert)
+    let alertController = UIAlertController(title: "Authreq Needs Notifications", message: "We cannot relay requests automatically while push notifications are disabled.\n\n(You can still add requests manually \nby using the camera.)", preferredStyle: .alert)
     
     let actionSettings = UIAlertAction(title: "Settings", style: .default) { (action:UIAlertAction) in
         DispatchQueue.main.async {

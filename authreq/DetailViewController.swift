@@ -97,9 +97,9 @@ class DetailViewController: UIViewController {
                 configureView()
             } else {
                 
-                if(!UIApplication.shared.isRegisteredForRemoteNotifications) {
+                /*if(!UIApplication.shared.isRegisteredForRemoteNotifications) {
                     self.present(getPushErrorAlert(), animated: true, completion: nil)
-                } else {
+                } else {*/
                     _ = detail.sign()
                     
                     if let item = activityIndicatorView {
@@ -114,7 +114,7 @@ class DetailViewController: UIViewController {
                     if let item = declineButton {
                         item.isEnabled = false
                     }
-                }
+               // }
             }
         }
     }
